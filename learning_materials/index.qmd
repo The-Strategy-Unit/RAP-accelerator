@@ -1,0 +1,18 @@
+---
+title: "Learning materials"
+format:
+  html:
+    toc: true
+---
+
+## Session 1: Mapping and modularity
+
+Brief introduction to the topic and what will be covered
+
+[Pre-session learning](1_mapping-and-modularity/pre-learning.qmd)
+
+[Workshop slides](1_mapping-and-modularity/slides.qmd)
+
+## Session 2: etc
+
+
