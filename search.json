@@ -1,5 +1,26 @@
 [
   {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "RAP Flipped Classroom",
+    "section": "",
+    "text": "This is the website for the Reproducible Analytical Pipelines (RAP) Flipped Classroom workshops, running from October-December 2026. These workshops are funded by the Strategic Commissioning Intelligence Centre (SCIC).\nInformation about this project will be hosted here.\nNOTE: THIS IS STILL DRAFT AND A WORK IN PROGRESS"
+  },
+  {
+    "objectID": "learning_materials/1_mapping-and-modularity/pre-learning.html#questions-to-answer",
+    "href": "learning_materials/1_mapping-and-modularity/pre-learning.html#questions-to-answer",
+    "title": "Mapping and Modularity",
+    "section": "Questions to answer",
+    "text": "Questions to answer\nHelping people prepare for the questions for discussion during the workshop sessions"
+  },
+  {
+    "objectID": "learning_materials/1_mapping-and-modularity/pre-learning.html#learning-materials",
+    "href": "learning_materials/1_mapping-and-modularity/pre-learning.html#learning-materials",
+    "title": "Mapping and Modularity",
+    "section": "Learning materials",
+    "text": "Learning materials\nLinks to learning materials Give estimated time to complete for each one"
+  },
+  {
     "objectID": "learning_materials/index.html",
     "href": "learning_materials/index.html",
     "title": "Learning materials",
@@ -19,20 +40,6 @@
     "title": "Learning materials",
     "section": "Session 2: etc",
     "text": "Session 2: etc"
-  },
-  {
-    "objectID": "learning_materials/1_mapping-and-modularity/pre-learning.html#questions-to-answer",
-    "href": "learning_materials/1_mapping-and-modularity/pre-learning.html#questions-to-answer",
-    "title": "Mapping and Modularity",
-    "section": "Questions to answer",
-    "text": "Questions to answer\nHelping people prepare for the questions for discussion during the workshop sessions"
-  },
-  {
-    "objectID": "learning_materials/1_mapping-and-modularity/pre-learning.html#learning-materials",
-    "href": "learning_materials/1_mapping-and-modularity/pre-learning.html#learning-materials",
-    "title": "Mapping and Modularity",
-    "section": "Learning materials",
-    "text": "Learning materials\nLinks to learning materials Give estimated time to complete for each one"
   },
   {
     "objectID": "about.html",
@@ -68,12 +75,5 @@
     "title": "About",
     "section": "Prior knowledge",
     "text": "Prior knowledge\nTBC"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "RAP Flipped Classroom",
-    "section": "",
-    "text": "This is the website for the Reproducible Analytical Pipelines (RAP) Flipped Classroom workshops, running from October-December 2026. These workshops are funded by the Strategic Commissioning Intelligence Centre (SCIC).\nInformation about this project will be hosted here.\nNOTE: THIS IS STILL DRAFT AND A WORK IN PROGRESS"
   }
 ]
