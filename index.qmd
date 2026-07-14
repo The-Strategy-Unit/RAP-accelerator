@@ -1,0 +1,13 @@
+---
+title: "RAP Flipped Classroom"
+format:
+  html:
+    toc: true
+---
+
+This is the website for the Reproducible Analytical Pipelines (RAP) Flipped Classroom workshops, running from October-December 2026.
+These workshops are funded by the Strategic Commissioning Intelligence Centre (SCIC).
+
+Information about this project will be hosted here.
+
+NOTE: THIS IS STILL DRAFT AND A WORK IN PROGRESS

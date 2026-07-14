@@ -1,0 +1,24 @@
+---
+title: "About"
+format:
+  html:
+    toc: true
+---
+
+## Course outline
+
+7 workshops - further details in Workshops section
+
+Video goes here?
+
+## What is a flipped classroom?
+
+Flipped classroom
+
+## Learning outcomes
+
+Overall learning outcomes - each session / topic should have its own learning outcomes too
+
+## Prior knowledge
+
+TBC
