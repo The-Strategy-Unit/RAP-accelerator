@@ -1,0 +1,16 @@
+---
+title: "Collaborative"
+subtitle: "Pre-learning materials"
+format:
+  html:
+    toc: true
+---
+
+## Questions to answer
+
+Think about these before the session
+
+- What problems have you faced when working on code with others (or on multiple machines)?
+- Have you used version control before? What was your experience?
+
+## Learning materials

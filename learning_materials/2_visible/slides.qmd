@@ -1,0 +1,18 @@
+---
+title: 📖 Visible
+subtitle: Make your projects easy to find and use with clear READMEs, licenses, and documentation
+author: "[YiWen Hon](mailto:mlcsu.su.datascience@nhs.net)"
+format:
+  revealjs:
+    theme: [default, ../su_presentation.scss]
+    transition: none
+    chalkboard:
+      buttons: false
+    footer: |
+      SCIC RAP Accelerator
+    preview-links: auto
+    slide-number: false
+    auto-animate: true
+---
+
+*Slides coming soon — check back soon for content.*

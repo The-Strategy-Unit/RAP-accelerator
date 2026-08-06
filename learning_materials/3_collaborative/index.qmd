@@ -1,0 +1,31 @@
+---
+title: "👥 Collaborative"
+subtitle: "Work effectively with others using Git, code review, and good communication habits"
+format:
+  html:
+    toc: true
+---
+
+## Overview
+
+In this session, you'll learn the fundamentals of **version control** with Git and GitHub — the tools that let teams collaborate safely on code, track changes, and avoid losing work to a corrupted file or accidental overwrite.
+
+You'll also explore **peer review** and **pair programming**, and learn how to ask for help effectively when you get stuck.
+
+## 🎯 Learning objectives
+
+By the end of this session, you should be able to:
+
+- Create and manage a repository on GitHub
+- Commit changes with clear, informative messages
+- Push and pull code from a remote repository
+- Conduct a peer review and give constructive feedback
+
+## 📖 Before the session
+
+Please complete the [pre-learning materials](pre-learning.qmd). These typically take 60 – 90 minutes and are essential for getting the most out of the session.
+
+## 🖥️ During the session
+
+[View the slides →](slides.qmd)
+

@@ -1,0 +1,38 @@
+---
+title: "About the programme"
+format:
+  html:
+    toc: true
+---
+
+## 📦 What is RAP?
+
+RAP are a set of tools, principles, and techniques that enable analysts to create analytical processes that are automated, transparent, quality assured and reusable. This has the potential to increase efficiency and quality of analytical work across the healthcare system.
+
+The [Goldacre review](https://www.gov.uk/government/publications/better-broader-safer-using-health-data-for-research-and-analysis/better-broader-safer-using-health-data-for-research-and-analysis) recommended RAP as the _minimum standard for academic and NHS data analysis_.
+
+## 🚀 What is the RAP Accelerator?
+
+A programme for ICB analysts starting their RAP journey, building the foundational skills to apply these approaches in practice. Some coding experience is expected (see [prerequisites](prerequisites.qmd)), along with enthusiasm to learn.
+
+It runs as a _flipped classroom_. You'll work through learning material at your own pace before each session, then use session time with tutors for discussion, problem-solving, and going deeper.
+
+## 📖 Course outline
+
+| Theme | Topics |
+|---------|-------|--------|
+| ♻️ [Reusable](../learning_materials/1_reusable/index.qmd) | Write modular, well-documented code that's easy for you and others to understand and reuse |
+| 📖 [Visible](../learning_materials/2_visible/index.qmd) | Make your projects easy to find and use with clear READMEs, licenses, and documentation |
+| 👥 [Collaborative](../learning_materials/3_collaborative/index.qmd) | Work effectively with others using Git, code review, and good communication habits |
+| 🛡️ [Reliable](../learning_materials/4_reliable/index.qmd) | Build trust in your code through testing, automation, and reproducible environments|
+| 🏆 [Capstone](../learning_materials/5_capstone/index.qmd) | Put it all into practice on a real project with feedback and support |
+
+Each session includes self-directed pre-work (reading, small exercises) and a one hour contact session with the tutors. We'll also have a place for attendees to ask questions to tutors or chat with peers running throughout the ten weeks.
+
+We won't cover:
+
+- Basic R or Python programming (We [expect you to already know a little programming](prerequisites.qmd))
+- Plotting and visualisation
+- Modelling and machine learning
+- Using LLMs
+- Building interactive web apps

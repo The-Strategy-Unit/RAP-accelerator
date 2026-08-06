@@ -1,0 +1,32 @@
+---
+title: "♻️ Reusable"
+subtitle: "Write modular, well-documented code that's easy for you and others to understand and reuse"
+format:
+  html:
+    toc: true
+---
+
+## Overview
+
+Writing code that's easy to understand and reuse, by others and by yourself months later is at the heart of RAP. 
+
+In this session, you'll learn to write modular functions, document your functions, and follow consistent style conventions that make your work easy to read.
+
+## 🎯 Learning objectives
+
+By the end of this session, you should be able to:
+
+- Write simple functions
+- Write clear function documentation
+- Use comments effectively (and know when NOT to comment)
+- Follow a consistent code style and use automated tools to enforce it
+- Recognize and refactor repeated code into reusable pieces
+- Structure your project files for clarity and maintainability
+
+## 📖 Before the session
+
+Please complete the [pre-learning materials](pre-learning.qmd). These typically take 60 – 90 minutes and are essential for getting the most out of the session.
+
+## 🖥️ During the session
+
+[View the slides →](slides.qmd)

@@ -1,0 +1,18 @@
+---
+title: 👥 Collaborative
+subtitle: Work effectively with others using Git, code review, and good communication habits
+author: "[YiWen Hon](mailto:mlcsu.su.datascience@nhs.net)"
+format:
+  revealjs:
+    theme: [default, ../su_presentation.scss]
+    transition: none
+    chalkboard:
+      buttons: false
+    footer: |
+      SCIC RAP Accelerator
+    preview-links: auto
+    slide-number: false
+    auto-animate: true
+---
+
+*Slides coming soon — check back soon for content.*

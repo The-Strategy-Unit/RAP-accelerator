@@ -1,0 +1,52 @@
+---
+title: "🏆 Capstone"
+subtitle: "Apply everything to your own project"
+format:
+  html:
+    toc: true
+---
+
+## Overview
+
+In the capstone project, you'll bring together everything you've learned and apply it to a real analytical project. You can use your own project or an example we provide.
+
+## 🎯 Learning objectives
+
+By the end of this session, you should be able to:
+
+- Apply RAP principles to an existing or new project
+- Conduct and receive peer feedback on your code
+- Plan and prioritise improvements to your analytical pipeline
+- Discuss trade-offs and make decisions about what to refactor and when
+
+## 💼 Your project
+
+### Bring your own
+
+You're welcome to bring an existing analytical project — anything from a one-off analysis to an ongoing pipeline. We'll help you apply RAP principles incrementally.
+
+**What makes a good capstone project:**
+
+- You care about it (it's real work, or similar to real work you do)
+- It's something you'll actually use and maintain after the course
+- It's complex enough to benefit from RAP (not a one-liner, but doesn't need to be huge)
+
+### Use our example
+
+If you don't have a suitable project, we'll provide an example analytical project that you can work through. You'll learn the same principles but on our project instead of yours.
+
+
+## 📖 Before the session
+
+For the capstone, there is no formal pre-learning materials. We'll ask you to complete a short form, reflecting on your capstone project. We'll ask you about:
+
+- What was the problem?
+- What RAP techniques did you apply?
+- How has that impacted your work?
+- What are you going to do next?
+
+You can also use time before the session to work on your project. Remember you can always ask for help in the channel.
+
+## 🖥️ During the session
+
+We'll reflect on and share your projects, give feedback, and discuss next steps. This is as much about learning your own development process as it is about the code itself.

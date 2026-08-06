@@ -1,0 +1,28 @@
+---
+title: "🛡️ Reliable"
+subtitle: "Build trust in your code through testing, automation, and reproducible environments"
+format:
+  html:
+    toc: true
+---
+
+## Overview
+
+Making code _reliable_ means ensuring it does what you think it does, and that it keeps doing so even as your data or dependencies change. In this session, you'll learn to test your code, automate quality checks, and set up your environment so anyone can reproduce your results.
+
+## 🎯 Learning objectives
+
+By the end of this session, you should be able to:
+
+- Write simple unit tests and understand why testing matters
+- Set up automated testing with CI/CD
+- Use virtual environments like {renv} and 
+- Handle environment variables and secrets securely
+
+## 📖 Before the session
+
+Please complete the [pre-learning materials](pre-learning.qmd). These typically take 60 – 90 minutes and are essential for getting the most out of the session.
+
+## 🖥️ During the session
+
+[View the slides →](slides.qmd)

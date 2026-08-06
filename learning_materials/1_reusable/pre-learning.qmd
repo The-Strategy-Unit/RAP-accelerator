@@ -1,0 +1,23 @@
+---
+title: "Reusable"
+subtitle: "Pre-learning materials"
+format:
+  html:
+    toc: true
+---
+
+## Questions to answer
+
+Think about these before the session 
+
+- What code have you written that would be useful to reuse? How would you refactor it into a function?
+- Does your team have a style guide (officially or informally)? Do people stick to it?
+- Do you share functions across projects or teams? If so, how are they shared?
+- What does "self-documenting code" mean to you?
+
+## Learning materials
+
+
+Exercise:
+
+Here is an example of a R / Python code snippet. What could we do to improve it?

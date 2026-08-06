@@ -1,13 +1,52 @@
 ---
-title: "RAP Flipped Classroom"
 format:
   html:
-    toc: true
+    toc: false
 ---
 
-This is the website for the Reproducible Analytical Pipelines (RAP) Flipped Classroom workshops, running from October-December 2026.
-These workshops are funded by the Strategic Commissioning Intelligence Centre (SCIC).
+:::: {.card-row}
 
-Information about this project will be hosted here.
+::: {.card-box}
 
-NOTE: THIS IS STILL DRAFT AND A WORK IN PROGRESS
+## ℹ️ About RAP Accelerator
+
+Learn more about [how the accelerator programme works](about/about.qmd), see if this programme is [aimed at you](about/learner-personas.qmd), and check you meet [the prerequisites](about/prerequisites.qmd).
+:::
+
+::: {.card-box}
+## 📋 Practical Information
+
+ Once you're enrolled, you can find practical information including the [schedule](practical_information/schedule.qmd), getting your [laptop set-up](practical_information/set-up.qmd) and information about [your tutors](practical_information/tutors.qmd).
+:::
+
+::: {.card-box}
+## 📚 Learning Materials
+
+All our [learning materials](learning_materials/index.qmd) are available online to explore at your own pace. 
+
+:::
+
+::::
+
+<style>
+.card-row {
+  display: flex;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+.card-box {
+  flex: 1;
+  padding: 1.5rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: rgba(var(--bs-secondary-rgb), 0.08);
+}
+
+.card-box h2 {
+  margin-top: 0;
+}
+
+</style>
+
+
+Welcome to the Reproducible Analytical Pipelines (RAP) Accelerator. A programme for ICB analysts starting their RAP journey, building the foundational skills to apply these approaches in practice. This programme runs from October – December 2026 and is funded by the Strategic Commissioning Intelligence Centre (SCIC).
