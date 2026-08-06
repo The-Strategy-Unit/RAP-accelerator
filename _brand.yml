@@ -7,7 +7,9 @@ meta:
 
 # adjust these paths if logos are placed elsewhere
 logo:
-  small: images/logo_black_favicon.png
+  small:
+    light: images/logo_black_medium.png
+    dark: images/logo_yellow_medium.png
   medium:
     light: images/logo_black_medium.png
     dark: images/logo_yellow_medium.png
@@ -22,10 +24,12 @@ color:
     su-yellow: "#f9bd07"    
     su-white: "#f5f4f3"
     su-blue: "#5881c1"    
+  # Brand semantic colours must be single palette references for compatibility
+  # across Quarto versions. Dark-mode values are defined in the stylesheet.
   foreground: su-charcoal
   background: su-white
   primary: su-yellow
-  secondary: dark-grey   
+  secondary: dark-grey
   info: su-blue
 
 typography:

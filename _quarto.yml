@@ -11,9 +11,12 @@ website:
 format:
   html:
     theme:
-      - cosmo
-      - brand
-    css: _SUBrand.StyleSheet.css
+      light:
+        - brand
+      dark:
+        - brand
+    css:
+      - _SUBrand.StyleSheet.css
     toc: true
 
 
