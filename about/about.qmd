@@ -27,7 +27,12 @@ It runs as a _flipped classroom_. You'll work through learning material at your 
 | 🛡️ [Reliable](../learning_materials/4_reliable/index.qmd) | Build trust in your code through testing, automation, and reproducible environments|
 | 🏆 [Capstone](../learning_materials/5_capstone/index.qmd) | Put it all into practice on a real project with feedback and support |
 
-Each session includes self-directed pre-work (reading, small exercises) and a one hour contact session with the tutors. We'll also have a place for attendees to ask questions to tutors or chat with peers running throughout the ten weeks.
+Each session includes:
+
+- 60-90 mins of self-directed pre-work (reading, small exercises)
+- 60 mins contact session with the tutors
+
+We'll also have an online community for attendees to ask questions to tutors or chat with peers running throughout the ten weeks.
 
 We won't cover:
 
