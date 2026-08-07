@@ -2,17 +2,16 @@
 title: "Learning materials"
 format:
   html:
-    toc: true
+    toc: false
 ---
 
-## Session 1: Mapping and modularity
-
-Brief introduction to the topic and what will be covered
-
-[Pre-session learning](1_mapping-and-modularity/pre-learning.qmd)
-
-[Workshop slides](1_mapping-and-modularity/slides.qmd)
-
-## Session 2: etc
+Welcome to the learning materials for the RAP Accelerator. Each session has pre-learning (required self-study before the session) and slides (used during the 1-hour session). You'll apply what you learn to your own project in the [capstone](5_capstone/index.qmd).
 
 
+| Session | Focus | Objectives | Pre-learning | Slides |
+|---|---|---|---|---|
+| ♻️ Reusable | Write modular, well-documented code that's easy for you and others to understand and reuse | [Objectives](1_reusable/index.qmd) | [Pre-learning](1_reusable/pre-learning.qmd) | [Slides](1_reusable/slides.qmd) |
+| 📖 Visible | Make your projects easy to find and use with clear READMEs, licenses, and documentation | [Objectives](2_visible/index.qmd) | [Pre-learning](2_visible/pre-learning.qmd) | [Slides](2_visible/slides.qmd) |
+| 👥 Collaborative | Work effectively with others using Git, code review, and good communication habits | [Objectives](3_collaborative/index.qmd) | [Pre-learning](3_collaborative/pre-learning.qmd) | [Slides](3_collaborative/slides.qmd) |
+| 🛡️ Reliable | Build trust in your code through testing, automation, and reproducible environments | [Objectives](4_reliable/index.qmd) | [Pre-learning](4_reliable/pre-learning.qmd) | [Slides](4_reliable/slides.qmd) |
+| 🏆 Capstone | Put it all into practice on a real project with feedback and support | [Objectives](5_capstone/index.qmd) | - | - |

@@ -1,0 +1,11 @@
+---
+title: "Learner Personas"
+format:
+  html:
+    toc: true
+---
+
+
+See [Greg's page on learner personas](https://third-bit.com/ideas/learner-personas/) for examples
+
+- one R, one python?

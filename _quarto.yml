@@ -2,18 +2,56 @@ project:
   type: website
 
 website:
-  title: "RAP Flipped Classroom"
+  title: "RAP Accelerator 🚀"
   navbar:
-    left:
-      - about.qmd
-      - learning_materials/index.qmd
+     left:
+      - text: "ℹ️ About"
+        menu:
+          - text: "What is the RAP accelerator?"
+            file: about/about.qmd
+          - text: "Learner Personas"
+            file: about/learner-personas.qmd
+          - text: "Prerequisites"
+            file: about/prerequisites.qmd
+      - text: "📋 Practical Information"
+        menu:
+          - text: "📅 Schedule"
+            file: practical_information/schedule.qmd
+          - text: "💻 Set up"
+            file: practical_information/set-up.qmd
+          - text: "🧑‍🏫 Your tutors"
+            file: practical_information/tutors.qmd
+      - text: "📚 Learning Materials"
+        menu:
+          - text: "Overview"
+            file: learning_materials/index.qmd
+          - text: "♻️ Reusable"
+            file: learning_materials/1_reusable/index.qmd
+          - text: "📖 Visible"
+            file: learning_materials/2_visible/index.qmd
+          - text: "👥 Collaborative"
+            file: learning_materials/3_collaborative/index.qmd
+          - text: "🛡️ Reliable"
+            file: learning_materials/4_reliable/index.qmd
+          - text: "🏆 Capstone"
+            file: learning_materials/5_capstone/index.qmd
+      
+  announcement:
+    icon: exclamation-triangle-fill
+    dismissable: true
+    content: "Site in progress"
+    type: secondary
+    position: below-navbar
 
 format:
   html:
     theme:
-      - cosmo
-      - brand
-    css: _SUBrand.StyleSheet.css
+      light:
+        - brand
+      dark:
+        - brand
+    css:
+      - _SUBrand.StyleSheet.css
     toc: true
 
 

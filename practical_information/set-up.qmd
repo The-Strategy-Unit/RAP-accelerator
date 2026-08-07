@@ -1,0 +1,32 @@
+---
+title: "Getting set up"
+format:
+  html:
+    toc: false
+---
+
+Before the first session, install:
+
+- R or Python — [Install R](https://cran.r-project.org/) or [Install Python](https://www.python.org/downloads/)
+- Git — [Install Git](https://git-scm.com/)
+- A code editor (choose one):
+  - [RStudio](https://posit.co/products/open-source/rstudio/) — great for R
+  - [VS Code](https://code.visualstudio.com/) — great for Python or R
+  - [Positron](https://positron.posit.co/) — great for Python or R
+
+You'll also need to [create a GitHub account](https://github.com) before session 3.
+
+Packages: TBD
+
+## ☁️ Cloud environment
+
+If you have issues using R or Python on your work computer, we'll set up a Binder as a backup. Binder is a free online environment where you can run code without installing anything. However, there are some limitations.
+
+- Changes aren't saved between sessions
+- Takes time to load
+- Limited for later work on your own project
+
+You'll get much more from this programme if you're able to work on your own machine.
+
+
+

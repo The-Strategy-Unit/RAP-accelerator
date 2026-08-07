@@ -1,0 +1,31 @@
+---
+title: "📖 Visible"
+subtitle: "Make your projects easy to find and use with clear READMEs, licenses, and documentation"
+format:
+  html:
+    toc: true
+---
+
+## Overview
+
+Once you're tracking your code with version control, the next step is making it **visible** and **usable** to others (and your future self). In this session, you'll learn how to document your project, license your code, and share it in ways that encourage collaboration and reuse.
+
+## 🎯 Learning objectives
+
+By the end of this session, you should be able to:
+
+- Write a clear, informative README
+- Choose an appropriate license for your code
+- Create vignettes or examples that demonstrate how to use your code
+- Set up basic project documentation
+- Understand open source conventions and tools
+- Make your code and analysis discoverable to others
+
+## 📖 Before the session
+
+Please complete the [pre-learning materials](pre-learning.qmd). These typically take 60 – 90 minutes and are essential for getting the most out of the session.
+
+## 🖥️ During the session
+
+[View the slides →](slides.qmd)
+

@@ -1,0 +1,17 @@
+---
+title: "Reliable"
+subtitle: "Pre-learning materials"
+format:
+  html:
+    toc: true
+---
+
+## Questions to answer
+
+Think about these before the session 
+
+- Have you ever had code work on your machine but fail when someone else runs it? What went wrong?
+- What are you most afraid will break in your code?
+- How would you know if your analysis is correct?
+
+## Learning materials
