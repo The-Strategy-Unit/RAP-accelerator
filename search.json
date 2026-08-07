@@ -2,78 +2,393 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "RAP Flipped Classroom",
+    "title": "RAP Accelerator 🚀",
     "section": "",
-    "text": "This is the website for the Reproducible Analytical Pipelines (RAP) Flipped Classroom workshops, running from October-December 2026. These workshops are funded by the Strategic Commissioning Intelligence Centre (SCIC).\nInformation about this project will be hosted here.\nNOTE: THIS IS STILL DRAFT AND A WORK IN PROGRESS"
+    "text": "Learn more about how the accelerator programme works, see if this programme is aimed at you, and check you meet the prerequisites.\n\n\n\nOnce you’re enrolled, you can find practical information including the schedule, getting your laptop set-up and information about your tutors.\n\n\n\nAll our learning materials are available online to explore at your own pace.\nWelcome to the Reproducible Analytical Pipelines (RAP) Accelerator. A programme for ICB analysts starting their RAP journey, building the foundational skills to apply these approaches in practice. This programme runs from October – December 2026 and is funded by the Strategic Commissioning Intelligence Centre (SCIC)."
   },
   {
-    "objectID": "learning_materials/1_mapping-and-modularity/pre-learning.html#questions-to-answer",
-    "href": "learning_materials/1_mapping-and-modularity/pre-learning.html#questions-to-answer",
-    "title": "Mapping and Modularity",
-    "section": "Questions to answer",
-    "text": "Questions to answer\nHelping people prepare for the questions for discussion during the workshop sessions"
+    "objectID": "index.html#ℹ-about-rap-accelerator",
+    "href": "index.html#ℹ-about-rap-accelerator",
+    "title": "RAP Accelerator 🚀",
+    "section": "",
+    "text": "Learn more about how the accelerator programme works, see if this programme is aimed at you, and check you meet the prerequisites."
   },
   {
-    "objectID": "learning_materials/1_mapping-and-modularity/pre-learning.html#learning-materials",
-    "href": "learning_materials/1_mapping-and-modularity/pre-learning.html#learning-materials",
-    "title": "Mapping and Modularity",
+    "objectID": "index.html#practical-information",
+    "href": "index.html#practical-information",
+    "title": "RAP Accelerator 🚀",
+    "section": "",
+    "text": "Once you’re enrolled, you can find practical information including the schedule, getting your laptop set-up and information about your tutors."
+  },
+  {
+    "objectID": "index.html#learning-materials",
+    "href": "index.html#learning-materials",
+    "title": "RAP Accelerator 🚀",
+    "section": "",
+    "text": "All our learning materials are available online to explore at your own pace."
+  },
+  {
+    "objectID": "practical_information/schedule.html",
+    "href": "practical_information/schedule.html",
+    "title": "Schedule",
+    "section": "",
+    "text": "The programme runs over ten weeks. Each module is offered at four different sessions. You’ll be assigned one of the listed sessions for each module. All four sessions cover identical content.\n\n\n\nModule\nTutor\nSession 1\nSession 2\nSession 3\nSession 4\n\n\n\n\n♻️ Reusable\nRhian\nWed 14 Oct, 2:00pm\nThu 15 Oct, 2:00pm\nWed 21 Oct, 10:00am\nThu 22 Oct, 10:00am\n\n\n📖 Visible\nYiWen\nWed 28 Oct, 2:00pm\nThu 29 Oct, 2:00pm\nWed 4 Nov, 10:00am\nThu 5 Nov, 10:00am\n\n\n👥 Collaborative\nYiWen\nWed 11 Nov, 2:00pm\nThu 12 Nov, 2:00pm\nWed 18 Nov, 10:00am\nThu 19 Nov, 10:00am\n\n\n🛡️ Reliable\nRhian\nWed 25 Nov, 2:00pm\nThu 26 Nov, 2:00pm\nWed 2 Dec, 10:00am\nThu 3 Dec, 10:00am\n\n\n🏆 Capstone\nRhian & YiWen\nWed 9 Dec, 2:00pm\nThu 10 Dec, 2:00pm\nWed 16 Dec, 10:00am\nThu 17 Dec, 10:00am"
+  },
+  {
+    "objectID": "about/prerequisites.html",
+    "href": "about/prerequisites.html",
+    "title": "Prerequisites & expectations",
+    "section": "",
+    "text": "You should be comfortable with the basics of R or Python:\n\nWriting simple functions\nWorking with variables\nUsing packages/libraries (installing and importing)"
+  },
+  {
+    "objectID": "about/prerequisites.html#what-you-need-to-know",
+    "href": "about/prerequisites.html#what-you-need-to-know",
+    "title": "Prerequisites & expectations",
+    "section": "",
+    "text": "You should be comfortable with the basics of R or Python:\n\nWriting simple functions\nWorking with variables\nUsing packages/libraries (installing and importing)"
+  },
+  {
+    "objectID": "about/prerequisites.html#during-the-sessions",
+    "href": "about/prerequisites.html#during-the-sessions",
+    "title": "Prerequisites & expectations",
+    "section": "💬 During the sessions",
+    "text": "💬 During the sessions\nAs the RAP Accelerator is run in a flipped classroom style, the sessions are highly engaging — don’t expect to just sit back and watch! To get the most out of the programme, here’s what we ask of you:\n\nComplete the pre-work: 60–90 minutes before each session. Essential, not optional.\nCamera on: we’ll work in small groups, and we learn best when we can see each other.\nEngage actively: ask questions, work through examples, share what you’re learning.\nBring a real project: the capstone project applies what you’ve learnt to something that matters to you."
+  },
+  {
+    "objectID": "about/prerequisites.html#need-a-quick-refresher",
+    "href": "about/prerequisites.html#need-a-quick-refresher",
+    "title": "Prerequisites & expectations",
+    "section": "🧑‍🏫 Need a quick refresher?",
+    "text": "🧑‍🏫 Need a quick refresher?\nIf you want to take part in the RAP accelerator but don’t yet meet the prerequisites, there is a chance for you to upskill before October.\nThe NHS Open Analytics community is running an Introduction to R and RStudio course in September. Attending this will ensure you meet the prerequisites. You can sign up online. On the sign-up form, please write that you heard about the workshop through SCIC."
+  },
+  {
+    "objectID": "about/about.html",
+    "href": "about/about.html",
+    "title": "About the programme",
+    "section": "",
+    "text": "RAP (Reproducible Analytical Pipelines) are a set of tools, principles, and techniques that enable analysts to create analytical processes that are automated, transparent, quality assured and reusable. This has the potential to increase efficiency and quality of analytical work across the healthcare system.\nThe Goldacre review recommended RAP as the minimum standard for academic and NHS data analysis."
+  },
+  {
+    "objectID": "about/about.html#what-is-rap",
+    "href": "about/about.html#what-is-rap",
+    "title": "About the programme",
+    "section": "",
+    "text": "RAP (Reproducible Analytical Pipelines) are a set of tools, principles, and techniques that enable analysts to create analytical processes that are automated, transparent, quality assured and reusable. This has the potential to increase efficiency and quality of analytical work across the healthcare system.\nThe Goldacre review recommended RAP as the minimum standard for academic and NHS data analysis."
+  },
+  {
+    "objectID": "about/about.html#what-is-the-rap-accelerator",
+    "href": "about/about.html#what-is-the-rap-accelerator",
+    "title": "About the programme",
+    "section": "🚀 What is the RAP Accelerator?",
+    "text": "🚀 What is the RAP Accelerator?\nA programme for ICB analysts starting their RAP journey, building the foundational skills to apply these approaches in practice. Some coding experience is expected (see prerequisites), along with enthusiasm to learn.\nIt runs as a flipped classroom. You’ll work through learning material at your own pace before each session, then use session time with tutors for discussion, problem-solving, and going deeper."
+  },
+  {
+    "objectID": "about/about.html#course-outline",
+    "href": "about/about.html#course-outline",
+    "title": "About the programme",
+    "section": "📖 Course outline",
+    "text": "📖 Course outline\n\n\n\nTheme\nTopics\n\n\n\n\n\n♻️ Reusable\nWrite modular, well-documented code that’s easy for you and others to understand and reuse\n\n\n\n📖 Visible\nMake your projects easy to find and use with clear READMEs, licenses, and documentation\n\n\n\n👥 Collaborative\nWork effectively with others using Git, code review, and good communication habits\n\n\n\n🛡️ Reliable\nBuild trust in your code through testing, automation, and reproducible environments\n\n\n\n🏆 Capstone\nPut it all into practice on a real project with feedback and support\n\n\n\n\nEach session includes:\n\n60-90 mins of self-directed pre-work (reading, small exercises)\n60 mins contact session with the tutors\n\nWe’ll also have an online community for attendees to ask questions to tutors or chat with peers running throughout the ten weeks.\nWe won’t cover:\n\nBasic R or Python programming (We expect you to already know a little programming)\nPlotting and visualisation\nModelling and machine learning\nUsing LLMs\nBuilding interactive web apps"
+  },
+  {
+    "objectID": "learning_materials/1_reusable/index.html",
+    "href": "learning_materials/1_reusable/index.html",
+    "title": "♻️ Reusable",
+    "section": "",
+    "text": "Writing code that’s easy to understand and reuse, by others and by yourself months later is at the heart of RAP.\nIn this session, you’ll learn to write modular functions, document your functions, and follow consistent style conventions that make your work easy to read."
+  },
+  {
+    "objectID": "learning_materials/1_reusable/index.html#overview",
+    "href": "learning_materials/1_reusable/index.html#overview",
+    "title": "♻️ Reusable",
+    "section": "",
+    "text": "Writing code that’s easy to understand and reuse, by others and by yourself months later is at the heart of RAP.\nIn this session, you’ll learn to write modular functions, document your functions, and follow consistent style conventions that make your work easy to read."
+  },
+  {
+    "objectID": "learning_materials/1_reusable/index.html#learning-objectives",
+    "href": "learning_materials/1_reusable/index.html#learning-objectives",
+    "title": "♻️ Reusable",
+    "section": "🎯 Learning objectives",
+    "text": "🎯 Learning objectives\nBy the end of this session, you should be able to:\n\nWrite simple functions\nWrite clear function documentation\nUse comments effectively (and know when NOT to comment)\nFollow a consistent code style and use automated tools to enforce it\nRecognize and refactor repeated code into reusable pieces\nStructure your project files for clarity and maintainability"
+  },
+  {
+    "objectID": "learning_materials/1_reusable/index.html#before-the-session",
+    "href": "learning_materials/1_reusable/index.html#before-the-session",
+    "title": "♻️ Reusable",
+    "section": "📖 Before the session",
+    "text": "📖 Before the session\nPlease complete the pre-learning materials. These typically take 60 – 90 minutes and are essential for getting the most out of the session."
+  },
+  {
+    "objectID": "learning_materials/1_reusable/index.html#during-the-session",
+    "href": "learning_materials/1_reusable/index.html#during-the-session",
+    "title": "♻️ Reusable",
+    "section": "🖥️ During the session",
+    "text": "🖥️ During the session\nView the slides →"
+  },
+  {
+    "objectID": "learning_materials/2_visible/pre-learning.html",
+    "href": "learning_materials/2_visible/pre-learning.html",
+    "title": "Visible",
+    "section": "",
+    "text": "Think about these before the session\n\nHave you read a README that was particularly helpful (or unhelpful)? What made the difference?\nWhy might a license matter for analytical code?"
+  },
+  {
+    "objectID": "learning_materials/2_visible/pre-learning.html#questions-to-answer",
+    "href": "learning_materials/2_visible/pre-learning.html#questions-to-answer",
+    "title": "Visible",
+    "section": "",
+    "text": "Think about these before the session\n\nHave you read a README that was particularly helpful (or unhelpful)? What made the difference?\nWhy might a license matter for analytical code?"
+  },
+  {
+    "objectID": "learning_materials/2_visible/pre-learning.html#learning-materials",
+    "href": "learning_materials/2_visible/pre-learning.html#learning-materials",
+    "title": "Visible",
     "section": "Learning materials",
-    "text": "Learning materials\nLinks to learning materials Give estimated time to complete for each one"
+    "text": "Learning materials"
+  },
+  {
+    "objectID": "learning_materials/4_reliable/index.html",
+    "href": "learning_materials/4_reliable/index.html",
+    "title": "🛡️ Reliable",
+    "section": "",
+    "text": "Making code reliable means ensuring it does what you think it does, and that it keeps doing so even as your data or dependencies change. In this session, you’ll learn to test your code, automate quality checks, and set up your environment so anyone can reproduce your results."
+  },
+  {
+    "objectID": "learning_materials/4_reliable/index.html#overview",
+    "href": "learning_materials/4_reliable/index.html#overview",
+    "title": "🛡️ Reliable",
+    "section": "",
+    "text": "Making code reliable means ensuring it does what you think it does, and that it keeps doing so even as your data or dependencies change. In this session, you’ll learn to test your code, automate quality checks, and set up your environment so anyone can reproduce your results."
+  },
+  {
+    "objectID": "learning_materials/4_reliable/index.html#learning-objectives",
+    "href": "learning_materials/4_reliable/index.html#learning-objectives",
+    "title": "🛡️ Reliable",
+    "section": "🎯 Learning objectives",
+    "text": "🎯 Learning objectives\nBy the end of this session, you should be able to:\n\nWrite simple unit tests and understand why testing matters\nSet up automated testing with CI/CD\nUse virtual environments like {renv} and\nHandle environment variables and secrets securely"
+  },
+  {
+    "objectID": "learning_materials/4_reliable/index.html#before-the-session",
+    "href": "learning_materials/4_reliable/index.html#before-the-session",
+    "title": "🛡️ Reliable",
+    "section": "📖 Before the session",
+    "text": "📖 Before the session\nPlease complete the pre-learning materials. These typically take 60 – 90 minutes and are essential for getting the most out of the session."
+  },
+  {
+    "objectID": "learning_materials/4_reliable/index.html#during-the-session",
+    "href": "learning_materials/4_reliable/index.html#during-the-session",
+    "title": "🛡️ Reliable",
+    "section": "🖥️ During the session",
+    "text": "🖥️ During the session\nView the slides →"
+  },
+  {
+    "objectID": "learning_materials/3_collaborative/pre-learning.html",
+    "href": "learning_materials/3_collaborative/pre-learning.html",
+    "title": "Collaborative",
+    "section": "",
+    "text": "Think about these before the session\n\nWhat problems have you faced when working on code with others (or on multiple machines)?\nHave you used version control before? What was your experience?"
+  },
+  {
+    "objectID": "learning_materials/3_collaborative/pre-learning.html#questions-to-answer",
+    "href": "learning_materials/3_collaborative/pre-learning.html#questions-to-answer",
+    "title": "Collaborative",
+    "section": "",
+    "text": "Think about these before the session\n\nWhat problems have you faced when working on code with others (or on multiple machines)?\nHave you used version control before? What was your experience?"
+  },
+  {
+    "objectID": "learning_materials/3_collaborative/pre-learning.html#learning-materials",
+    "href": "learning_materials/3_collaborative/pre-learning.html#learning-materials",
+    "title": "Collaborative",
+    "section": "Learning materials",
+    "text": "Learning materials"
+  },
+  {
+    "objectID": "learning_materials/5_capstone/index.html",
+    "href": "learning_materials/5_capstone/index.html",
+    "title": "🏆 Capstone",
+    "section": "",
+    "text": "In the capstone project, you’ll bring together everything you’ve learned and apply it to a real analytical project. You can use your own project or an example we provide."
+  },
+  {
+    "objectID": "learning_materials/5_capstone/index.html#overview",
+    "href": "learning_materials/5_capstone/index.html#overview",
+    "title": "🏆 Capstone",
+    "section": "",
+    "text": "In the capstone project, you’ll bring together everything you’ve learned and apply it to a real analytical project. You can use your own project or an example we provide."
+  },
+  {
+    "objectID": "learning_materials/5_capstone/index.html#learning-objectives",
+    "href": "learning_materials/5_capstone/index.html#learning-objectives",
+    "title": "🏆 Capstone",
+    "section": "🎯 Learning objectives",
+    "text": "🎯 Learning objectives\nBy the end of this session, you should be able to:\n\nApply RAP principles to an existing or new project\nConduct and receive peer feedback on your code\nPlan and prioritise improvements to your analytical pipeline\nDiscuss trade-offs and make decisions about what to refactor and when"
+  },
+  {
+    "objectID": "learning_materials/5_capstone/index.html#your-project",
+    "href": "learning_materials/5_capstone/index.html#your-project",
+    "title": "🏆 Capstone",
+    "section": "💼 Your project",
+    "text": "💼 Your project\n\nBring your own\nYou’re welcome to bring an existing analytical project — anything from a one-off analysis to an ongoing pipeline. We’ll help you apply RAP principles incrementally.\nWhat makes a good capstone project:\n\nYou care about it (it’s real work, or similar to real work you do)\nIt’s something you’ll actually use and maintain after the course\nIt’s complex enough to benefit from RAP (not a one-liner, but doesn’t need to be huge)\n\n\n\nUse our example\nIf you don’t have a suitable project, we’ll provide an example analytical project that you can work through. You’ll learn the same principles but on our project instead of yours."
+  },
+  {
+    "objectID": "learning_materials/5_capstone/index.html#before-the-session",
+    "href": "learning_materials/5_capstone/index.html#before-the-session",
+    "title": "🏆 Capstone",
+    "section": "📖 Before the session",
+    "text": "📖 Before the session\nFor the capstone, there are no formal pre-learning materials. We’ll ask you to complete a short form, reflecting on your capstone project. We’ll ask you about:\n\nWhat was the problem?\nWhat RAP techniques did you apply?\nHow has that impacted your work?\nWhat are you going to do next?\n\nYou can also use time before the session to work on your project. Remember you can always ask for help in the channel."
+  },
+  {
+    "objectID": "learning_materials/5_capstone/index.html#during-the-session",
+    "href": "learning_materials/5_capstone/index.html#during-the-session",
+    "title": "🏆 Capstone",
+    "section": "🖥️ During the session",
+    "text": "🖥️ During the session\nWe’ll reflect on and share your projects, give feedback, and discuss next steps. This is as much about learning your own development process as it is about the code itself."
+  },
+  {
+    "objectID": "learning_materials/3_collaborative/index.html",
+    "href": "learning_materials/3_collaborative/index.html",
+    "title": "👥 Collaborative",
+    "section": "",
+    "text": "In this session, you’ll learn the fundamentals of version control with Git and GitHub — the tools that let teams collaborate safely on code, track changes, and avoid losing work to a corrupted file or accidental overwrite.\nYou’ll also explore peer review and pair programming, and learn how to ask for help effectively when you get stuck."
+  },
+  {
+    "objectID": "learning_materials/3_collaborative/index.html#overview",
+    "href": "learning_materials/3_collaborative/index.html#overview",
+    "title": "👥 Collaborative",
+    "section": "",
+    "text": "In this session, you’ll learn the fundamentals of version control with Git and GitHub — the tools that let teams collaborate safely on code, track changes, and avoid losing work to a corrupted file or accidental overwrite.\nYou’ll also explore peer review and pair programming, and learn how to ask for help effectively when you get stuck."
+  },
+  {
+    "objectID": "learning_materials/3_collaborative/index.html#learning-objectives",
+    "href": "learning_materials/3_collaborative/index.html#learning-objectives",
+    "title": "👥 Collaborative",
+    "section": "🎯 Learning objectives",
+    "text": "🎯 Learning objectives\nBy the end of this session, you should be able to:\n\nCreate and manage a repository on GitHub\nCommit changes with clear, informative messages\nPush and pull code from a remote repository\nConduct a peer review and give constructive feedback"
+  },
+  {
+    "objectID": "learning_materials/3_collaborative/index.html#before-the-session",
+    "href": "learning_materials/3_collaborative/index.html#before-the-session",
+    "title": "👥 Collaborative",
+    "section": "📖 Before the session",
+    "text": "📖 Before the session\nPlease complete the pre-learning materials. These typically take 60 – 90 minutes and are essential for getting the most out of the session."
+  },
+  {
+    "objectID": "learning_materials/3_collaborative/index.html#during-the-session",
+    "href": "learning_materials/3_collaborative/index.html#during-the-session",
+    "title": "👥 Collaborative",
+    "section": "🖥️ During the session",
+    "text": "🖥️ During the session\nView the slides →"
+  },
+  {
+    "objectID": "learning_materials/4_reliable/pre-learning.html",
+    "href": "learning_materials/4_reliable/pre-learning.html",
+    "title": "Reliable",
+    "section": "",
+    "text": "Think about these before the session\n\nHave you ever had code work on your machine but fail when someone else runs it? What went wrong?\nWhat are you most afraid will break in your code?\nHow would you know if your analysis is correct?"
+  },
+  {
+    "objectID": "learning_materials/4_reliable/pre-learning.html#questions-to-answer",
+    "href": "learning_materials/4_reliable/pre-learning.html#questions-to-answer",
+    "title": "Reliable",
+    "section": "",
+    "text": "Think about these before the session\n\nHave you ever had code work on your machine but fail when someone else runs it? What went wrong?\nWhat are you most afraid will break in your code?\nHow would you know if your analysis is correct?"
+  },
+  {
+    "objectID": "learning_materials/4_reliable/pre-learning.html#learning-materials",
+    "href": "learning_materials/4_reliable/pre-learning.html#learning-materials",
+    "title": "Reliable",
+    "section": "Learning materials",
+    "text": "Learning materials"
+  },
+  {
+    "objectID": "learning_materials/2_visible/index.html",
+    "href": "learning_materials/2_visible/index.html",
+    "title": "📖 Visible",
+    "section": "",
+    "text": "Once you’re tracking your code with version control, the next step is making it visible and usable to others (and your future self). In this session, you’ll learn how to document your project, license your code, and share it in ways that encourage collaboration and reuse."
+  },
+  {
+    "objectID": "learning_materials/2_visible/index.html#overview",
+    "href": "learning_materials/2_visible/index.html#overview",
+    "title": "📖 Visible",
+    "section": "",
+    "text": "Once you’re tracking your code with version control, the next step is making it visible and usable to others (and your future self). In this session, you’ll learn how to document your project, license your code, and share it in ways that encourage collaboration and reuse."
+  },
+  {
+    "objectID": "learning_materials/2_visible/index.html#learning-objectives",
+    "href": "learning_materials/2_visible/index.html#learning-objectives",
+    "title": "📖 Visible",
+    "section": "🎯 Learning objectives",
+    "text": "🎯 Learning objectives\nBy the end of this session, you should be able to:\n\nWrite a clear, informative README\nChoose an appropriate license for your code\nCreate vignettes or examples that demonstrate how to use your code\nSet up basic project documentation\nUnderstand open source conventions and tools\nMake your code and analysis discoverable to others"
+  },
+  {
+    "objectID": "learning_materials/2_visible/index.html#before-the-session",
+    "href": "learning_materials/2_visible/index.html#before-the-session",
+    "title": "📖 Visible",
+    "section": "📖 Before the session",
+    "text": "📖 Before the session\nPlease complete the pre-learning materials. These typically take 60 – 90 minutes and are essential for getting the most out of the session."
+  },
+  {
+    "objectID": "learning_materials/2_visible/index.html#during-the-session",
+    "href": "learning_materials/2_visible/index.html#during-the-session",
+    "title": "📖 Visible",
+    "section": "🖥️ During the session",
+    "text": "🖥️ During the session\nView the slides →"
+  },
+  {
+    "objectID": "learning_materials/1_reusable/pre-learning.html",
+    "href": "learning_materials/1_reusable/pre-learning.html",
+    "title": "Reusable",
+    "section": "",
+    "text": "Think about these before the session\n\nWhat code have you written that would be useful to reuse? How would you refactor it into a function?\nDoes your team have a style guide (officially or informally)? Do people stick to it?\nDo you share functions across projects or teams? If so, how are they shared?\nWhat does “self-documenting code” mean to you?"
+  },
+  {
+    "objectID": "learning_materials/1_reusable/pre-learning.html#questions-to-answer",
+    "href": "learning_materials/1_reusable/pre-learning.html#questions-to-answer",
+    "title": "Reusable",
+    "section": "",
+    "text": "Think about these before the session\n\nWhat code have you written that would be useful to reuse? How would you refactor it into a function?\nDoes your team have a style guide (officially or informally)? Do people stick to it?\nDo you share functions across projects or teams? If so, how are they shared?\nWhat does “self-documenting code” mean to you?"
+  },
+  {
+    "objectID": "learning_materials/1_reusable/pre-learning.html#learning-materials",
+    "href": "learning_materials/1_reusable/pre-learning.html#learning-materials",
+    "title": "Reusable",
+    "section": "Learning materials",
+    "text": "Learning materials\nExercise:\nHere is an example of a R / Python code snippet. What could we do to improve it?"
   },
   {
     "objectID": "learning_materials/index.html",
     "href": "learning_materials/index.html",
     "title": "Learning materials",
     "section": "",
-    "text": "Brief introduction to the topic and what will be covered\nPre-session learning\nWorkshop slides"
+    "text": "Welcome to the learning materials for the RAP Accelerator. Each session has pre-learning (required self-study before the session) and slides (used during the 1-hour session). You’ll apply what you learn to your own project in the capstone.\n\n\n\nSession\nFocus\nObjectives\nPre-learning\nSlides\n\n\n\n\n♻️ Reusable\nWrite modular, well-documented code that’s easy for you and others to understand and reuse\nObjectives\nPre-learning\nSlides\n\n\n📖 Visible\nMake your projects easy to find and use with clear READMEs, licenses, and documentation\nObjectives\nPre-learning\nSlides\n\n\n👥 Collaborative\nWork effectively with others using Git, code review, and good communication habits\nObjectives\nPre-learning\nSlides\n\n\n🛡️ Reliable\nBuild trust in your code through testing, automation, and reproducible environments\nObjectives\nPre-learning\nSlides\n\n\n🏆 Capstone\nPut it all into practice on a real project with feedback and support\nObjectives\n-\n-"
   },
   {
-    "objectID": "learning_materials/index.html#session-1-mapping-and-modularity",
-    "href": "learning_materials/index.html#session-1-mapping-and-modularity",
-    "title": "Learning materials",
+    "objectID": "about/learner-personas.html",
+    "href": "about/learner-personas.html",
+    "title": "Learner Personas",
     "section": "",
-    "text": "Brief introduction to the topic and what will be covered\nPre-session learning\nWorkshop slides"
+    "text": "See Greg’s page on learner personas for examples\n\none R, one python?"
   },
   {
-    "objectID": "learning_materials/index.html#session-2-etc",
-    "href": "learning_materials/index.html#session-2-etc",
-    "title": "Learning materials",
-    "section": "Session 2: etc",
-    "text": "Session 2: etc"
+    "objectID": "practical_information/tutors.html#rhian",
+    "href": "practical_information/tutors.html#rhian",
+    "title": "Tutors",
+    "section": "Rhian",
+    "text": "Rhian"
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
+    "objectID": "practical_information/set-up.html",
+    "href": "practical_information/set-up.html",
+    "title": "Getting set up",
     "section": "",
-    "text": "7 workshops - further details in Workshops section\nVideo goes here?"
+    "text": "Before the first session, install:\nYou’ll also need to create a GitHub account before session 3.\nPackages: TBD"
   },
   {
-    "objectID": "about.html#course-outline",
-    "href": "about.html#course-outline",
-    "title": "About",
-    "section": "",
-    "text": "7 workshops - further details in Workshops section\nVideo goes here?"
-  },
-  {
-    "objectID": "about.html#what-is-a-flipped-classroom",
-    "href": "about.html#what-is-a-flipped-classroom",
-    "title": "About",
-    "section": "What is a flipped classroom?",
-    "text": "What is a flipped classroom?\nFlipped classroom"
-  },
-  {
-    "objectID": "about.html#learning-outcomes",
-    "href": "about.html#learning-outcomes",
-    "title": "About",
-    "section": "Learning outcomes",
-    "text": "Learning outcomes\nOverall learning outcomes - each session / topic should have its own learning outcomes too"
-  },
-  {
-    "objectID": "about.html#prior-knowledge",
-    "href": "about.html#prior-knowledge",
-    "title": "About",
-    "section": "Prior knowledge",
-    "text": "Prior knowledge\nTBC"
+    "objectID": "practical_information/set-up.html#cloud-environment",
+    "href": "practical_information/set-up.html#cloud-environment",
+    "title": "Getting set up",
+    "section": "☁️ Cloud environment",
+    "text": "☁️ Cloud environment\nIf you have issues using R or Python on your work computer, we’ll set up a Binder as a backup. Binder is a free online environment where you can run code without installing anything. However, there are some limitations.\n\nChanges aren’t saved between sessions\nTakes time to load\nLimited for later work on your own project\n\nYou’ll get much more from this programme if you’re able to work on your own machine."
   }
 ]
