@@ -7,7 +7,7 @@ format:
 
 ## 📦 What is RAP?
 
-RAP are a set of tools, principles, and techniques that enable analysts to create analytical processes that are automated, transparent, quality assured and reusable. This has the potential to increase efficiency and quality of analytical work across the healthcare system.
+RAP (Reproducible Analytical Pipelines) are a set of tools, principles, and techniques that enable analysts to create analytical processes that are automated, transparent, quality assured and reusable. This has the potential to increase efficiency and quality of analytical work across the healthcare system.
 
 The [Goldacre review](https://www.gov.uk/government/publications/better-broader-safer-using-health-data-for-research-and-analysis/better-broader-safer-using-health-data-for-research-and-analysis) recommended RAP as the _minimum standard for academic and NHS data analysis_.
 
