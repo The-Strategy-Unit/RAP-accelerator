@@ -38,7 +38,7 @@ If you don't have a suitable project, we'll provide an example analytical projec
 
 ## 📖 Before the session
 
-For the capstone, there is no formal pre-learning materials. We'll ask you to complete a short form, reflecting on your capstone project. We'll ask you about:
+For the capstone, there are no formal pre-learning materials. We'll ask you to complete a short form, reflecting on your capstone project. We'll ask you about:
 
 - What was the problem?
 - What RAP techniques did you apply?
