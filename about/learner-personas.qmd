@@ -5,7 +5,16 @@ format:
     toc: true
 ---
 
+Some examples of the kinds of people that might come on the accelerator, and what they might learn
 
-See [Greg's page on learner personas](https://third-bit.com/ideas/learner-personas/) for examples
+## Riley Reports
 
-- one R, one python?
+* Riley Reports has a lot of experience with performance reports and other forms of regular reporting across a number of NHS contexts.
+* Over time they have developed advanced skills with Excel and PowerQuery to speed up reporting and add depth to analyses done with this data
+* They are now working in an ICB across a range of data with a lot of different types of questions across different datasets
+* Riley feels able to keep up with requests for data processing and analysis but has heard about RAP and wants to know how it could help them
+* In particular Riley thinks that they could learn skills to allow other team members to pick up work while they're off, have more robust and transparent processes for when things go awry, and maybe add a few statistical tools to the toolbox along the way
+
+## Patel Pipeline
+
+
