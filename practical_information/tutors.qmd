@@ -5,6 +5,21 @@ format:
     toc: true
 ---
 
-## YiWen
+## YiWen 
+
+::: {style="float: left; margin: 8px;"}
+![](/images/headshot-yiwen-hon.jpg){width=120}
+:::
+
+YiWen Hon (pronouns: she/her) is a Data Scientist at the Strategy Unit. She has experience developing open source models and data pipelines using Python, with a particular interest in documentation and communication. She also manages the [NHS-OA RAP Code Review Buddies Network](https://github.com/nhs-oa-community/RAP_Drop_In/wiki/Code-Review-Buddies-Network).
+
+
+<br>
 
 ## Rhian
+
+::: {style="float: left; margin: 10px;"}
+![](/images/headshot-rhian-davies.jpg){width=120}
+:::
+
+Rhian Davies (pronouns: she/her) is a Senior Data Scientist at the Strategy Unit. She is an experienced statistician and data science consultant working in public health, specialising in R programming. She is also an active member of the R community (rainbowR, NHS Open Analytics, R-Ladies) and a Statistical Ambassador for the Royal Statistical Society.
