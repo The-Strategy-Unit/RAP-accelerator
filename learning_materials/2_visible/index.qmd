@@ -18,7 +18,6 @@ By the end of this session, you should be able to:
 - Choose an appropriate license for your code
 - Create vignettes or examples that demonstrate how to use your code
 - Set up basic project documentation
-- Understand open source conventions and tools
 - Make your code and analysis discoverable to others
 
 ## 📖 Before the session

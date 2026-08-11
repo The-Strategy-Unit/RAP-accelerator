@@ -10,9 +10,9 @@ format:
 
 Think about these before the session
 
-- Have you read a README that was particularly helpful (or unhelpful)? What made the difference?
+- Have you read a README or other documentation that was particularly helpful (or unhelpful)? What made the difference?
 - Why might a license matter for analytical code?
 
 ## Learning materials
 
-
+🚧 TO FOLLOW - WORK IN PROGRESS 🚧
