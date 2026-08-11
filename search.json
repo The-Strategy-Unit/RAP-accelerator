@@ -368,7 +368,21 @@
     "href": "about/learner-personas.html",
     "title": "Learner Personas",
     "section": "",
-    "text": "See Greg’s page on learner personas for examples\n\none R, one python?"
+    "text": "Some examples of the kinds of people that might come on the accelerator, and what they might learn"
+  },
+  {
+    "objectID": "about/learner-personas.html#riley-reports",
+    "href": "about/learner-personas.html#riley-reports",
+    "title": "Learner Personas",
+    "section": "Riley Reports",
+    "text": "Riley Reports\n\nRiley Reports has a lot of experience with performance reports and other forms of regular reporting across a number of NHS contexts\nOver time they have developed advanced skills with Excel and Power Query to speed up reporting and add depth to analyses done with this data\nThey are now working in an ICB across a range of data with a lot of different types of questions across different datasets\nThey have learned a bit of R and have used it in anger a few times but they have heard about using R with RAP and want to know how it could help them\nIn particular Riley thinks that they could learn skills to allow other team members to pick up work while they’re off, have more robust and transparent processes for when things go awry, and maybe add a few statistical tools to the toolbox along the way"
+  },
+  {
+    "objectID": "about/learner-personas.html#patel-pipeline",
+    "href": "about/learner-personas.html#patel-pipeline",
+    "title": "Learner Personas",
+    "section": "Patel Pipeline",
+    "text": "Patel Pipeline\n\nPatel Pipeline has spent time in industry working on big datasets\nThey have a lot of experience working with SQL and Power Query formula language (M)\nBefore they started with the ICB their team was starting to use Python for data processing and they had started to learn more about using Python for data processing\nAt the moment they are the lead analyst in their area interested in moving data pipelines to Python and have had some early success\nPatel Pipeline heard about RAP at an analyst huddle and thinks that ensuring data pipeline work is transparent, versioned, and robust will help them convince their team leader to encourage more of the team to move towards Python"
   },
   {
     "objectID": "practical_information/tutors.html#rhian",
