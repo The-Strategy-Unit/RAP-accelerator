@@ -130,21 +130,21 @@
     "href": "learning_materials/2_visible/pre-learning.html",
     "title": "Visible",
     "section": "",
-    "text": "Think about these before the session\n\nHave you read a README that was particularly helpful (or unhelpful)? What made the difference?\nWhy might a license matter for analytical code?"
+    "text": "Think about these before the session\n\nHave you read a README or other documentation that was particularly helpful (or unhelpful)? What made the difference?\nWhy might a license matter for analytical code?"
   },
   {
     "objectID": "learning_materials/2_visible/pre-learning.html#questions-to-answer",
     "href": "learning_materials/2_visible/pre-learning.html#questions-to-answer",
     "title": "Visible",
     "section": "",
-    "text": "Think about these before the session\n\nHave you read a README that was particularly helpful (or unhelpful)? What made the difference?\nWhy might a license matter for analytical code?"
+    "text": "Think about these before the session\n\nHave you read a README or other documentation that was particularly helpful (or unhelpful)? What made the difference?\nWhy might a license matter for analytical code?"
   },
   {
     "objectID": "learning_materials/2_visible/pre-learning.html#learning-materials",
     "href": "learning_materials/2_visible/pre-learning.html#learning-materials",
     "title": "Visible",
     "section": "Learning materials",
-    "text": "Learning materials"
+    "text": "Learning materials\n🚧 TO FOLLOW - WORK IN PROGRESS 🚧"
   },
   {
     "objectID": "learning_materials/4_reliable/index.html",
@@ -200,7 +200,7 @@
     "href": "learning_materials/3_collaborative/pre-learning.html#learning-materials",
     "title": "Collaborative",
     "section": "Learning materials",
-    "text": "Learning materials"
+    "text": "Learning materials\n🚧 TO FOLLOW - WORK IN PROGRESS 🚧"
   },
   {
     "objectID": "learning_materials/5_capstone/index.html",
@@ -319,7 +319,7 @@
     "href": "learning_materials/2_visible/index.html#learning-objectives",
     "title": "📖 Visible",
     "section": "🎯 Learning objectives",
-    "text": "🎯 Learning objectives\nBy the end of this session, you should be able to:\n\nWrite a clear, informative README\nChoose an appropriate license for your code\nCreate vignettes or examples that demonstrate how to use your code\nSet up basic project documentation\nUnderstand open source conventions and tools\nMake your code and analysis discoverable to others"
+    "text": "🎯 Learning objectives\nBy the end of this session, you should be able to:\n\nWrite a clear, informative README\nChoose an appropriate license for your code\nCreate vignettes or examples that demonstrate how to use your code\nSet up basic project documentation\nMake your code and analysis discoverable to others"
   },
   {
     "objectID": "learning_materials/2_visible/index.html#before-the-session",
