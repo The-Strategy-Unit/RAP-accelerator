@@ -14,3 +14,5 @@ Think about these before the session
 - Have you used version control before? What was your experience?
 
 ## Learning materials
+
+🚧 TO FOLLOW - WORK IN PROGRESS 🚧
