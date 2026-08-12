@@ -11,7 +11,7 @@ format:
 ![](/images/headshot-yiwen-hon.jpg){width=120}
 :::
 
-YiWen Hon (pronouns: she/her) is a Data Scientist at the Strategy Unit. She has experience developing open source models and data pipelines using Python, with a particular interest in documentation and communication. She also manages the [NHS-OA RAP Code Review Buddies Network](https://github.com/nhs-oa-community/RAP_Drop_In/wiki/Code-Review-Buddies-Network).
+YiWen Hon (pronouns: she/her) is a Data Scientist at The Strategy Unit. She has experience developing open source models and data pipelines using Python, with a particular interest in documentation and communication. She also manages the [NHS-OA RAP Code Review Buddies Network](https://github.com/nhs-oa-community/RAP_Drop_In/wiki/Code-Review-Buddies-Network).
 
 
 <br>
