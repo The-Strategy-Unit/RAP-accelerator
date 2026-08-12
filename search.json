@@ -88,7 +88,7 @@
     "href": "about/about.html#course-outline",
     "title": "About the programme",
     "section": "📖 Course outline",
-    "text": "📖 Course outline\n\n\n\nTheme\nTopics\n\n\n\n\n\n♻️ Reusable\nWrite modular, well-documented code that’s easy for you and others to understand and reuse\n\n\n\n📖 Visible\nMake your projects easy to find and use with clear READMEs, licenses, and documentation\n\n\n\n👥 Collaborative\nWork effectively with others using Git, code review, and good communication habits\n\n\n\n🛡️ Reliable\nBuild trust in your code through testing, automation, and reproducible environments\n\n\n\n🏆 Capstone\nPut it all into practice on a real project with feedback and support\n\n\n\n\nEach session includes:\n\n60-90 mins of self-directed pre-work (reading, small exercises)\n60 mins contact session with the tutors\n\nWe’ll also have an online community for attendees to ask questions to tutors or chat with peers running throughout the ten weeks.\nWe won’t cover:\n\nBasic R or Python programming (We expect you to already know a little programming)\nPlotting and visualisation\nModelling and machine learning\nUsing LLMs\nBuilding interactive web apps"
+    "text": "📖 Course outline\n\n\n\nTheme\nTopics\n\n\n\n\n\n♻️ Reusable\nWrite modular, well-documented code that’s easy for you and others to understand and reuse\n\n\n\n📖 Visible\nMake your projects easy to find and use with clear READMEs, licences, and documentation\n\n\n\n👥 Collaborative\nWork effectively with others using Git, code review, and good communication habits\n\n\n\n🛡️ Reliable\nBuild trust in your code through testing, automation, and reproducible environments\n\n\n\n🏆 Capstone\nPut it all into practice on a real project with feedback and support\n\n\n\n\nEach session includes:\n\n60-90 mins of self-directed pre-work (reading, small exercises)\n60 mins contact session with the tutors\n\nWe’ll also have an online community for attendees to ask questions to tutors or chat with peers running throughout the ten weeks.\nWe won’t cover:\n\nBasic R or Python programming (We expect you to already know a little programming)\nPlotting and visualisation\nModelling and machine learning\nUsing LLMs\nBuilding interactive web apps"
   },
   {
     "objectID": "learning_materials/1_reusable/index.html",
@@ -130,14 +130,14 @@
     "href": "learning_materials/2_visible/pre-learning.html",
     "title": "Visible",
     "section": "",
-    "text": "Think about these before the session\n\nHave you read a README or other documentation that was particularly helpful (or unhelpful)? What made the difference?\nWhy might a license matter for analytical code?"
+    "text": "Think about these before the session\n\nHave you read a README or other documentation that was particularly helpful (or unhelpful)? What made the difference?\nWhy might a licence matter for analytical code?"
   },
   {
     "objectID": "learning_materials/2_visible/pre-learning.html#questions-to-answer",
     "href": "learning_materials/2_visible/pre-learning.html#questions-to-answer",
     "title": "Visible",
     "section": "",
-    "text": "Think about these before the session\n\nHave you read a README or other documentation that was particularly helpful (or unhelpful)? What made the difference?\nWhy might a license matter for analytical code?"
+    "text": "Think about these before the session\n\nHave you read a README or other documentation that was particularly helpful (or unhelpful)? What made the difference?\nWhy might a licence matter for analytical code?"
   },
   {
     "objectID": "learning_materials/2_visible/pre-learning.html#learning-materials",
@@ -319,7 +319,7 @@
     "href": "learning_materials/2_visible/index.html#learning-objectives",
     "title": "📖 Visible",
     "section": "🎯 Learning objectives",
-    "text": "🎯 Learning objectives\nBy the end of this session, you should be able to:\n\nWrite a clear, informative README\nChoose an appropriate license for your code\nCreate vignettes or examples that demonstrate how to use your code\nSet up basic project documentation\nMake your code and analysis discoverable to others"
+    "text": "🎯 Learning objectives\nBy the end of this session, you should be able to:\n\nWrite a clear, informative README\nChoose an appropriate licence for your code\nCreate vignettes or examples that demonstrate how to use your code\nSet up basic project documentation\nMake your code and analysis discoverable to others"
   },
   {
     "objectID": "learning_materials/2_visible/index.html#before-the-session",
@@ -361,7 +361,7 @@
     "href": "learning_materials/index.html",
     "title": "Learning materials",
     "section": "",
-    "text": "Welcome to the learning materials for the RAP Accelerator. Each session has pre-learning (required self-study before the session) and slides (used during the 1-hour session). You’ll apply what you learn to your own project in the capstone.\n\n\n\nSession\nFocus\nObjectives\nPre-learning\nSlides\n\n\n\n\n♻️ Reusable\nWrite modular, well-documented code that’s easy for you and others to understand and reuse\nObjectives\nPre-learning\nSlides\n\n\n📖 Visible\nMake your projects easy to find and use with clear READMEs, licenses, and documentation\nObjectives\nPre-learning\nSlides\n\n\n👥 Collaborative\nWork effectively with others using Git, code review, and good communication habits\nObjectives\nPre-learning\nSlides\n\n\n🛡️ Reliable\nBuild trust in your code through testing, automation, and reproducible environments\nObjectives\nPre-learning\nSlides\n\n\n🏆 Capstone\nPut it all into practice on a real project with feedback and support\nObjectives\n-\n-"
+    "text": "Welcome to the learning materials for the RAP Accelerator. Each session has pre-learning (required self-study before the session) and slides (used during the 1-hour session). You’ll apply what you learn to your own project in the capstone.\n\n\n\nSession\nFocus\nObjectives\nPre-learning\nSlides\n\n\n\n\n♻️ Reusable\nWrite modular, well-documented code that’s easy for you and others to understand and reuse\nObjectives\nPre-learning\nSlides\n\n\n📖 Visible\nMake your projects easy to find and use with clear READMEs, licences, and documentation\nObjectives\nPre-learning\nSlides\n\n\n👥 Collaborative\nWork effectively with others using Git, code review, and good communication habits\nObjectives\nPre-learning\nSlides\n\n\n🛡️ Reliable\nBuild trust in your code through testing, automation, and reproducible environments\nObjectives\nPre-learning\nSlides\n\n\n🏆 Capstone\nPut it all into practice on a real project with feedback and support\nObjectives\n-\n-"
   },
   {
     "objectID": "about/learner-personas.html",
