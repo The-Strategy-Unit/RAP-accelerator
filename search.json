@@ -385,11 +385,25 @@
     "text": "Patel Pipeline\n\nPatel Pipeline has spent time in industry working on big datasets\nThey have a lot of experience working with SQL and Power Query formula language (M)\nBefore they started with the ICB their team was starting to use Python for data processing and they had started to learn more about using Python for data processing\nAt the moment they are the lead analyst in their area interested in moving data pipelines to Python and have had some early success\nPatel Pipeline heard about RAP at an analyst huddle and thinks that ensuring data pipeline work is transparent, versioned, and robust will help them convince their team leader to encourage more of the team to move towards Python"
   },
   {
+    "objectID": "practical_information/tutors.html",
+    "href": "practical_information/tutors.html",
+    "title": "Tutors",
+    "section": "",
+    "text": "YiWen Hon (pronouns: she/her) is a Data Scientist at The Strategy Unit. She has experience developing open source models and data pipelines using Python, with a particular interest in documentation and communication. She also manages the NHS-OA RAP Code Review Buddies Network."
+  },
+  {
+    "objectID": "practical_information/tutors.html#yiwen",
+    "href": "practical_information/tutors.html#yiwen",
+    "title": "Tutors",
+    "section": "",
+    "text": "YiWen Hon (pronouns: she/her) is a Data Scientist at The Strategy Unit. She has experience developing open source models and data pipelines using Python, with a particular interest in documentation and communication. She also manages the NHS-OA RAP Code Review Buddies Network."
+  },
+  {
     "objectID": "practical_information/tutors.html#rhian",
     "href": "practical_information/tutors.html#rhian",
     "title": "Tutors",
     "section": "Rhian",
-    "text": "Rhian"
+    "text": "Rhian\n\n\n\nRhian Davies (pronouns: she/her) is a Senior Data Scientist at The Strategy Unit. She is an experienced statistician and data science consultant working in public health, specialising in R programming. She is also an active member of the R community (rainbowR, NHS Open Analytics, R-Ladies+) and a Statistical Ambassador for the Royal Statistical Society."
   },
   {
     "objectID": "practical_information/set-up.html",
