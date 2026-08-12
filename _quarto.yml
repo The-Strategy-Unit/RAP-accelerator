@@ -50,11 +50,7 @@ website:
 
 format:
   html:
-    theme:
-      light:
-        - brand
-      dark:
-        - brand
+    theme: brand
     css:
       - _SUBrand.StyleSheet.css
     toc: true

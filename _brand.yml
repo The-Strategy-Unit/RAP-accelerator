@@ -7,15 +7,9 @@ meta:
 
 # adjust these paths if logos are placed elsewhere
 logo:
-  small:
-    light: images/logo_black_medium.png
-    dark: images/logo_yellow_medium.png
-  medium:
-    light: images/logo_black_medium.png
-    dark: images/logo_yellow_medium.png
-  large: 
-    light: images/logo_black.svg 
-    dark: images/logo_yellow.svg  
+  small: images/logo_black_medium.png
+  medium: images/logo_black_medium.png
+  large: images/logo_black.svg 
 
 color:
   palette:    
