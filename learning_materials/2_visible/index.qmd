@@ -1,6 +1,6 @@
 ---
 title: "📖 Visible"
-subtitle: "Make your projects easy to find and use with clear READMEs, licenses, and documentation"
+subtitle: "Make your projects easy to find and use with clear READMEs, licences, and documentation"
 format:
   html:
     toc: true
@@ -15,7 +15,7 @@ Once you're tracking your code with version control, the next step is making it 
 By the end of this session, you should be able to:
 
 - Write a clear, informative README
-- Choose an appropriate license for your code
+- Choose an appropriate licence for your code
 - Create vignettes or examples that demonstrate how to use your code
 - Set up basic project documentation
 - Make your code and analysis discoverable to others

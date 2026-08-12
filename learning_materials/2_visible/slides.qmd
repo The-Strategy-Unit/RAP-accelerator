@@ -1,6 +1,6 @@
 ---
 title: 📖 Visible
-subtitle: Make your projects easy to find and use with clear READMEs, licenses, and documentation
+subtitle: Make your projects easy to find and use with clear READMEs, licences, and documentation
 author: "[YiWen Hon](mailto:mlcsu.su.datascience@nhs.net)"
 format:
   revealjs:
