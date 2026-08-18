@@ -15,9 +15,10 @@ Making code _reliable_ means ensuring it does what you think it does, and that i
 By the end of this session, you should be able to:
 
 - Write simple unit tests and understand why testing matters
-- Set up automated testing with CI/CD
-- Use virtual environments like {renv} and 
 - Handle environment variables and secrets securely
+- Understand what CI/CD is and how automated testing can be incorporated into a workflow
+- Understand the purpose of virtual environments such as {renv} and venv
+
 
 ## 📖 Before the session
 
