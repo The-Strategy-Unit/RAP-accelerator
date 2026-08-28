@@ -6,8 +6,6 @@ format:
     toc: true
 ---
 
-Format: sample data, background, suggestions for next steps?
-
 ## Overview
 
 If you aren't able to use data that is local to you for any reason (such as privacy, or complexity) you could carry out a capstone project using open data. An example is given following.
@@ -16,7 +14,7 @@ If you aren't able to use data that is local to you for any reason (such as priv
 
 NHS England [publishes](https://digital.nhs.uk/data-and-information/publications/statistical/access-to-crisis-care-via-nhs-111---mental-health/april-to-august-2024) data about access to mental health crisis care through the 111 service. The data includes information about the number of calls and the number answered within 60 seconds, as well as trust and ICB names. This data could be used to report on the proportion of calls answered within 60 seconds over time.
 
-You might have the task of reporting on and benchmarking performance on the proportion of calls answered within 60 seconds across a region.
+You might have the task of reporting on and benchmarking performance on the proportion of calls answered within 60 seconds across a region or regions.
 
 ## 📖 Approaches
 
