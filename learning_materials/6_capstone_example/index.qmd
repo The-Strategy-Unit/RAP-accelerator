@@ -1,0 +1,25 @@
+---
+title: "📝 Capstone example"
+subtitle: "An example RAP pipeline task using open data"
+format:
+  html:
+    toc: true
+---
+
+Format: sample data, background, suggestions for next steps?
+
+## Overview
+
+If you aren't able to use data that is local to you for any reason (such as privacy, or complexity) you could carry out a capstone project using open data. An example is given following.
+
+## 💼 Task
+
+NHS England [publishes](https://digital.nhs.uk/data-and-information/publications/statistical/access-to-crisis-care-via-nhs-111---mental-health/april-to-august-2024) data about access to mental health crisis care through the 111 service. The data includes information about the number of calls and the number answered within 60 seconds, as well as trust and ICB names. This data could be used to report on the proportion of calls answered within 60 seconds over time.
+
+You might have the task of reporting on and benchmarking performance on the proportion of calls answered within 60 seconds across a region.
+
+## 📖 Approaches
+
+To approach this task you could create a Quarto document which is parameterised so that it can be made to focus on specific regions or specific periods of time. Analyses might include tracking performance over time, perhaps with a [Structured Process Control](https://en.wikipedia.org/wiki/Statistical_process_control) chart. There are various methods of drawing such charts including [NHSR plot the dots](https://nhsrplotthedots.nhsrcommunity.com/)
+
+You may also consider bringing in other information from datasets about deprivation, health spending, or other factors that might relate to access to mental health crisis services
