@@ -16,10 +16,9 @@ In this session, you'll learn to write modular functions, document your function
 
 By the end of this session, you should be able to:
 
-- Recognise and refactor repeated code into reusable pieces
+- Recognise and refactor repeated code into into reusable functions 
 - Choose appropriate names for functions
 - Write clear function documentation
-- Use comments effectively (and know when NOT to comment)
 - Follow a consistent code style and use automated tools to enforce it
 
 ## 📖 Before the session
