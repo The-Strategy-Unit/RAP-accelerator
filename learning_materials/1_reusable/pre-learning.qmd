@@ -1,23 +1,307 @@
 ---
-title: "Reusable"
+title: "Reusable Code"
 subtitle: "Pre-learning materials"
 format:
   html:
     toc: true
 ---
 
-## Questions to answer
+Writing code once and reusing it is one of the biggest productivity and quality wins in a Reproducible Analytical Pipeline. Every time we copy-paste a block of code instead of reusing a function, we create another place for a bug to hide, and another place to remember to update when the logic changes.
 
-Think about these before the session 
+This section covers four things that helps make great functions:
 
-- What code have you written that would be useful to reuse? How would you refactor it into a function?
-- Does your team have a style guide (officially or informally)? Do people stick to it?
-- Do you share functions across projects or teams? If so, how are they shared?
-- What does "self-documenting code" mean to you?
+1. Meaningful names
+2. Do one thing
+3. Documenting functions
+4. Consistent style
 
-## Learning materials
+::: {.callout-note}
+Read through the sections below and try out the _👩‍💻 Your turn_ sections. We'll use your answers to these sections them as discussion points in the contact session.
+:::
+
+---
+
+## 1. Meaningful names {#naming}
+
+A good name tells the reader what something represents or does, without them having to read the code in detail. Choosing a good name can be surpringly tricky! When choosing a function name, try to describe what the function does really specifically. 
+
+- Describe the purpose. Say what the thing does, specifically
+- Write for humans - readable, searchable names. e.g `start_date` is much more understandable (and searchable) than `d`
+- Be consistent with names used elsewhere in the project, if you already have `load_sales()`, use `load_costs()` rather than `importCosts()`
+
+Compare:
+
+```r
+process_data(x)
+```
+
+with:
+
+```r
+calculate_percentage_change(new, old)
+```
+
+The second name tells the reader what's happening before they've even looked inside the function. Avoid vague names like `x`, `tmp`, `df2` or `do_thing` when something more specific is easy to write.
+
+::: {.callout-tip}
+ If you find yourself adding a comment to explain _how_ a line of code works, that's often a sign that you could use a better name. Comments are best saved for explaining the _why_ of the code, not _how_.
+:::
+
+### 👩‍💻 Your turn
+Look at a script you've written recently. Find one variable or function name that isn't self-explanatory. What would you rename it to?
+
+### 📖 Resources
+
+- [Meaningful function names](https://youtu.be/Pkd3ud8b9_4?si=gbr-cudEZMUmWGWP&t=28)
+- [How long should a function name be?](https://www.youtube.com/watch?v=yLtZopHDwLU)
+
+---
+
+## 2. Functions should do one thing {#one-thing}
+
+A well-written function does one thing, does it well, and does only that. Aim for functions that:
+
+- Are small
+- Do one thing only
+- Take as few parameters as possible
+
+Instead of repeating the same calculation in several places:
+
+::: {.panel-tabset}
+### R
+```r
+sales_growth <- (this_year_sales - last_year_sales) / last_year_sales
+profit_growth <- (this_year_profit - last_year_profit) / last_year_profit
+```
+
+Capture the logic once:
+
+```r
+percentage_change <- function(new, old) {
+  (new - old) / old
+}
+
+sales_growth <- percentage_change(this_year_sales, last_year_sales)
+profit_growth <- percentage_change(this_year_profit, last_year_profit)
+```
+
+### Python
+```python
+sales_growth = (this_year_sales - last_year_sales) / last_year_sales
+profit_growth = (this_year_profit - last_year_profit) / last_year_profit
+```
+
+Capture the logic once:
+
+```python
+def percentage_change(new, old):
+    return (new - old) / old
+
+sales_growth = percentage_change(this_year_sales, last_year_sales)
+profit_growth = percentage_change(this_year_profit, last_year_profit)
+```
+:::
+
+`percentage_change()` has one clear job. It doesn't know or care whether it's being used for sales, profit, or anything else. That's what makes it reusable.
+
+When should you extract a function? Duplication isn't automatically a problem the first time you see it. A useful rule of thumb is the [Rule of Three](https://en.wikipedia.org/wiki/Rule_of_three_(computer_programming)). Cnce the same logic shows up a third time, that's a good time to pull the code into a function.
+
+If a function feels cluttered, look for low-level detail that could be pulled out into a reusable helper function. For example, input checks could move into a helper function of it's own.
+
+::: {.panel-tabset}
+### R
+```r
+# Before: validation is mixed in with the calculation
+get_age <- function(age_days, units = "years") {
+  if (is.character(age_days)) stop("Age must be a number")
+  if (age_days < 0) stop("Negative age")
+  if (age_days > 150 * 365) stop("A bit too old?")
+  if (units == "years") age_days / 365 else age_days
+}
+
+# After: validation is pulled out, and the main function is easier to read
+get_age <- function(age_days, units = "years") {
+  check_age(age_days)
+  if (units == "years") age_days / 365 else age_days
+}
+
+check_age <- function(age_days) {
+  if (is.character(age_days)) stop("Age must be a number")
+  if (age_days < 0) stop("Negative age")
+  if (age_days > 150 * 365) stop("A bit too old?")
+}
+```
+
+### Python
+
+```python
+# Before: validation is mixed in with the calculation
+def get_age(age_days, units="years"):
+    if isinstance(age_days, str):
+        raise ValueError("Age must be a number")
+    if age_days < 0:
+        raise ValueError("Negative age")
+    if age_days > 150 * 365:
+        raise ValueError("A bit too old?")
+
+    if units == "years":
+        return age_days / 365
+    else:
+        return age_days
 
 
-Exercise:
+# After: validation is pulled out, and the main function is easier to read
+def check_age(age_days):
+    if isinstance(age_days, str):
+        raise ValueError("Age must be a number")
+    if age_days < 0:
+        raise ValueError("Negative age")
+    if age_days > 150 * 365:
+        raise ValueError("A bit too old?")
 
-Here is an example of a R / Python code snippet. What could we do to improve it?
+
+def get_age(age_days, units="years"):
+    check_age(age_days)
+
+    if units == "years":
+        return age_days / 365
+    else:
+        return age_days
+```
+:::
+
+Where practical, aim for [pure functions](https://dev.to/kjdowns/what-s-a-pure-function-205e). These are functions that, given the same inputs, always return the same output, with no side effects (no file access, no printing, no depending on or changing anything outside the function). Pure functions are easier to test and reuse.
+
+### 👩‍💻 Your turn
+
+Look back at a script you've written. Find a chunk of code that appears more than once, even with small variations.
+
+Sketch out how you'd turn it into a function:
+
+- What would you call it?
+- What inputs would it need?
+- What would it return?
+
+Bring your example to the session, we'll use a few of these as discussion points.
+
+### 📖 Resources
+
+- [Functions — R for Data Science](https://r4ds.hadley.nz/functions.html)
+- [Defining Your Own Python Function](https://realpython.com/defining-your-own-python-function/) by Real Python, section on writing clear, single-purpose functions (Python)
+
+---
+
+## 3. Document your functions {#documenting}
+
+A function is easy to reuse when the reader can quickly answer three questions, without reading the implementation:
+
+- What does it do?
+- What inputs does it need?
+- What does it return?
+
+::: {.panel-tabset}
+### R
+```r
+#' Calculate percentage change
+#'
+#' @param new Numeric. The new (current) value.
+#' @param old Numeric. The original (baseline) value.
+#'
+#' @return Numeric. The proportional change from `old` to `new`.
+#'
+#' @examples
+#' percentage_change(new = 120, old = 100)
+percentage_change <- function(new, old) {
+  (new - old) / old
+}
+```
+
+::: {.callout-important}
+The `#'` comment block above is the R [roxygen2](https://roxygen2.r-lib.org/articles/roxygen2.html) convention. It only generates a  help page (`?percentage_change`) if your function lives inside an R package. If your script is just stand alone, it won't do anything automatically. It's still a good habit to write your function docs in this style even in an ordinary script. It forces you to answer the "what/inputs/returns" questions, and it means your docs are ready to go if that code ever does end up in a package.
+:::
+
+### Python
+```python
+def percentage_change(new, old):
+    """Calculate the proportional change between two values.
+
+    Args:
+        new (float): The new (current) value.
+        old (float): The original (baseline) value.
+
+    Returns:
+        float: The proportional change from old to new.
+
+    Example:
+        >>> percentage_change(120, 100)
+        0.2
+    """
+    return (new - old) / old
+```
+ve this limitation. They work the same way whether your function lives in a one-off script or a full package, and are picked up automatically by `help()`.
+:::
+
+### 👩‍💻 Your turn
+Take the function you sketched out in [section 2](#one-thing) and write proper documentation for it. Either a roxygen2-style block in R, or a docstring in Python.
+
+### 📖 Resources
+-  [Get started with roxygen2](https://roxygen2.r-lib.org/articles/roxygen2.html) (R)
+-  [PEP 257 — Docstring Conventions](https://peps.python.org/pep-0257/) (Python)
+
+---
+
+## 4. Consistent style {#style}
+
+A consistent style makes code easier to scan, understand and safely modify. It matters more for reusable code: something meant to be shared or reused needs to be readable by people who didn't write it. Agree conventions with your team, then let a tool handle the mechanical parts. 
+
+::: {.panel-tabset}
+### R
+```r
+# Before
+my_function=function(x,y){
+x+y
+}
+
+# After: styler::style_file() applied
+my_function <- function(x, y) {
+  x + y
+}
+```
+`styler` reformats code automatically; `lintr` flags style problems it can't fix for you.
+
+### Python
+```python
+# Before
+def my_function(x,y):
+    return x+y
+
+# After: black applied
+def my_function(x, y):
+    return x + y
+```
+`black` or `ruff format` reformat code automatically; `ruff` also flags issues it can't fix.
+:::
+
+The logic hasn't changed here, just the formatting. But consistent spacing and layout mean anyone on the team can read this function without first adjusting to a one-off style.
+
+### 👩‍💻 Your turn
+Run an auto-formatter on a script of your own `styler::style_file()` (R) or `black` / `ruff format` (Python). What did it change automatically? Was anything left for you to fix by hand?
+
+### 📖 Resources
+
+- [{lintr} (R)](https://lintr.r-lib.org/articles/lintr.html)
+- [ruff (python)](https://realpython.com/ruff-python/)
+- [Tidyverse Style Guide](https://style.tidyverse.org/), sections on functions and syntax (R)
+- [PEP 8 Style Guide for Python Code](https://peps.python.org/pep-0008/), sections on Naming Conventions and Programming Recommendations (Python)
+
+---
+
+## Before the session
+
+Come prepared to discuss:
+
+- The function you sketched in [section 2](#one-thing) — name, inputs, return value
+- What code have you written that would be useful to reuse?
+- What makes a function easy for someone else to understand and reuse?
+- What coding conventions does your team already follow, formally or informally?
+- Have you encountered code that was hard to understand or reuse? What made it difficult?
