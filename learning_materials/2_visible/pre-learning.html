@@ -200,7 +200,14 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#questions-to-answer" id="toc-questions-to-answer" class="nav-link active" data-scroll-target="#questions-to-answer">Questions to answer</a></li>
-  <li><a href="#learning-materials" id="toc-learning-materials" class="nav-link" data-scroll-target="#learning-materials">Learning materials</a></li>
+  <li><a href="#learning-materials" id="toc-learning-materials" class="nav-link" data-scroll-target="#learning-materials">Learning materials</a>
+  <ul class="collapse">
+  <li><a href="#documentation" id="toc-documentation" class="nav-link" data-scroll-target="#documentation">Documentation</a></li>
+  <li><a href="#r-users" id="toc-r-users" class="nav-link" data-scroll-target="#r-users">R users</a></li>
+  <li><a href="#python-users" id="toc-python-users" class="nav-link" data-scroll-target="#python-users">Python users</a></li>
+  <li><a href="#licences" id="toc-licences" class="nav-link" data-scroll-target="#licences">Licences</a></li>
+  <li><a href="#next-steps" id="toc-next-steps" class="nav-link" data-scroll-target="#next-steps">Next steps</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -237,9 +244,43 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="learning-materials" class="level2">
 <h2 class="anchored" data-anchor-id="learning-materials">Learning materials</h2>
-<p>🚧 TO FOLLOW - WORK IN PROGRESS 🚧</p>
+<section id="documentation" class="level3">
+<h3 class="anchored" data-anchor-id="documentation">Documentation</h3>
+<p>Having awesome code isn’t enough on its own. We need to make it easy for others to find, understand, and use - documentation is one of the ways that we can achieve this. For Reproducible Analytical Pipelines, there are several types of documentation, each with their own role to play.</p>
+<p>In the previous session, we looked at how to document individual functions, so that users are clear on what each function does. However, function documentation on its own might not be enough for users, because it does not provide an overview of the package or pipeline as a whole. Providing further context and instructions is key to making your code more accessible. Additionally, although you might understand your code today, it might not make sense 12 months later! Documentation is also a way of making your code understandable for your future self.</p>
+<p>The simplest and most minimal form of documentation is a README.</p>
+<p>📖 <a href="https://www.makeareadme.com/">Make a README</a> by Danny Guo (10 minutes).</p>
+<p>✏️ Write a README for some code that you have written, or for some analysis you have completed (15 minutes). Please be prepared to share and discuss this in the face-to-face session.</p>
+<p>Once a README is in place, you may also want to provide more detailed documentation for your code. This is because the README is intended to provide a quick overview, which might not be sufficient on its own. Below are some options for creating more detailed documentation.</p>
+</section>
+<section id="r-users" class="level3">
+<h3 class="anchored" data-anchor-id="r-users">R users</h3>
+<p>📖 <a href="https://carpentries-incubator.github.io/lesson-R-packaging/vignettes.html">R Vignettes</a> by Software Carpentry.</p>
+<p>Read the article and explore the vignette for one R package of your choice. How does it aid your understanding of the code? What does the vignette provide that the README on its own does not? (30 minutes)</p>
+</section>
+<section id="python-users" class="level3">
+<h3 class="anchored" data-anchor-id="python-users">Python users</h3>
+<p>📖 <a href="https://nhsengland.github.io/nhse-rap-cookiecutter/">RAP Cookiecutter documentation</a> by NHS England.</p>
+<p>Read the documentation site and compare it with the <a href="https://github.com/nhsengland/nhse-rap-cookiecutter/blob/main/README.md">repository README</a>. What are the differences between the two types of documentation? (30 minutes)</p>
+</section>
+<section id="licences" class="level3">
+<h3 class="anchored" data-anchor-id="licences">Licences</h3>
+<p>There are many different licences out there. What are our options, if we are to make our code open source? Watch the video below for an overview.</p>
+<p>📺 <a href="https://www.youtube.com/watch?v=nFU8KoSgEmk">Open source licence types</a> by Pro Tech Show (12 minutes).</p>
+<p>What licences are recommended for analytical code by the UK Government Service Manual? What category does this fall under, according to the classifications provided in the video above?</p>
+<p>📖 <a href="https://www.gov.uk/service-manual/technology/making-source-code-open-and-reusable">Government Digital Service: Making source code open and reusable</a> (10 minutes)</p>
+</section>
+<section id="next-steps" class="level3">
+<h3 class="anchored" data-anchor-id="next-steps">Next steps</h3>
+<p>If you wish to extend your learning beyond the scope of this course, try some of the resources below.</p>
+<ul>
+<li>📺 <a href="https://www.youtube.com/watch?v=R6zeikbTgVc">Writing effective documentation</a> by Beth Aitman (10 minutes)</li>
+<li><a href="https://rguides.dev/tutorials/r-package-development/pkgdown-sites/">Use {pkgdown}</a> to turn your R vignettes into a documentation site</li>
+<li><a href="https://www.mkdocs.org/getting-started/">Use mkdocs</a> to build a basic Python documentation site.</li>
+</ul>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
