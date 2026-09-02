@@ -15,4 +15,53 @@ Think about these before the session
 
 ## Learning materials
 
-🚧 TO FOLLOW - WORK IN PROGRESS 🚧
+### Documentation
+
+Having awesome code isn't enough on its own. We need to make it easy for others to find, understand, and use - documentation is one of the ways that we can achieve this.
+For Reproducible Analytical Pipelines, there are several types of documentation, each with their own role to play.
+
+In the previous session, we looked at how to document individual functions, so that users are clear on what each function does.
+However, function documentation on its own might not be enough for users, because it does not provide an overview of the package or pipeline as a whole.
+Providing further context and instructions is key to making your code more accessible.
+Additionally, although you might understand your code today, it might not make sense 12 months later!
+Documentation is also a way of making your code understandable for your future self.
+
+The simplest and most minimal form of documentation is a README.
+
+📖 [Make a README](https://www.makeareadme.com/) by Danny Guo (10 minutes).
+
+✏️ Write a README for some code that you have written, or for some analysis you have completed (15 minutes). Please be prepared to share and discuss this in the face-to-face session.
+
+Once a README is in place, you may also want to provide more detailed documentation for your code.
+This is because the README is intended to provide a quick overview, which might not be sufficient on its own.
+Below are some options for creating more detailed documentation.
+
+### R users
+
+📖 [R Vignettes](https://carpentries-incubator.github.io/lesson-R-packaging/vignettes.html) by Software Carpentry.
+
+Read the article and explore the vignette for one R package of your choice. How does it aid your understanding of the code? What does the vignette provide that the README on its own does not? (30 minutes)
+
+### Python users
+
+📖 [RAP Cookiecutter documentation](https://nhsengland.github.io/nhse-rap-cookiecutter/) by NHS England. 
+
+Read the documentation site and compare it with the [repository README](https://github.com/nhsengland/nhse-rap-cookiecutter/blob/main/README.md). What are the differences between the two types of documentation? (30 minutes)
+
+### Licences
+
+There are many different licences out there. What are our options, if we are to make our code open source? Watch the video below for an overview.
+
+📺 [Open source licence types](https://www.youtube.com/watch?v=nFU8KoSgEmk) by Pro Tech Show (12 minutes).
+
+What licences are recommended for analytical code by the UK Government Service Manual? What category does this fall under, according to the classifications provided in the video above? 
+
+📖 [Government Digital Service: Making source code open and reusable](https://www.gov.uk/service-manual/technology/making-source-code-open-and-reusable) (10 minutes)
+
+### Next steps
+
+If you wish to extend your learning beyond the scope of this course, try some of the resources below.
+
+- 📺 [Writing effective documentation](https://www.youtube.com/watch?v=R6zeikbTgVc) by Beth Aitman (10 minutes)
+- [Use {pkgdown}](https://rguides.dev/tutorials/r-package-development/pkgdown-sites/) to turn your R vignettes into a documentation site
+- [Use mkdocs](https://www.mkdocs.org/getting-started/) to build a basic Python documentation site.
