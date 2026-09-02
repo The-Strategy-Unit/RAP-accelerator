@@ -18,6 +18,6 @@ You might have the task of reporting on and benchmarking performance on the prop
 
 ## 📖 Approaches
 
-To approach this task you could create a Quarto document which is parameterised so that it can be made to focus on specific regions or specific periods of time. Analyses might include tracking performance over time, perhaps with a [Structured Process Control](https://en.wikipedia.org/wiki/Statistical_process_control) chart. There are various methods of drawing such charts including [NHSR plot the dots](https://nhsrplotthedots.nhsrcommunity.com/).
+To approach this task you could create a Quarto document which is parameterised so that it can be made to focus on specific regions or specific periods of time. Analyses might include tracking performance over time, perhaps with a [Statistical Process Control](https://en.wikipedia.org/wiki/Statistical_process_control) chart. There are various methods of drawing such charts including [NHSR plot the dots](https://nhsrplotthedots.nhsrcommunity.com/).
 
 You may also consider bringing in other information from datasets about deprivation, health spending, or other factors that might relate to access to mental health crisis services.
