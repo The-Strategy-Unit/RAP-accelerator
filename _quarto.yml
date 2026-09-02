@@ -35,8 +35,6 @@ website:
             file: learning_materials/4_reliable/index.qmd
           - text: "🏆 Capstone"
             file: learning_materials/5_capstone/index.qmd
-          - text: "📝 Capstone example"
-            file: learning_materials/6_capstone_example/index.qmd
      right: 
         - icon: github
           href: https://github.com/The-Strategy-Unit/RAP-accelerator
