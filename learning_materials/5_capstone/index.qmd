@@ -33,7 +33,7 @@ You're welcome to bring an existing analytical project — anything from a one-o
 
 ### Use our example
 
-If you don't have a suitable project, we'll provide an [example analytical project](example.qmd) that you can work through. You'll learn the same principles but on our project instead of yours.
+If you don't have a suitable project, we have provided an [example analytical project](example.qmd) that you can work through. You'll learn the same principles but on our project instead of yours.
 
 ## 📖 Before the session
 
