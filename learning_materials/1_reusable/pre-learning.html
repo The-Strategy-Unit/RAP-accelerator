@@ -26,6 +26,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -199,8 +234,27 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#questions-to-answer" id="toc-questions-to-answer" class="nav-link active" data-scroll-target="#questions-to-answer">Questions to answer</a></li>
-  <li><a href="#learning-materials" id="toc-learning-materials" class="nav-link" data-scroll-target="#learning-materials">Learning materials</a></li>
+  <li><a href="#naming" id="toc-naming" class="nav-link active" data-scroll-target="#naming">1. Meaningful names</a>
+  <ul class="collapse">
+  <li><a href="#your-turn" id="toc-your-turn" class="nav-link" data-scroll-target="#your-turn">👩‍💻 Your turn</a></li>
+  <li><a href="#resources" id="toc-resources" class="nav-link" data-scroll-target="#resources">📖 Resources</a></li>
+  </ul></li>
+  <li><a href="#one-thing" id="toc-one-thing" class="nav-link" data-scroll-target="#one-thing">2. Functions should do one thing</a>
+  <ul class="collapse">
+  <li><a href="#your-turn-1" id="toc-your-turn-1" class="nav-link" data-scroll-target="#your-turn-1">👩‍💻 Your turn</a></li>
+  <li><a href="#resources-1" id="toc-resources-1" class="nav-link" data-scroll-target="#resources-1">📖 Resources</a></li>
+  </ul></li>
+  <li><a href="#documenting" id="toc-documenting" class="nav-link" data-scroll-target="#documenting">3. Document your functions</a>
+  <ul class="collapse">
+  <li><a href="#your-turn-2" id="toc-your-turn-2" class="nav-link" data-scroll-target="#your-turn-2">👩‍💻 Your turn</a></li>
+  <li><a href="#resources-2" id="toc-resources-2" class="nav-link" data-scroll-target="#resources-2">📖 Resources</a></li>
+  </ul></li>
+  <li><a href="#style" id="toc-style" class="nav-link" data-scroll-target="#style">4. Consistent style</a>
+  <ul class="collapse">
+  <li><a href="#your-turn-3" id="toc-your-turn-3" class="nav-link" data-scroll-target="#your-turn-3">👩‍💻 Your turn</a></li>
+  <li><a href="#resources-3" id="toc-resources-3" class="nav-link" data-scroll-target="#resources-3">📖 Resources</a></li>
+  </ul></li>
+  <li><a href="#before-the-session" id="toc-before-the-session" class="nav-link" data-scroll-target="#before-the-session">Before the session</a></li>
   </ul>
 </nav>
     </div>
@@ -227,20 +281,313 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="questions-to-answer" class="level2">
-<h2 class="anchored" data-anchor-id="questions-to-answer">Questions to answer</h2>
-<p>Think about these before the session</p>
+<p>Writing code once and reusing it is one of the biggest productivity and quality wins in a Reproducible Analytical Pipeline. Every time we copy-paste a block of code instead of reusing a function, we create another place for a bug to hide, and another place to remember to update when the logic changes.</p>
+<p>This section covers four things that helps make great functions:</p>
+<ol type="1">
+<li>Meaningful names</li>
+<li>Do one thing</li>
+<li>Documenting functions</li>
+<li>Consistent style</li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Read through the sections below and try out the <em>👩‍💻 Your turn</em> sections. We’ll use your answers to these sections them as discussion points in the contact session.</p>
+</div>
+</div>
+<hr>
+<section id="naming" class="level2">
+<h2 class="anchored" data-anchor-id="naming">1. Meaningful names</h2>
+<p>A good name tells the reader what something represents or does, without them having to read the code in detail. Choosing a good name can be surpringly tricky! When choosing a function name, try to describe what the function does really specifically.</p>
 <ul>
-<li>What code have you written that would be useful to reuse? How would you refactor it into a function?</li>
-<li>Does your team have a style guide (officially or informally)? Do people stick to it?</li>
-<li>Do you share functions across projects or teams? If so, how are they shared?</li>
-<li>What does “self-documenting code” mean to you?</li>
+<li>Describe the purpose. Say what the thing does, specifically</li>
+<li>Write for humans - readable, searchable names. e.g <code>start_date</code> is much more understandable (and searchable) than <code>d</code></li>
+<li>Be consistent with names used elsewhere in the project, if you already have <code>load_sales()</code>, use <code>load_costs()</code> rather than <code>importCosts()</code></li>
 </ul>
+<p>Compare:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">process_data</span>(x)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>with:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">calculate_percentage_change</span>(new, old)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>The second name tells the reader what’s happening before they’ve even looked inside the function. Avoid vague names like <code>x</code>, <code>tmp</code>, <code>df2</code> or <code>do_thing</code> when something more specific is easy to write.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>If you find yourself adding a comment to explain <em>how</em> a line of code works, that’s often a sign that you could use a better name. Comments are best saved for explaining the <em>why</em> of the code, not <em>how</em>.</p>
+</div>
+</div>
+<section id="your-turn" class="level3">
+<h3 class="anchored" data-anchor-id="your-turn">👩‍💻 Your turn</h3>
+<p>Look at a script you’ve written recently. Find one variable or function name that isn’t self-explanatory. What would you rename it to?</p>
 </section>
-<section id="learning-materials" class="level2">
-<h2 class="anchored" data-anchor-id="learning-materials">Learning materials</h2>
-<p>Exercise:</p>
-<p>Here is an example of a R / Python code snippet. What could we do to improve it?</p>
+<section id="resources" class="level3">
+<h3 class="anchored" data-anchor-id="resources">📖 Resources</h3>
+<ul>
+<li><a href="https://youtu.be/Pkd3ud8b9_4?si=gbr-cudEZMUmWGWP&amp;t=28">Meaningful function names</a></li>
+<li><a href="https://www.youtube.com/watch?v=yLtZopHDwLU">How long should a function name be?</a></li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="one-thing" class="level2">
+<h2 class="anchored" data-anchor-id="one-thing">2. Functions should do one thing</h2>
+<p>A well-written function does one thing, does it well, and does only that. Aim for functions that:</p>
+<ul>
+<li>Are small</li>
+<li>Do one thing only</li>
+<li>Take as few parameters as possible</li>
+</ul>
+<p>Instead of repeating the same calculation in several places:</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">R</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">Python</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>sales_growth <span class="ot">&lt;-</span> (this_year_sales <span class="sc">-</span> last_year_sales) <span class="sc">/</span> last_year_sales</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>profit_growth <span class="ot">&lt;-</span> (this_year_profit <span class="sc">-</span> last_year_profit) <span class="sc">/</span> last_year_profit</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Capture the logic once:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>percentage_change <span class="ot">&lt;-</span> <span class="cf">function</span>(new, old) {</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  (new <span class="sc">-</span> old) <span class="sc">/</span> old</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>sales_growth <span class="ot">&lt;-</span> <span class="fu">percentage_change</span>(this_year_sales, last_year_sales)</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>profit_growth <span class="ot">&lt;-</span> <span class="fu">percentage_change</span>(this_year_profit, last_year_profit)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>sales_growth <span class="op">=</span> (this_year_sales <span class="op">-</span> last_year_sales) <span class="op">/</span> last_year_sales</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>profit_growth <span class="op">=</span> (this_year_profit <span class="op">-</span> last_year_profit) <span class="op">/</span> last_year_profit</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Capture the logic once:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> percentage_change(new, old):</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> (new <span class="op">-</span> old) <span class="op">/</span> old</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>sales_growth <span class="op">=</span> percentage_change(this_year_sales, last_year_sales)</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>profit_growth <span class="op">=</span> percentage_change(this_year_profit, last_year_profit)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+</div>
+<p><code>percentage_change()</code> has one clear job. It doesn’t know or care whether it’s being used for sales, profit, or anything else. That’s what makes it reusable.</p>
+<p>When should you extract a function? Duplication isn’t automatically a problem the first time you see it. A useful rule of thumb is the <a href="https://en.wikipedia.org/wiki/Rule_of_three_(computer_programming)">Rule of Three</a>. Cnce the same logic shows up a third time, that’s a good time to pull the code into a function.</p>
+<p>If a function feels cluttered, look for low-level detail that could be pulled out into a reusable helper function. For example, input checks could move into a helper function of it’s own.</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true" href="">R</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false" href="">Python</a></li></ul>
+<div class="tab-content">
+<div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Before: validation is mixed in with the calculation</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>get_age <span class="ot">&lt;-</span> <span class="cf">function</span>(age_days, <span class="at">units =</span> <span class="st">"years"</span>) {</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="fu">is.character</span>(age_days)) <span class="fu">stop</span>(<span class="st">"Age must be a number"</span>)</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (age_days <span class="sc">&lt;</span> <span class="dv">0</span>) <span class="fu">stop</span>(<span class="st">"Negative age"</span>)</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (age_days <span class="sc">&gt;</span> <span class="dv">150</span> <span class="sc">*</span> <span class="dv">365</span>) <span class="fu">stop</span>(<span class="st">"A bit too old?"</span>)</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (units <span class="sc">==</span> <span class="st">"years"</span>) age_days <span class="sc">/</span> <span class="dv">365</span> <span class="cf">else</span> age_days</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a><span class="co"># After: validation is pulled out, and the main function is easier to read</span></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>get_age <span class="ot">&lt;-</span> <span class="cf">function</span>(age_days, <span class="at">units =</span> <span class="st">"years"</span>) {</span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">check_age</span>(age_days)</span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (units <span class="sc">==</span> <span class="st">"years"</span>) age_days <span class="sc">/</span> <span class="dv">365</span> <span class="cf">else</span> age_days</span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>check_age <span class="ot">&lt;-</span> <span class="cf">function</span>(age_days) {</span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="fu">is.character</span>(age_days)) <span class="fu">stop</span>(<span class="st">"Age must be a number"</span>)</span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (age_days <span class="sc">&lt;</span> <span class="dv">0</span>) <span class="fu">stop</span>(<span class="st">"Negative age"</span>)</span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (age_days <span class="sc">&gt;</span> <span class="dv">150</span> <span class="sc">*</span> <span class="dv">365</span>) <span class="fu">stop</span>(<span class="st">"A bit too old?"</span>)</span>
+<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Before: validation is mixed in with the calculation</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> get_age(age_days, units<span class="op">=</span><span class="st">"years"</span>):</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="bu">isinstance</span>(age_days, <span class="bu">str</span>):</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>        <span class="cf">raise</span> <span class="pp">ValueError</span>(<span class="st">"Age must be a number"</span>)</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> age_days <span class="op">&lt;</span> <span class="dv">0</span>:</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>        <span class="cf">raise</span> <span class="pp">ValueError</span>(<span class="st">"Negative age"</span>)</span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> age_days <span class="op">&gt;</span> <span class="dv">150</span> <span class="op">*</span> <span class="dv">365</span>:</span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>        <span class="cf">raise</span> <span class="pp">ValueError</span>(<span class="st">"A bit too old?"</span>)</span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> units <span class="op">==</span> <span class="st">"years"</span>:</span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> age_days <span class="op">/</span> <span class="dv">365</span></span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> age_days</span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a><span class="co"># After: validation is pulled out, and the main function is easier to read</span></span>
+<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> check_age(age_days):</span>
+<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="bu">isinstance</span>(age_days, <span class="bu">str</span>):</span>
+<span id="cb8-19"><a href="#cb8-19" aria-hidden="true" tabindex="-1"></a>        <span class="cf">raise</span> <span class="pp">ValueError</span>(<span class="st">"Age must be a number"</span>)</span>
+<span id="cb8-20"><a href="#cb8-20" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> age_days <span class="op">&lt;</span> <span class="dv">0</span>:</span>
+<span id="cb8-21"><a href="#cb8-21" aria-hidden="true" tabindex="-1"></a>        <span class="cf">raise</span> <span class="pp">ValueError</span>(<span class="st">"Negative age"</span>)</span>
+<span id="cb8-22"><a href="#cb8-22" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> age_days <span class="op">&gt;</span> <span class="dv">150</span> <span class="op">*</span> <span class="dv">365</span>:</span>
+<span id="cb8-23"><a href="#cb8-23" aria-hidden="true" tabindex="-1"></a>        <span class="cf">raise</span> <span class="pp">ValueError</span>(<span class="st">"A bit too old?"</span>)</span>
+<span id="cb8-24"><a href="#cb8-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-25"><a href="#cb8-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-26"><a href="#cb8-26" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> get_age(age_days, units<span class="op">=</span><span class="st">"years"</span>):</span>
+<span id="cb8-27"><a href="#cb8-27" aria-hidden="true" tabindex="-1"></a>    check_age(age_days)</span>
+<span id="cb8-28"><a href="#cb8-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-29"><a href="#cb8-29" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> units <span class="op">==</span> <span class="st">"years"</span>:</span>
+<span id="cb8-30"><a href="#cb8-30" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> age_days <span class="op">/</span> <span class="dv">365</span></span>
+<span id="cb8-31"><a href="#cb8-31" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb8-32"><a href="#cb8-32" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> age_days</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+</div>
+<p>Where practical, aim for <a href="https://dev.to/kjdowns/what-s-a-pure-function-205e">pure functions</a>. These are functions that, given the same inputs, always return the same output, with no side effects (no file access, no printing, no depending on or changing anything outside the function). Pure functions are easier to test and reuse.</p>
+<section id="your-turn-1" class="level3">
+<h3 class="anchored" data-anchor-id="your-turn-1">👩‍💻 Your turn</h3>
+<p>Look back at a script you’ve written. Find a chunk of code that appears more than once, even with small variations.</p>
+<p>Sketch out how you’d turn it into a function:</p>
+<ul>
+<li>What would you call it?</li>
+<li>What inputs would it need?</li>
+<li>What would it return?</li>
+</ul>
+<p>Bring your example to the session, we’ll use a few of these as discussion points.</p>
+</section>
+<section id="resources-1" class="level3">
+<h3 class="anchored" data-anchor-id="resources-1">📖 Resources</h3>
+<ul>
+<li><a href="https://r4ds.hadley.nz/functions.html">Functions — R for Data Science</a></li>
+<li><a href="https://realpython.com/defining-your-own-python-function/">Defining Your Own Python Function</a> by Real Python, section on writing clear, single-purpose functions (Python)</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="documenting" class="level2">
+<h2 class="anchored" data-anchor-id="documenting">3. Document your functions</h2>
+<p>A function is easy to reuse when the reader can quickly answer three questions, without reading the implementation:</p>
+<ul>
+<li>What does it do?</li>
+<li>What inputs does it need?</li>
+<li>What does it return?</li>
+</ul>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-3-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-1" role="tab" aria-controls="tabset-3-1" aria-selected="true" href="">R</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-2" role="tab" aria-controls="tabset-3-2" aria-selected="false" href="">Python</a></li></ul>
+<div class="tab-content">
+<div id="tabset-3-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-3-1-tab">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co">#' Calculate percentage change</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="co">#'</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="co">#' @param new Numeric. The new (current) value.</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="co">#' @param old Numeric. The original (baseline) value.</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="co">#'</span></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="co">#' @return Numeric. The proportional change from `old` to `new`.</span></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="co">#'</span></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a><span class="co">#' @examples</span></span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a><span class="co">#' percentage_change(new = 120, old = 100)</span></span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>percentage_change <span class="ot">&lt;-</span> <span class="cf">function</span>(new, old) {</span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>  (new <span class="sc">-</span> old) <span class="sc">/</span> old</span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The <code>#'</code> comment block above is the R <a href="https://roxygen2.r-lib.org/articles/roxygen2.html">roxygen2</a> convention. It only generates a help page (<code>?percentage_change</code>) if your function lives inside an R package. If your script is just stand alone, it won’t do anything automatically. It’s still a good habit to write your function docs in this style even in an ordinary script. It forces you to answer the “what/inputs/returns” questions, and it means your docs are ready to go if that code ever does end up in a package.</p>
+</div>
+</div>
+</div>
+<div id="tabset-3-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-2-tab">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> percentage_change(new, old):</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Calculate the proportional change between two values.</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="co">    Args:</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="co">        new (float): The new (current) value.</span></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a><span class="co">        old (float): The original (baseline) value.</span></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a><span class="co">    Returns:</span></span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a><span class="co">        float: The proportional change from old to new.</span></span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a><span class="co">    Example:</span></span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a><span class="co">        &gt;&gt;&gt; percentage_change(120, 100)</span></span>
+<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a><span class="co">        0.2</span></span>
+<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
+<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> (new <span class="op">-</span> old) <span class="op">/</span> old</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>ve this limitation. They work the same way whether your function lives in a one-off script or a full package, and are picked up automatically by <code>help()</code>.</p>
+</div>
+</div>
+</div>
+<section id="your-turn-2" class="level3">
+<h3 class="anchored" data-anchor-id="your-turn-2">👩‍💻 Your turn</h3>
+<p>Take the function you sketched out in <a href="#one-thing">section 2</a> and write proper documentation for it. Either a roxygen2-style block in R, or a docstring in Python.</p>
+</section>
+<section id="resources-2" class="level3">
+<h3 class="anchored" data-anchor-id="resources-2">📖 Resources</h3>
+<ul>
+<li><a href="https://roxygen2.r-lib.org/articles/roxygen2.html">Get started with roxygen2</a> (R)</li>
+<li><a href="https://realpython.com/how-to-write-docstrings-in-python/">How to write docstrings in Python</a> (Python)</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="style" class="level2">
+<h2 class="anchored" data-anchor-id="style">4. Consistent style</h2>
+<p>A consistent style makes code easier to scan, understand and safely modify. It matters more for reusable code: something meant to be shared or reused needs to be readable by people who didn’t write it. Agree conventions with your team, then let a tool handle the mechanical parts.</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-4-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-1" role="tab" aria-controls="tabset-4-1" aria-selected="true" href="">R</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-2" role="tab" aria-controls="tabset-4-2" aria-selected="false" href="">Python</a></li></ul>
+<div class="tab-content">
+<div id="tabset-4-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-4-1-tab">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Before</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>my_function<span class="ot">=</span><span class="cf">function</span>(x,y){</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>x<span class="sc">+</span>y</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a><span class="co"># After: styler::style_file() applied</span></span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>my_function <span class="ot">&lt;-</span> <span class="cf">function</span>(x, y) {</span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>  x <span class="sc">+</span> y</span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><code>styler</code> reformats code automatically; <code>lintr</code> flags style problems it can’t fix for you.</p>
+</div>
+<div id="tabset-4-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-4-2-tab">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Before</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> my_function(x,y):</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> x<span class="op">+</span>y</span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="co"># After: black applied</span></span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> my_function(x, y):</span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> x <span class="op">+</span> y</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><code>black</code> or <code>ruff format</code> reformat code automatically; <code>ruff</code> also flags issues it can’t fix.</p>
+</div>
+</div>
+</div>
+<p>The logic hasn’t changed here, just the formatting. But consistent spacing and layout mean anyone on the team can read this function without first adjusting to a one-off style.</p>
+<section id="your-turn-3" class="level3">
+<h3 class="anchored" data-anchor-id="your-turn-3">👩‍💻 Your turn</h3>
+<p>Run an auto-formatter on a script of your own <code>styler::style_file()</code> (R) or <code>black</code> / <code>ruff format</code> (Python). What did it change automatically? Was anything left for you to fix by hand?</p>
+</section>
+<section id="resources-3" class="level3">
+<h3 class="anchored" data-anchor-id="resources-3">📖 Resources</h3>
+<ul>
+<li><a href="https://lintr.r-lib.org/articles/lintr.html">{lintr} (R)</a></li>
+<li><a href="https://realpython.com/ruff-python/">ruff (python)</a></li>
+<li><a href="https://style.tidyverse.org/">Tidyverse Style Guide</a>, sections on functions and syntax (R)</li>
+<li><a href="https://peps.python.org/pep-0008/">PEP 8 Style Guide for Python Code</a>, sections on Naming Conventions and Programming Recommendations (Python)</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="before-the-session" class="level2">
+<h2 class="anchored" data-anchor-id="before-the-session">Before the session</h2>
+<p>Come prepared to discuss:</p>
+<ul>
+<li>The function you sketched in <a href="#one-thing">section 2</a> — name, inputs, return value</li>
+<li>What code have you written that would be useful to reuse?</li>
+<li>What makes a function easy for someone else to understand and reuse?</li>
+<li>What coding conventions does your team already follow, formally or informally?</li>
+<li>Have you encountered code that was hard to understand or reuse? What made it difficult?</li>
+</ul>
 
 
 </section>
