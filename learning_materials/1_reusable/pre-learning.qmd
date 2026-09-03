@@ -246,7 +246,7 @@ Take the function you sketched out in [section 2](#one-thing) and write proper d
 
 ### 📖 Resources
 -  [Get started with roxygen2](https://roxygen2.r-lib.org/articles/roxygen2.html) (R)
--  [PEP 257 — Docstring Conventions](https://peps.python.org/pep-0257/) (Python)
+-  [How to write docstrings in Python](https://realpython.com/how-to-write-docstrings-in-python/) (Python)
 
 ---
 
