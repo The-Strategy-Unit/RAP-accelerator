@@ -1,5 +1,5 @@
 ---
-title: "Reusable Code"
+title: "Reusable"
 subtitle: "Pre-learning materials"
 format:
   html:

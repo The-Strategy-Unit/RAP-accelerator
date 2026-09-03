@@ -35,6 +35,11 @@ website:
             file: learning_materials/4_reliable/index.qmd
           - text: "🏆 Capstone"
             file: learning_materials/5_capstone/index.qmd
+     right: 
+        - icon: github
+          href: https://github.com/The-Strategy-Unit/RAP-accelerator
+
+
       
   announcement:
     icon: exclamation-triangle-fill
@@ -45,11 +50,7 @@ website:
 
 format:
   html:
-    theme:
-      light:
-        - brand
-      dark:
-        - brand
+    theme: brand
     css:
       - _SUBrand.StyleSheet.css
     toc: true
