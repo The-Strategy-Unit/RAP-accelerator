@@ -172,14 +172,21 @@
     "href": "practical_information/set-up.html",
     "title": "Getting set up",
     "section": "",
-    "text": "Before the first session, install:\nYou’ll also need to create a GitHub account before session 3.\nPackages: TBD"
+    "text": "Before the first session, install:\nYou’ll also need to create a GitHub account before session 3."
+  },
+  {
+    "objectID": "practical_information/set-up.html#packages",
+    "href": "practical_information/set-up.html#packages",
+    "title": "Getting set up",
+    "section": "📦 Packages",
+    "text": "📦 Packages\nIdeally, you should have sufficient admin rights on your machine to install the packages that you need as and when you require them. To start off with, here are some packages that we recommend for R and Python:\n\nRecommended Python packages\n\nuv for package management\npandas for data wrangling\nruff for formatting and linting\n\n\n\nRecommended R packages\n\n{tidyverse} collection of R packages"
   },
   {
     "objectID": "practical_information/set-up.html#cloud-environment",
     "href": "practical_information/set-up.html#cloud-environment",
     "title": "Getting set up",
     "section": "☁️ Cloud environment",
-    "text": "☁️ Cloud environment\nIf you have issues using R or Python on your work computer, we’ll set up a Binder as a backup. Binder is a free online environment where you can run code without installing anything. However, there are some limitations.\n\nChanges aren’t saved between sessions\nTakes time to load\nLimited for later work on your own project\n\nYou’ll get much more from this programme if you’re able to work on your own machine."
+    "text": "☁️ Cloud environment\nIf you have issues using R or Python on your work computer, we have set up GitHub Codespace templates as a backup. GitHub codespace is a free online environment where you can run code without installing anything. However, there are some limitations.\n\nLimited to 60 free hours per month\nTakes time to load\nLimited for later work on your own project\nCloud based - you cannot upload sensitive data\n\nYou’ll get much more from this programme if you’re able to work on your own machine."
   },
   {
     "objectID": "about/about.html",
