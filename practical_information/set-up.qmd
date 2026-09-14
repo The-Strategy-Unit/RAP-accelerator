@@ -16,15 +16,29 @@ Before the first session, install:
 
 You'll also need to [create a GitHub account](https://github.com) before session 3.
 
-Packages: TBD
+## 📦 Packages
+
+Ideally, you should have sufficient admin rights on your machine to install the packages that you need as and when you require them.
+To start off with, here are some packages that we recommend for R and Python:
+
+### Recommended Python packages
+
+- [uv](https://docs.astral.sh/uv/getting-started/installation/#pypi) for package management 
+- [pandas](https://pandas.pydata.org/pandas-docs/stable/getting_started/index.html) for data wrangling
+- [ruff](https://docs.astral.sh/ruff/) for formatting and linting
+
+### Recommended R packages
+
+- [{tidyverse}](https://tidyverse.org/) collection of R packages
 
 ## ☁️ Cloud environment
 
-If you have issues using R or Python on your work computer, we'll set up a Binder as a backup. Binder is a free online environment where you can run code without installing anything. However, there are some limitations.
+If you have issues using R or Python on your work computer, we have set up [GitHub Codespace templates](https://github.com/The-Strategy-Unit/codespace-template) as a backup. GitHub codespace is a free online environment where you can run code without installing anything. However, there are some limitations.
 
-- Changes aren't saved between sessions
+- Limited to 60 free hours per month
 - Takes time to load
 - Limited for later work on your own project
+- Cloud based - you cannot upload sensitive data
 
 You'll get much more from this programme if you're able to work on your own machine.
 
