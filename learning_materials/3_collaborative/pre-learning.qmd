@@ -6,13 +6,67 @@ format:
     toc: true
 ---
 
-## Questions to answer
+Analytical work never exists in isolation - it is always produced for or with other people.
+Working on analytical projects collaboratively can sometimes be a messy experience due to differences in file versions between different computers, or losing track of which changes were made by whom.
+Luckily, there are tools to help manage coding collaboration.
 
-Think about these before the session
+In this module, we will use GitHub to practice working asynchronously on a project together. We will cover:
 
-- What problems have you faced when working on code with others (or on multiple machines)?
-- Have you used version control before? What was your experience?
+- Setting up GitHub authentication on your machine
+- Cloning code to your machine from GitHub
+- Making changes to the code on your machine
+- Pushing your changes to share them with colleagues
+- Reviewing requested changes
 
-## Learning materials
+## Setting up GitHub authentication on your machine
 
-🚧 TO FOLLOW - WORK IN PROGRESS 🚧
+The first step to using GitHub for collaboration is to authenticate your machine. 
+This means that you are creating a connection between your computer and GitHub using a specific user account.
+
+Choose __**either**__ SSH or HTTPS - you do not need both. [Follow these instructions](https://se-education.org/guides/tutorials/githubAuthentication.html#setting-up-github-authentication).
+
+## Cloning code to your machine from GitHub
+
+Open the code editor of your choice, which you should have installed during [setup](/practical_information/set-up.qmd).
+
+::: {.callout-note}
+We highly recommend that you use a location on your computer that is not synced to cloud-based systems like Sharepoint, OneDrive or DropBox. This is because they can conflict with each other and lead to errors. Please use a folder that is not synced, like the Desktop.
+:::
+
+Each session group will be given a specific repository to clone to their machine and work collaboratively on.
+
+1. Go to the repository URL for your group.
+2. Click the green button that says `<> Code`
+3. Click on the `Local` tab. Then in the "Clone" section, select either HTTPS or SSH depending on which option you set up previously. Copy the URL provided.
+
+TODO: separate instructions for RStudio and VSCode/Positron?
+
+## Making changes to the code on your machine
+
+Assign yourself to an issue
+Create a branch relating to the issue
+Make your changes
+Save your changes
+git status
+git add
+git commit 
+
+## Pushing your changes to share them with colleagues
+
+git push
+Make a pull request
+
+## Merging your changes once approved
+
+How to review - some tips?
+Merge PR when approved
+
+## Before the session
+
+Come prepared to discuss:
+
+- What was your experience like working on GitHub? Any particular pain points?
+- 
+
+## Further reading (optional)
+
