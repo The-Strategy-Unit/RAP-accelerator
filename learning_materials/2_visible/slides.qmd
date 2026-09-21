@@ -15,4 +15,30 @@ format:
     auto-animate: true
 ---
 
-*Slides coming soon — check back soon for content.*
+## Audiences
+
+Who are the different audiences for your analysis?
+
+## Different types of documentation 
+
+What are the differences between documentation sites, vignettes, and READMEs?
+
+## Different documentation for different audiences
+
+Which type of documentation might be best suited for each of your different audiences?
+
+## Licenses
+
+Why might a licence matter for analytical code?
+
+## What makes good documentation?
+
+Have you read a README or other documentation that was particularly helpful (or unhelpful)? What made the difference?
+
+## Sharing your README
+
+What was your experience of writing a README like? Please share the README that you wrote.
+
+## Other options
+
+What other ways are there to increase the visibility of your work?

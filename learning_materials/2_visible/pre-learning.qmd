@@ -6,17 +6,6 @@ format:
     toc: true
 ---
 
-## Questions to answer
-
-Think about these before the session
-
-- Have you read a README or other documentation that was particularly helpful (or unhelpful)? What made the difference?
-- Why might a licence matter for analytical code?
-
-## Learning materials
-
-### Documentation
-
 Having awesome code isn't enough on its own. We need to make it easy for others to find, understand, and use - documentation is one of the ways that we can achieve this.
 For Reproducible Analytical Pipelines, there are several types of documentation, each with their own role to play.
 
@@ -26,27 +15,46 @@ Providing further context and instructions is key to making your code more acces
 Additionally, although you might understand your code today, it might not make sense 12 months later!
 Documentation is also a way of making your code understandable for your future self.
 
-The simplest and most minimal form of documentation is a README.
+This section covers three ways of making your code more visible:
+
+- READMEs
+- Vignettes and documentation websites
+- Licenses
+
+::: {.callout-note}
+Read through the sections below and try out the _👩‍💻 Your turn_ sections. We'll use your answers to these sections them as discussion points in the contact session.
+:::
+
+## READMEs
+
+The simplest and most minimal form of documentation is a README. Please read the following article.
 
 📖 [Make a README](https://www.makeareadme.com/) by Danny Guo (10 minutes).
 
+### 👩‍💻 Your turn
+
 ✏️ Write a README for some code that you have written, or for some analysis you have completed (15 minutes). Please be prepared to share and discuss this in the face-to-face session.
+
+## Vignettes and documentation sites
 
 Once a README is in place, you may also want to provide more detailed documentation for your code.
 This is because the README is intended to provide a quick overview, which might not be sufficient on its own.
 Below are some options for creating more detailed documentation.
 
-### R users
+::: {.panel-tabset}
+### R
 
 📖 [R Vignettes](https://carpentries-incubator.github.io/lesson-R-packaging/vignettes.html) by Software Carpentry.
 
 Read the article and explore the vignette for one R package of your choice. How does it aid your understanding of the code? What does the vignette provide that the README on its own does not? (30 minutes)
 
-### Python users
+### Python
 
 📖 [RAP Cookiecutter documentation](https://nhsengland.github.io/nhse-rap-cookiecutter/) by NHS England. 
 
 Read the documentation site and compare it with the [repository README](https://github.com/nhsengland/nhse-rap-cookiecutter/blob/main/README.md). What are the differences between the two types of documentation? (30 minutes)
+
+:::
 
 ### Licences
 
@@ -58,10 +66,23 @@ What licences are recommended for analytical code by the UK Government Service M
 
 📖 [Government Digital Service: Making source code open and reusable](https://www.gov.uk/service-manual/technology/making-source-code-open-and-reusable) (10 minutes)
 
-### Next steps
+## Before the session
+
+Come prepared to discuss:
+
+- Who are the different audiences for your analysis?
+- What are the differences between documentation sites, vignettes, and READMEs?
+- Which type of documentation might be best suited for each of your different audiences?
+- Why might a licence matter for analytical code?
+- Have you read a README or other documentation that was particularly helpful (or unhelpful)? What made the difference?
+- What was your experience of writing a README like? Please share the README that you wrote.
+- What other ways are there to increase the visibility of your work?
+
+## Next steps (optional)
 
 If you wish to extend your learning beyond the scope of this course, try some of the resources below.
 
 - 📺 [Writing effective documentation](https://www.youtube.com/watch?v=R6zeikbTgVc) by Beth Aitman (10 minutes)
-- [Use {pkgdown}](https://rguides.dev/tutorials/r-package-development/pkgdown-sites/) to turn your R vignettes into a documentation site
-- [Use mkdocs](https://www.mkdocs.org/getting-started/) to build a basic Python documentation site.
+- ✏️ R: [Use {pkgdown}](https://rguides.dev/tutorials/r-package-development/pkgdown-sites/) to turn your R vignettes into a documentation site
+- ✏️ Python: [Use mkdocs](https://www.mkdocs.org/getting-started/) to build a basic Python documentation site.
+- 📖 Have a look at [ATLAS](https://atlas.hsma.co.uk/), a directory of open-source tools, packages, and projects for analytics and decision science in healthcare. Consider submitting your work to it.
