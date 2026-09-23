@@ -48,9 +48,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-25eac23d88b76baa0801982e114d5f98.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-3ff187706f6136ec7951dc214fdb61f5.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-25eac23d88b76baa0801982e114d5f98.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-21b08c19baec34a3e9161bf281570af6.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-c25201241fa143bb27157ff3b7009344.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-21b08c19baec34a3e9161bf281570af6.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -199,15 +199,16 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#questions-to-answer" id="toc-questions-to-answer" class="nav-link active" data-scroll-target="#questions-to-answer">Questions to answer</a></li>
-  <li><a href="#learning-materials" id="toc-learning-materials" class="nav-link" data-scroll-target="#learning-materials">Learning materials</a>
+  <li><a href="#readmes" id="toc-readmes" class="nav-link active" data-scroll-target="#readmes">READMEs</a>
   <ul class="collapse">
-  <li><a href="#documentation" id="toc-documentation" class="nav-link" data-scroll-target="#documentation">Documentation</a></li>
-  <li><a href="#r-users" id="toc-r-users" class="nav-link" data-scroll-target="#r-users">R users</a></li>
-  <li><a href="#python-users" id="toc-python-users" class="nav-link" data-scroll-target="#python-users">Python users</a></li>
-  <li><a href="#licences" id="toc-licences" class="nav-link" data-scroll-target="#licences">Licences</a></li>
-  <li><a href="#next-steps" id="toc-next-steps" class="nav-link" data-scroll-target="#next-steps">Next steps</a></li>
+  <li><a href="#your-turn" id="toc-your-turn" class="nav-link" data-scroll-target="#your-turn">👩‍💻 Your turn</a></li>
   </ul></li>
+  <li><a href="#vignettes-and-documentation-sites" id="toc-vignettes-and-documentation-sites" class="nav-link" data-scroll-target="#vignettes-and-documentation-sites">Vignettes and documentation sites</a>
+  <ul class="collapse">
+  <li><a href="#licences" id="toc-licences" class="nav-link" data-scroll-target="#licences">Licences</a></li>
+  </ul></li>
+  <li><a href="#before-the-session" id="toc-before-the-session" class="nav-link" data-scroll-target="#before-the-session">Before the session</a></li>
+  <li><a href="#next-steps-optional" id="toc-next-steps-optional" class="nav-link" data-scroll-target="#next-steps-optional">Next steps (optional)</a></li>
   </ul>
 </nav>
     </div>
@@ -234,35 +235,52 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="questions-to-answer" class="level2">
-<h2 class="anchored" data-anchor-id="questions-to-answer">Questions to answer</h2>
-<p>Think about these before the session</p>
-<ul>
-<li>Have you read a README or other documentation that was particularly helpful (or unhelpful)? What made the difference?</li>
-<li>Why might a licence matter for analytical code?</li>
-</ul>
-</section>
-<section id="learning-materials" class="level2">
-<h2 class="anchored" data-anchor-id="learning-materials">Learning materials</h2>
-<section id="documentation" class="level3">
-<h3 class="anchored" data-anchor-id="documentation">Documentation</h3>
 <p>Having awesome code isn’t enough on its own. We need to make it easy for others to find, understand, and use - documentation is one of the ways that we can achieve this. For Reproducible Analytical Pipelines, there are several types of documentation, each with their own role to play.</p>
 <p>In the previous session, we looked at how to document individual functions, so that users are clear on what each function does. However, function documentation on its own might not be enough for users, because it does not provide an overview of the package or pipeline as a whole. Providing further context and instructions is key to making your code more accessible. Additionally, although you might understand your code today, it might not make sense 12 months later! Documentation is also a way of making your code understandable for your future self.</p>
-<p>The simplest and most minimal form of documentation is a README.</p>
+<p>This section covers three ways of making your code more visible:</p>
+<ul>
+<li>READMEs</li>
+<li>Vignettes and documentation websites</li>
+<li>Licences</li>
+</ul>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Read through the sections below and try out the 👩‍💻 <em>Your turn</em> sections. We’ll use your answers to these sections them as discussion points in the contact session.</p>
+</div>
+</div>
+<section id="readmes" class="level2">
+<h2 class="anchored" data-anchor-id="readmes">READMEs</h2>
+<p>The simplest and most minimal form of documentation is a README. Please read the following article.</p>
 <p>📖 <a href="https://www.makeareadme.com/">Make a README</a> by Danny Guo (10 minutes).</p>
+<section id="your-turn" class="level3">
+<h3 class="anchored" data-anchor-id="your-turn">👩‍💻 Your turn</h3>
 <p>✏️ Write a README for some code that you have written, or for some analysis you have completed (15 minutes). Please be prepared to share and discuss this in the face-to-face session.</p>
-<p>Once a README is in place, you may also want to provide more detailed documentation for your code. This is because the README is intended to provide a quick overview, which might not be sufficient on its own. Below are some options for creating more detailed documentation.</p>
 </section>
-<section id="r-users" class="level3">
-<h3 class="anchored" data-anchor-id="r-users">R users</h3>
+</section>
+<section id="vignettes-and-documentation-sites" class="level2">
+<h2 class="anchored" data-anchor-id="vignettes-and-documentation-sites">Vignettes and documentation sites</h2>
+<p>Once a README is in place, you may also want to provide more detailed documentation for your code. This is because the README is intended to provide a quick overview, which might not be sufficient on its own. Below are some options for creating more detailed documentation.</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">R</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">Python</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
 <p>📖 <a href="https://carpentries-incubator.github.io/lesson-R-packaging/vignettes.html">R Vignettes</a> by Software Carpentry.</p>
 <p>Read the article and explore the vignette for one R package of your choice. How does it aid your understanding of the code? What does the vignette provide that the README on its own does not? (30 minutes)</p>
-</section>
-<section id="python-users" class="level3">
-<h3 class="anchored" data-anchor-id="python-users">Python users</h3>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
 <p>📖 <a href="https://nhsengland.github.io/nhse-rap-cookiecutter/">RAP Cookiecutter documentation</a> by NHS England.</p>
 <p>Read the documentation site and compare it with the <a href="https://github.com/nhsengland/nhse-rap-cookiecutter/blob/main/README.md">repository README</a>. What are the differences between the two types of documentation? (30 minutes)</p>
-</section>
+</div>
+</div>
+</div>
 <section id="licences" class="level3">
 <h3 class="anchored" data-anchor-id="licences">Licences</h3>
 <p>There are many different licences out there. What are our options, if we are to make our code open source? Watch the video below for an overview.</p>
@@ -270,17 +288,31 @@ ul.task-list li input[type="checkbox"] {
 <p>What licences are recommended for analytical code by the UK Government Service Manual? What category does this fall under, according to the classifications provided in the video above?</p>
 <p>📖 <a href="https://www.gov.uk/service-manual/technology/making-source-code-open-and-reusable">Government Digital Service: Making source code open and reusable</a> (10 minutes)</p>
 </section>
-<section id="next-steps" class="level3">
-<h3 class="anchored" data-anchor-id="next-steps">Next steps</h3>
+</section>
+<section id="before-the-session" class="level2">
+<h2 class="anchored" data-anchor-id="before-the-session">Before the session</h2>
+<p>Come prepared to discuss:</p>
+<ul>
+<li>Who are the different audiences for your analysis?</li>
+<li>What are the differences between documentation sites, vignettes, and READMEs?</li>
+<li>Which type of documentation might be best suited for each of your different audiences?</li>
+<li>Why might a licence matter for analytical code?</li>
+<li>Have you read a README or other documentation that was particularly helpful (or unhelpful)? What made the difference?</li>
+<li>What was your experience of writing a README like? Please share the README that you wrote.</li>
+<li>What other ways are there to increase the visibility of your work?</li>
+</ul>
+</section>
+<section id="next-steps-optional" class="level2">
+<h2 class="anchored" data-anchor-id="next-steps-optional">Next steps (optional)</h2>
 <p>If you wish to extend your learning beyond the scope of this course, try some of the resources below.</p>
 <ul>
 <li>📺 <a href="https://www.youtube.com/watch?v=R6zeikbTgVc">Writing effective documentation</a> by Beth Aitman (10 minutes)</li>
-<li><a href="https://rguides.dev/tutorials/r-package-development/pkgdown-sites/">Use {pkgdown}</a> to turn your R vignettes into a documentation site</li>
-<li><a href="https://www.mkdocs.org/getting-started/">Use mkdocs</a> to build a basic Python documentation site.</li>
+<li>✏️ R: <a href="https://rguides.dev/tutorials/r-package-development/pkgdown-sites/">Use {pkgdown}</a> to turn your R vignettes into a documentation site</li>
+<li>✏️ Python: <a href="https://www.mkdocs.org/getting-started/">Use mkdocs</a> to build a basic Python documentation site.</li>
+<li>📖 Have a look at <a href="https://atlas.hsma.co.uk/">ATLAS</a>, a directory of open-source tools, packages, and projects for analytics and decision science in healthcare. Consider submitting your work to it.</li>
 </ul>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
