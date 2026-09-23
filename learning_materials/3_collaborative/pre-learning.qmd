@@ -4,6 +4,8 @@ subtitle: "Pre-learning materials"
 format:
   html:
     toc: true
+filters:
+  - git-sandbox
 ---
 
 Analytical work never exists in isolation - it is always produced for or with other people.
@@ -156,6 +158,10 @@ Come prepared to discuss:
 
 There are some unassigned issues in your group repository. If you feel confident and want to practice more with Git and GitHub, feel free to assign yourself to these issues and work on them.
 
+### Guide to writing good commits
+
+📖 [Git commit message](https://github.com/joelparkerhenderson/git-commit-message/#git-commit-message) by Joel Parker Henderson
+
 ### Working on your own machine
 
 We have been working on the GitHub web interface.
@@ -165,4 +171,39 @@ However, this only offers limited functionality and to really integrate Git into
 
 ### Practice using the git command line interface (CLI)
 
-TODO: add demo sandbox from https://ryjohnson09.github.io/quarto-git-sandbox/
+Below is a sandbox to practice using git in the browser.
+It is not a real git repository and no data is saved.
+The exercise simulates how you would use the command line interface (CLI) in your computer terminal to enact some of the actions covered in this module, which we carried out on the GitHub web interface.
+
+
+```git-sandbox
+id: git-practice
+title: Basic intro to the git CLI
+prompt: "~/demo-project $"
+intro: |
+  Run the suggested commands below to perform specific tasks.
+  Type {y}help{/} to see what the sandbox supports.
+hints: [git status, git checkout -b docs, 'echo "A new line." >> README.md', git diff, git add ., 'git commit -m "Extend the README"'], 'git push'
+done-note: You have created a new branch called `docs` and made changes to the README on your branch. Your changes are pushed to GitHub so colleagues can see them. The next step would be to do a Pull Request on GitHub.
+seed: |
+  git init
+  echo "# Demo project" > README.md
+  git add .
+  git commit -m "Add the README"
+  echo "library(tidyverse)" > analysis.R
+  git add .
+  git commit -m "Start the analysis"
+tasks:
+  - text: Ask where things stand with `git status`
+    when: ran /^\s*git\s+status/
+  - text: Create a new branch called `docs`
+    when: branch docs
+  - text: Change a file and find it in the Changes panel
+    when: not clean
+  - text: Add the file to your commit
+    when: staged
+  - text: Commit it and watch the history graph grow
+    when: commits >= 3
+  - text: Push your changes to GitHub
+    when: pushed
+```
