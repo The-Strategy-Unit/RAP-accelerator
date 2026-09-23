@@ -15,4 +15,14 @@ format:
     auto-animate: true
 ---
 
-*Slides coming soon — check back soon for content.*
+## Reflection
+
+What was your experience like working with Git on GitHub? 
+
+## Discussion
+
+What benefits can you see from using Git and GitHub? Downsides?
+
+## Next steps
+
+How can you incorporate these tools into your existing workflows?
