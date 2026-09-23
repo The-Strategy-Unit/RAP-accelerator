@@ -27,7 +27,7 @@ What are the differences between documentation sites, vignettes, and READMEs?
 
 Which type of documentation might be best suited for each of your different audiences?
 
-## Licenses
+## Licences
 
 Why might a licence matter for analytical code?
 

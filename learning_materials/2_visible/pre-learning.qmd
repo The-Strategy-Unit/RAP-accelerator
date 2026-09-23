@@ -19,10 +19,10 @@ This section covers three ways of making your code more visible:
 
 - READMEs
 - Vignettes and documentation websites
-- Licenses
+- Licences
 
 ::: {.callout-note}
-Read through the sections below and try out the _👩‍💻 Your turn_ sections. We'll use your answers to these sections them as discussion points in the contact session.
+Read through the sections below and try out the 👩‍💻 _Your turn_ sections. We'll use your answers to these sections them as discussion points in the contact session.
 :::
 
 ## READMEs
