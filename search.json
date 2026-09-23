@@ -1,222 +1,5 @@
 [
   {
-    "objectID": "learning_materials/5_capstone/example.html",
-    "href": "learning_materials/5_capstone/example.html",
-    "title": "📝 Capstone example",
-    "section": "",
-    "text": "If you aren’t able to use data that is local to you for any reason (such as privacy, or complexity) you could carry out a capstone project using open data. An example is given following."
-  },
-  {
-    "objectID": "learning_materials/5_capstone/example.html#overview",
-    "href": "learning_materials/5_capstone/example.html#overview",
-    "title": "📝 Capstone example",
-    "section": "",
-    "text": "If you aren’t able to use data that is local to you for any reason (such as privacy, or complexity) you could carry out a capstone project using open data. An example is given following."
-  },
-  {
-    "objectID": "learning_materials/5_capstone/example.html#task",
-    "href": "learning_materials/5_capstone/example.html#task",
-    "title": "📝 Capstone example",
-    "section": "💼 Task",
-    "text": "💼 Task\nNHS England publishes data about access to mental health crisis care through the 111 service. The data includes information about the number of calls and the number answered within 60 seconds, as well as trust and ICB names. This data could be used to report on the proportion of calls answered within 60 seconds over time.\nYou might have the task of reporting on and benchmarking performance on the proportion of calls answered within 60 seconds across a region or regions."
-  },
-  {
-    "objectID": "learning_materials/5_capstone/example.html#approaches",
-    "href": "learning_materials/5_capstone/example.html#approaches",
-    "title": "📝 Capstone example",
-    "section": "📖 Approaches",
-    "text": "📖 Approaches\nTo approach this task you could create a Quarto document which is parameterised so that it can be made to focus on specific regions or specific periods of time. Analyses might include tracking performance over time, perhaps with a Statistical Process Control chart. There are various methods of drawing such charts including NHSR plot the dots.\nYou may also consider bringing in other information from datasets about deprivation, health spending, or other factors that might relate to access to mental health crisis services."
-  },
-  {
-    "objectID": "learning_materials/1_reusable/pre-learning.html",
-    "href": "learning_materials/1_reusable/pre-learning.html",
-    "title": "Reusable",
-    "section": "",
-    "text": "Writing code once and reusing it is one of the biggest productivity and quality wins in a Reproducible Analytical Pipeline. Every time we copy-paste a block of code instead of reusing a function, we create another place for a bug to hide, and another place to remember to update when the logic changes.\nThis section covers four things that helps make great functions:"
-  },
-  {
-    "objectID": "learning_materials/1_reusable/pre-learning.html#naming",
-    "href": "learning_materials/1_reusable/pre-learning.html#naming",
-    "title": "Reusable",
-    "section": "1. Meaningful names",
-    "text": "1. Meaningful names\nA good name tells the reader what something represents or does, without them having to read the code in detail. Choosing a good name can be surpringly tricky! When choosing a function name, try to describe what the function does really specifically.\n\nDescribe the purpose. Say what the thing does, specifically\nWrite for humans - readable, searchable names. e.g start_date is much more understandable (and searchable) than d\nBe consistent with names used elsewhere in the project, if you already have load_sales(), use load_costs() rather than importCosts()\n\nCompare:\nprocess_data(x)\nwith:\ncalculate_percentage_change(new, old)\nThe second name tells the reader what’s happening before they’ve even looked inside the function. Avoid vague names like x, tmp, df2 or do_thing when something more specific is easy to write.\n\n\n\n\n\n\nTip\n\n\n\nIf you find yourself adding a comment to explain how a line of code works, that’s often a sign that you could use a better name. Comments are best saved for explaining the why of the code, not how.\n\n\n\n👩‍💻 Your turn\nLook at a script you’ve written recently. Find one variable or function name that isn’t self-explanatory. What would you rename it to?\n\n\n📖 Resources\n\nMeaningful function names\nHow long should a function name be?"
-  },
-  {
-    "objectID": "learning_materials/1_reusable/pre-learning.html#one-thing",
-    "href": "learning_materials/1_reusable/pre-learning.html#one-thing",
-    "title": "Reusable",
-    "section": "2. Functions should do one thing",
-    "text": "2. Functions should do one thing\nA well-written function does one thing, does it well, and does only that. Aim for functions that:\n\nAre small\nDo one thing only\nTake as few parameters as possible\n\nInstead of repeating the same calculation in several places:\n\nRPython\n\n\nsales_growth &lt;- (this_year_sales - last_year_sales) / last_year_sales\nprofit_growth &lt;- (this_year_profit - last_year_profit) / last_year_profit\nCapture the logic once:\npercentage_change &lt;- function(new, old) {\n  (new - old) / old\n}\n\nsales_growth &lt;- percentage_change(this_year_sales, last_year_sales)\nprofit_growth &lt;- percentage_change(this_year_profit, last_year_profit)\n\n\nsales_growth = (this_year_sales - last_year_sales) / last_year_sales\nprofit_growth = (this_year_profit - last_year_profit) / last_year_profit\nCapture the logic once:\ndef percentage_change(new, old):\n    return (new - old) / old\n\nsales_growth = percentage_change(this_year_sales, last_year_sales)\nprofit_growth = percentage_change(this_year_profit, last_year_profit)\n\n\n\npercentage_change() has one clear job. It doesn’t know or care whether it’s being used for sales, profit, or anything else. That’s what makes it reusable.\nWhen should you extract a function? Duplication isn’t automatically a problem the first time you see it. A useful rule of thumb is the Rule of Three. Cnce the same logic shows up a third time, that’s a good time to pull the code into a function.\nIf a function feels cluttered, look for low-level detail that could be pulled out into a reusable helper function. For example, input checks could move into a helper function of it’s own.\n\nRPython\n\n\n# Before: validation is mixed in with the calculation\nget_age &lt;- function(age_days, units = \"years\") {\n  if (is.character(age_days)) stop(\"Age must be a number\")\n  if (age_days &lt; 0) stop(\"Negative age\")\n  if (age_days &gt; 150 * 365) stop(\"A bit too old?\")\n  if (units == \"years\") age_days / 365 else age_days\n}\n\n# After: validation is pulled out, and the main function is easier to read\nget_age &lt;- function(age_days, units = \"years\") {\n  check_age(age_days)\n  if (units == \"years\") age_days / 365 else age_days\n}\n\ncheck_age &lt;- function(age_days) {\n  if (is.character(age_days)) stop(\"Age must be a number\")\n  if (age_days &lt; 0) stop(\"Negative age\")\n  if (age_days &gt; 150 * 365) stop(\"A bit too old?\")\n}\n\n\n# Before: validation is mixed in with the calculation\ndef get_age(age_days, units=\"years\"):\n    if isinstance(age_days, str):\n        raise ValueError(\"Age must be a number\")\n    if age_days &lt; 0:\n        raise ValueError(\"Negative age\")\n    if age_days &gt; 150 * 365:\n        raise ValueError(\"A bit too old?\")\n\n    if units == \"years\":\n        return age_days / 365\n    else:\n        return age_days\n\n\n# After: validation is pulled out, and the main function is easier to read\ndef check_age(age_days):\n    if isinstance(age_days, str):\n        raise ValueError(\"Age must be a number\")\n    if age_days &lt; 0:\n        raise ValueError(\"Negative age\")\n    if age_days &gt; 150 * 365:\n        raise ValueError(\"A bit too old?\")\n\n\ndef get_age(age_days, units=\"years\"):\n    check_age(age_days)\n\n    if units == \"years\":\n        return age_days / 365\n    else:\n        return age_days\n\n\n\nWhere practical, aim for pure functions. These are functions that, given the same inputs, always return the same output, with no side effects (no file access, no printing, no depending on or changing anything outside the function). Pure functions are easier to test and reuse.\n\n👩‍💻 Your turn\nLook back at a script you’ve written. Find a chunk of code that appears more than once, even with small variations.\nSketch out how you’d turn it into a function:\n\nWhat would you call it?\nWhat inputs would it need?\nWhat would it return?\n\nBring your example to the session, we’ll use a few of these as discussion points.\n\n\n📖 Resources\n\nFunctions — R for Data Science\nDefining Your Own Python Function by Real Python, section on writing clear, single-purpose functions (Python)"
-  },
-  {
-    "objectID": "learning_materials/1_reusable/pre-learning.html#documenting",
-    "href": "learning_materials/1_reusable/pre-learning.html#documenting",
-    "title": "Reusable",
-    "section": "3. Document your functions",
-    "text": "3. Document your functions\nA function is easy to reuse when the reader can quickly answer three questions, without reading the implementation:\n\nWhat does it do?\nWhat inputs does it need?\nWhat does it return?\n\n\nRPython\n\n\n#' Calculate percentage change\n#'\n#' @param new Numeric. The new (current) value.\n#' @param old Numeric. The original (baseline) value.\n#'\n#' @return Numeric. The proportional change from `old` to `new`.\n#'\n#' @examples\n#' percentage_change(new = 120, old = 100)\npercentage_change &lt;- function(new, old) {\n  (new - old) / old\n}\n\n\n\n\n\n\nImportant\n\n\n\nThe #' comment block above is the R roxygen2 convention. It only generates a help page (?percentage_change) if your function lives inside an R package. If your script is just stand alone, it won’t do anything automatically. It’s still a good habit to write your function docs in this style even in an ordinary script. It forces you to answer the “what/inputs/returns” questions, and it means your docs are ready to go if that code ever does end up in a package.\n\n\n\n\ndef percentage_change(new, old):\n    \"\"\"Calculate the proportional change between two values.\n\n    Args:\n        new (float): The new (current) value.\n        old (float): The original (baseline) value.\n\n    Returns:\n        float: The proportional change from old to new.\n\n    Example:\n        &gt;&gt;&gt; percentage_change(120, 100)\n        0.2\n    \"\"\"\n    return (new - old) / old\nve this limitation. They work the same way whether your function lives in a one-off script or a full package, and are picked up automatically by help().\n\n\n\n\n👩‍💻 Your turn\nTake the function you sketched out in section 2 and write proper documentation for it. Either a roxygen2-style block in R, or a docstring in Python.\n\n\n📖 Resources\n\nGet started with roxygen2 (R)\nHow to write docstrings in Python (Python)"
-  },
-  {
-    "objectID": "learning_materials/1_reusable/pre-learning.html#style",
-    "href": "learning_materials/1_reusable/pre-learning.html#style",
-    "title": "Reusable",
-    "section": "4. Consistent style",
-    "text": "4. Consistent style\nA consistent style makes code easier to scan, understand and safely modify. It matters more for reusable code: something meant to be shared or reused needs to be readable by people who didn’t write it. Agree conventions with your team, then let a tool handle the mechanical parts.\n\nRPython\n\n\n# Before\nmy_function=function(x,y){\nx+y\n}\n\n# After: styler::style_file() applied\nmy_function &lt;- function(x, y) {\n  x + y\n}\nstyler reformats code automatically; lintr flags style problems it can’t fix for you.\n\n\n# Before\ndef my_function(x,y):\n    return x+y\n\n# After: black applied\ndef my_function(x, y):\n    return x + y\nblack or ruff format reformat code automatically; ruff also flags issues it can’t fix.\n\n\n\nThe logic hasn’t changed here, just the formatting. But consistent spacing and layout mean anyone on the team can read this function without first adjusting to a one-off style.\n\n👩‍💻 Your turn\nRun an auto-formatter on a script of your own styler::style_file() (R) or black / ruff format (Python). What did it change automatically? Was anything left for you to fix by hand?\n\n\n📖 Resources\n\n{lintr} (R)\nruff (python)\nTidyverse Style Guide, sections on functions and syntax (R)\nPEP 8 Style Guide for Python Code, sections on Naming Conventions and Programming Recommendations (Python)"
-  },
-  {
-    "objectID": "learning_materials/1_reusable/pre-learning.html#before-the-session",
-    "href": "learning_materials/1_reusable/pre-learning.html#before-the-session",
-    "title": "Reusable",
-    "section": "Before the session",
-    "text": "Before the session\nCome prepared to discuss:\n\nThe function you sketched in section 2 — name, inputs, return value\nWhat code have you written that would be useful to reuse?\nWhat makes a function easy for someone else to understand and reuse?\nWhat coding conventions does your team already follow, formally or informally?\nHave you encountered code that was hard to understand or reuse? What made it difficult?"
-  },
-  {
-    "objectID": "learning_materials/2_visible/index.html",
-    "href": "learning_materials/2_visible/index.html",
-    "title": "📖 Visible",
-    "section": "",
-    "text": "Once you’re tracking your code with version control, the next step is making it visible and usable to others (and your future self). In this session, you’ll learn how to document your project, license your code, and share it in ways that encourage collaboration and reuse."
-  },
-  {
-    "objectID": "learning_materials/2_visible/index.html#overview",
-    "href": "learning_materials/2_visible/index.html#overview",
-    "title": "📖 Visible",
-    "section": "",
-    "text": "Once you’re tracking your code with version control, the next step is making it visible and usable to others (and your future self). In this session, you’ll learn how to document your project, license your code, and share it in ways that encourage collaboration and reuse."
-  },
-  {
-    "objectID": "learning_materials/2_visible/index.html#learning-objectives",
-    "href": "learning_materials/2_visible/index.html#learning-objectives",
-    "title": "📖 Visible",
-    "section": "🎯 Learning objectives",
-    "text": "🎯 Learning objectives\nBy the end of this session, you should be able to:\n\nWrite a clear, informative README\nChoose an appropriate licence for your code\nCreate vignettes or examples that demonstrate how to use your code\nSet up basic project documentation\nMake your code and analysis discoverable to others"
-  },
-  {
-    "objectID": "learning_materials/2_visible/index.html#before-the-session",
-    "href": "learning_materials/2_visible/index.html#before-the-session",
-    "title": "📖 Visible",
-    "section": "📖 Before the session",
-    "text": "📖 Before the session\nPlease complete the pre-learning materials. These typically take 60 – 90 minutes and are essential for getting the most out of the session."
-  },
-  {
-    "objectID": "learning_materials/2_visible/index.html#during-the-session",
-    "href": "learning_materials/2_visible/index.html#during-the-session",
-    "title": "📖 Visible",
-    "section": "🖥️ During the session",
-    "text": "🖥️ During the session\nView the slides →"
-  },
-  {
-    "objectID": "learning_materials/4_reliable/pre-learning.html",
-    "href": "learning_materials/4_reliable/pre-learning.html",
-    "title": "Reliable",
-    "section": "",
-    "text": "Think about these before the session\n\nHave you ever had code work on your machine but fail when someone else runs it? What went wrong?\nWhat are you most afraid will break in your code?\nHow would you know if your analysis is correct?"
-  },
-  {
-    "objectID": "learning_materials/4_reliable/pre-learning.html#questions-to-answer",
-    "href": "learning_materials/4_reliable/pre-learning.html#questions-to-answer",
-    "title": "Reliable",
-    "section": "",
-    "text": "Think about these before the session\n\nHave you ever had code work on your machine but fail when someone else runs it? What went wrong?\nWhat are you most afraid will break in your code?\nHow would you know if your analysis is correct?"
-  },
-  {
-    "objectID": "learning_materials/4_reliable/pre-learning.html#learning-materials",
-    "href": "learning_materials/4_reliable/pre-learning.html#learning-materials",
-    "title": "Reliable",
-    "section": "Learning materials",
-    "text": "Learning materials"
-  },
-  {
-    "objectID": "learning_materials/3_collaborative/index.html",
-    "href": "learning_materials/3_collaborative/index.html",
-    "title": "👥 Collaborative",
-    "section": "",
-    "text": "In this session, you’ll learn the fundamentals of version control with Git and GitHub — the tools that let teams collaborate safely on code, track changes, and avoid losing work to a corrupted file or accidental overwrite.\nYou’ll also explore peer review and pair programming, and learn how to ask for help effectively when you get stuck."
-  },
-  {
-    "objectID": "learning_materials/3_collaborative/index.html#overview",
-    "href": "learning_materials/3_collaborative/index.html#overview",
-    "title": "👥 Collaborative",
-    "section": "",
-    "text": "In this session, you’ll learn the fundamentals of version control with Git and GitHub — the tools that let teams collaborate safely on code, track changes, and avoid losing work to a corrupted file or accidental overwrite.\nYou’ll also explore peer review and pair programming, and learn how to ask for help effectively when you get stuck."
-  },
-  {
-    "objectID": "learning_materials/3_collaborative/index.html#learning-objectives",
-    "href": "learning_materials/3_collaborative/index.html#learning-objectives",
-    "title": "👥 Collaborative",
-    "section": "🎯 Learning objectives",
-    "text": "🎯 Learning objectives\nBy the end of this session, you should be able to:\n\nCreate and manage a repository on GitHub\nCommit changes with clear, informative messages\nPush and pull code from a remote repository\nConduct a peer review and give constructive feedback"
-  },
-  {
-    "objectID": "learning_materials/3_collaborative/index.html#before-the-session",
-    "href": "learning_materials/3_collaborative/index.html#before-the-session",
-    "title": "👥 Collaborative",
-    "section": "📖 Before the session",
-    "text": "📖 Before the session\nPlease complete the pre-learning materials. These typically take 60 – 90 minutes and are essential for getting the most out of the session."
-  },
-  {
-    "objectID": "learning_materials/3_collaborative/index.html#during-the-session",
-    "href": "learning_materials/3_collaborative/index.html#during-the-session",
-    "title": "👥 Collaborative",
-    "section": "🖥️ During the session",
-    "text": "🖥️ During the session\nView the slides →"
-  },
-  {
-    "objectID": "learning_materials/index.html",
-    "href": "learning_materials/index.html",
-    "title": "Learning materials",
-    "section": "",
-    "text": "Welcome to the learning materials for the RAP Accelerator. Each session has pre-learning (required self-study before the session) and slides (used during the 1-hour session). You’ll apply what you learn to your own project in the capstone.\n\n\n\nSession\nFocus\nObjectives\nPre-learning\nSlides\n\n\n\n\n♻️ Reusable\nWrite modular, well-documented code that’s easy for you and others to understand and reuse\nObjectives\nPre-learning\nSlides\n\n\n📖 Visible\nMake your projects easy to find and use with clear READMEs, licences, and documentation\nObjectives\nPre-learning\nSlides\n\n\n👥 Collaborative\nWork effectively with others using Git, code review, and good communication habits\nObjectives\nPre-learning\nSlides\n\n\n🛡️ Reliable\nBuild trust in your code through testing, automation, and reproducible environments\nObjectives\nPre-learning\nSlides\n\n\n🏆 Capstone\nPut it all into practice on a real project with feedback and support\nObjectives\n-\n-"
-  },
-  {
-    "objectID": "practical_information/set-up.html",
-    "href": "practical_information/set-up.html",
-    "title": "Getting set up",
-    "section": "",
-    "text": "Before the first session, install:\nYou’ll also need to create a GitHub account before session 3."
-  },
-  {
-    "objectID": "practical_information/set-up.html#packages",
-    "href": "practical_information/set-up.html#packages",
-    "title": "Getting set up",
-    "section": "📦 Packages",
-    "text": "📦 Packages\nIdeally, you should have sufficient admin rights on your machine to install the packages that you need as and when you require them. To start off with, here are some packages that we recommend for R and Python:\n\nRecommended Python packages\n\nuv for package management\npandas for data wrangling\nruff for formatting and linting\n\n\n\nRecommended R packages\n\n{tidyverse} collection of R packages"
-  },
-  {
-    "objectID": "practical_information/set-up.html#cloud-environment",
-    "href": "practical_information/set-up.html#cloud-environment",
-    "title": "Getting set up",
-    "section": "☁️ Cloud environment",
-    "text": "☁️ Cloud environment\nIf you have issues using R or Python on your work computer, we have set up GitHub Codespace templates as a backup. GitHub codespace is a free online environment where you can run code without installing anything. However, there are some limitations.\n\nLimited to 60 free hours per month\nTakes time to load\nLimited for later work on your own project\nCloud based - you cannot upload sensitive data\n\nYou’ll get much more from this programme if you’re able to work on your own machine."
-  },
-  {
-    "objectID": "about/about.html",
-    "href": "about/about.html",
-    "title": "About the programme",
-    "section": "",
-    "text": "RAP (Reproducible Analytical Pipelines) are a set of tools, principles, and techniques that enable analysts to create analytical processes that are automated, transparent, quality assured and reusable. This has the potential to increase efficiency and quality of analytical work across the healthcare system.\nThe Goldacre review recommended RAP as the minimum standard for academic and NHS data analysis."
-  },
-  {
-    "objectID": "about/about.html#what-is-rap",
-    "href": "about/about.html#what-is-rap",
-    "title": "About the programme",
-    "section": "",
-    "text": "RAP (Reproducible Analytical Pipelines) are a set of tools, principles, and techniques that enable analysts to create analytical processes that are automated, transparent, quality assured and reusable. This has the potential to increase efficiency and quality of analytical work across the healthcare system.\nThe Goldacre review recommended RAP as the minimum standard for academic and NHS data analysis."
-  },
-  {
-    "objectID": "about/about.html#what-is-the-rap-accelerator",
-    "href": "about/about.html#what-is-the-rap-accelerator",
-    "title": "About the programme",
-    "section": "🚀 What is the RAP Accelerator?",
-    "text": "🚀 What is the RAP Accelerator?\nA programme for ICB analysts starting their RAP journey, building the foundational skills to apply these approaches in practice. Some coding experience is expected (see prerequisites), along with enthusiasm to learn.\nIt runs as a flipped classroom. You’ll work through learning material at your own pace before each session, then use session time with tutors for discussion, problem-solving, and going deeper."
-  },
-  {
-    "objectID": "about/about.html#course-outline",
-    "href": "about/about.html#course-outline",
-    "title": "About the programme",
-    "section": "📖 Course outline",
-    "text": "📖 Course outline\n\n\n\nTheme\nTopics\n\n\n\n\n\n♻️ Reusable\nWrite modular, well-documented code that’s easy for you and others to understand and reuse\n\n\n\n📖 Visible\nMake your projects easy to find and use with clear READMEs, licences, and documentation\n\n\n\n👥 Collaborative\nWork effectively with others using Git, code review, and good communication habits\n\n\n\n🛡️ Reliable\nBuild trust in your code through testing, automation, and reproducible environments\n\n\n\n🏆 Capstone\nPut it all into practice on a real project with feedback and support\n\n\n\n\nEach session includes:\n\n60-90 mins of self-directed pre-work (reading, small exercises)\n60 mins contact session with the tutors\n\nWe’ll also have an online community for attendees to ask questions to tutors or chat with peers running throughout the ten weeks.\nWe won’t cover:\n\nBasic R or Python programming (We expect you to already know a little programming)\nPlotting and visualisation\nModelling and machine learning\nUsing LLMs\nBuilding interactive web apps"
-  },
-  {
     "objectID": "about/learner-personas.html",
     "href": "about/learner-personas.html",
     "title": "Learner Personas",
@@ -236,34 +19,6 @@
     "title": "Learner Personas",
     "section": "Patel Pipeline",
     "text": "Patel Pipeline\n\nPatel Pipeline has spent time in industry working on big datasets\nThey have a lot of experience working with SQL and Power Query formula language (M)\nBefore they started with the ICB their team was starting to use Python for data processing and they had started to learn more about using Python for data processing\nAt the moment they are the lead analyst in their area interested in moving data pipelines to Python and have had some early success\nPatel Pipeline heard about RAP at an analyst huddle and thinks that ensuring data pipeline work is transparent, versioned, and robust will help them convince their team leader to encourage more of the team to move towards Python"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "RAP Accelerator 🚀",
-    "section": "",
-    "text": "Learn more about how the accelerator programme works, see if this programme is aimed at you, and check you meet the prerequisites.\n\n\n\nOnce you’re enrolled, you can find practical information including the schedule, getting your laptop set-up and information about your tutors.\n\n\n\nAll our learning materials are available online to explore at your own pace.\nWelcome to the Reproducible Analytical Pipelines (RAP) Accelerator. A programme for ICB analysts starting their RAP journey, building the foundational skills to apply these approaches in practice. This programme runs from October – December 2026 and is funded by the Strategic Commissioning Intelligence Centre (SCIC)."
-  },
-  {
-    "objectID": "index.html#ℹ-about-rap-accelerator",
-    "href": "index.html#ℹ-about-rap-accelerator",
-    "title": "RAP Accelerator 🚀",
-    "section": "",
-    "text": "Learn more about how the accelerator programme works, see if this programme is aimed at you, and check you meet the prerequisites."
-  },
-  {
-    "objectID": "index.html#practical-information",
-    "href": "index.html#practical-information",
-    "title": "RAP Accelerator 🚀",
-    "section": "",
-    "text": "Once you’re enrolled, you can find practical information including the schedule, getting your laptop set-up and information about your tutors."
-  },
-  {
-    "objectID": "index.html#learning-materials",
-    "href": "index.html#learning-materials",
-    "title": "RAP Accelerator 🚀",
-    "section": "",
-    "text": "All our learning materials are available online to explore at your own pace."
   },
   {
     "objectID": "about/prerequisites.html",
@@ -315,32 +70,32 @@
     "text": "Rhian\n\n\n\nRhian Davies (pronouns: she/her) is a Senior Data Scientist at The Strategy Unit. She is an experienced statistician and data science consultant working in public health, specialising in R programming. She is also an active member of the R community (rainbowR, NHS Open Analytics, R-Ladies+) and a Statistical Ambassador for the Royal Statistical Society."
   },
   {
-    "objectID": "practical_information/schedule.html",
-    "href": "practical_information/schedule.html",
-    "title": "Schedule",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "RAP Accelerator 🚀",
     "section": "",
-    "text": "The programme runs over ten weeks. Each module is offered at four different sessions. You’ll be assigned one of the listed sessions for each module. All four sessions cover identical content.\n\n\n\nModule\nTutor\nSession 1\nSession 2\nSession 3\nSession 4\n\n\n\n\n♻️ Reusable\nRhian\nWed 14 Oct, 2:00pm\nThu 15 Oct, 2:00pm\nWed 21 Oct, 10:00am\nThu 22 Oct, 10:00am\n\n\n📖 Visible\nYiWen\nWed 28 Oct, 2:00pm\nThu 29 Oct, 2:00pm\nWed 4 Nov, 10:00am\nThu 5 Nov, 10:00am\n\n\n👥 Collaborative\nYiWen\nWed 11 Nov, 2:00pm\nThu 12 Nov, 2:00pm\nWed 18 Nov, 10:00am\nThu 19 Nov, 10:00am\n\n\n🛡️ Reliable\nRhian\nWed 25 Nov, 2:00pm\nThu 26 Nov, 2:00pm\nWed 2 Dec, 10:00am\nThu 3 Dec, 10:00am\n\n\n🏆 Capstone\nRhian & YiWen\nWed 9 Dec, 2:00pm\nThu 10 Dec, 2:00pm\nWed 16 Dec, 10:00am\nThu 17 Dec, 10:00am"
+    "text": "Learn more about how the accelerator programme works, see if this programme is aimed at you, and check you meet the prerequisites.\n\n\n\nOnce you’re enrolled, you can find practical information including the schedule, getting your laptop set-up and information about your tutors.\n\n\n\nAll our learning materials are available online to explore at your own pace.\nWelcome to the Reproducible Analytical Pipelines (RAP) Accelerator. A programme for ICB analysts starting their RAP journey, building the foundational skills to apply these approaches in practice. This programme runs from October – December 2026 and is funded by the Strategic Commissioning Intelligence Centre (SCIC)."
   },
   {
-    "objectID": "learning_materials/3_collaborative/pre-learning.html",
-    "href": "learning_materials/3_collaborative/pre-learning.html",
-    "title": "Collaborative",
+    "objectID": "index.html#ℹ-about-rap-accelerator",
+    "href": "index.html#ℹ-about-rap-accelerator",
+    "title": "RAP Accelerator 🚀",
     "section": "",
-    "text": "Think about these before the session\n\nWhat problems have you faced when working on code with others (or on multiple machines)?\nHave you used version control before? What was your experience?"
+    "text": "Learn more about how the accelerator programme works, see if this programme is aimed at you, and check you meet the prerequisites."
   },
   {
-    "objectID": "learning_materials/3_collaborative/pre-learning.html#questions-to-answer",
-    "href": "learning_materials/3_collaborative/pre-learning.html#questions-to-answer",
-    "title": "Collaborative",
+    "objectID": "index.html#practical-information",
+    "href": "index.html#practical-information",
+    "title": "RAP Accelerator 🚀",
     "section": "",
-    "text": "Think about these before the session\n\nWhat problems have you faced when working on code with others (or on multiple machines)?\nHave you used version control before? What was your experience?"
+    "text": "Once you’re enrolled, you can find practical information including the schedule, getting your laptop set-up and information about your tutors."
   },
   {
-    "objectID": "learning_materials/3_collaborative/pre-learning.html#learning-materials",
-    "href": "learning_materials/3_collaborative/pre-learning.html#learning-materials",
-    "title": "Collaborative",
-    "section": "Learning materials",
-    "text": "Learning materials\n🚧 TO FOLLOW - WORK IN PROGRESS 🚧"
+    "objectID": "index.html#learning-materials",
+    "href": "index.html#learning-materials",
+    "title": "RAP Accelerator 🚀",
+    "section": "",
+    "text": "All our learning materials are available online to explore at your own pace."
   },
   {
     "objectID": "learning_materials/4_reliable/index.html",
@@ -378,60 +133,46 @@
     "text": "🖥️ During the session\nView the slides →"
   },
   {
-    "objectID": "learning_materials/2_visible/pre-learning.html",
-    "href": "learning_materials/2_visible/pre-learning.html",
-    "title": "Visible",
+    "objectID": "learning_materials/1_reusable/pre-learning.html",
+    "href": "learning_materials/1_reusable/pre-learning.html",
+    "title": "Reusable",
     "section": "",
-    "text": "Think about these before the session\n\nHave you read a README or other documentation that was particularly helpful (or unhelpful)? What made the difference?\nWhy might a licence matter for analytical code?"
+    "text": "Writing code once and reusing it is one of the biggest productivity and quality wins in a Reproducible Analytical Pipeline. Every time we copy-paste a block of code instead of reusing a function, we create another place for a bug to hide, and another place to remember to update when the logic changes.\nThis section covers four things that helps make great functions:"
   },
   {
-    "objectID": "learning_materials/2_visible/pre-learning.html#questions-to-answer",
-    "href": "learning_materials/2_visible/pre-learning.html#questions-to-answer",
-    "title": "Visible",
-    "section": "",
-    "text": "Think about these before the session\n\nHave you read a README or other documentation that was particularly helpful (or unhelpful)? What made the difference?\nWhy might a licence matter for analytical code?"
+    "objectID": "learning_materials/1_reusable/pre-learning.html#naming",
+    "href": "learning_materials/1_reusable/pre-learning.html#naming",
+    "title": "Reusable",
+    "section": "1. Meaningful names",
+    "text": "1. Meaningful names\nA good name tells the reader what something represents or does, without them having to read the code in detail. Choosing a good name can be surpringly tricky! When choosing a function name, try to describe what the function does really specifically.\n\nDescribe the purpose. Say what the thing does, specifically\nWrite for humans - readable, searchable names. e.g start_date is much more understandable (and searchable) than d\nBe consistent with names used elsewhere in the project, if you already have load_sales(), use load_costs() rather than importCosts()\n\nCompare:\nprocess_data(x)\nwith:\ncalculate_percentage_change(new, old)\nThe second name tells the reader what’s happening before they’ve even looked inside the function. Avoid vague names like x, tmp, df2 or do_thing when something more specific is easy to write.\n\n\n\n\n\n\nTip\n\n\n\nIf you find yourself adding a comment to explain how a line of code works, that’s often a sign that you could use a better name. Comments are best saved for explaining the why of the code, not how.\n\n\n\n👩‍💻 Your turn\nLook at a script you’ve written recently. Find one variable or function name that isn’t self-explanatory. What would you rename it to?\n\n\n📖 Resources\n\nMeaningful function names\nHow long should a function name be?"
   },
   {
-    "objectID": "learning_materials/2_visible/pre-learning.html#learning-materials",
-    "href": "learning_materials/2_visible/pre-learning.html#learning-materials",
-    "title": "Visible",
-    "section": "Learning materials",
-    "text": "Learning materials\n\nDocumentation\nHaving awesome code isn’t enough on its own. We need to make it easy for others to find, understand, and use - documentation is one of the ways that we can achieve this. For Reproducible Analytical Pipelines, there are several types of documentation, each with their own role to play.\nIn the previous session, we looked at how to document individual functions, so that users are clear on what each function does. However, function documentation on its own might not be enough for users, because it does not provide an overview of the package or pipeline as a whole. Providing further context and instructions is key to making your code more accessible. Additionally, although you might understand your code today, it might not make sense 12 months later! Documentation is also a way of making your code understandable for your future self.\nThe simplest and most minimal form of documentation is a README.\n📖 Make a README by Danny Guo (10 minutes).\n✏️ Write a README for some code that you have written, or for some analysis you have completed (15 minutes). Please be prepared to share and discuss this in the face-to-face session.\nOnce a README is in place, you may also want to provide more detailed documentation for your code. This is because the README is intended to provide a quick overview, which might not be sufficient on its own. Below are some options for creating more detailed documentation.\n\n\nR users\n📖 R Vignettes by Software Carpentry.\nRead the article and explore the vignette for one R package of your choice. How does it aid your understanding of the code? What does the vignette provide that the README on its own does not? (30 minutes)\n\n\nPython users\n📖 RAP Cookiecutter documentation by NHS England.\nRead the documentation site and compare it with the repository README. What are the differences between the two types of documentation? (30 minutes)\n\n\nLicences\nThere are many different licences out there. What are our options, if we are to make our code open source? Watch the video below for an overview.\n📺 Open source licence types by Pro Tech Show (12 minutes).\nWhat licences are recommended for analytical code by the UK Government Service Manual? What category does this fall under, according to the classifications provided in the video above?\n📖 Government Digital Service: Making source code open and reusable (10 minutes)\n\n\nNext steps\nIf you wish to extend your learning beyond the scope of this course, try some of the resources below.\n\n📺 Writing effective documentation by Beth Aitman (10 minutes)\nUse {pkgdown} to turn your R vignettes into a documentation site\nUse mkdocs to build a basic Python documentation site."
+    "objectID": "learning_materials/1_reusable/pre-learning.html#one-thing",
+    "href": "learning_materials/1_reusable/pre-learning.html#one-thing",
+    "title": "Reusable",
+    "section": "2. Functions should do one thing",
+    "text": "2. Functions should do one thing\nA well-written function does one thing, does it well, and does only that. Aim for functions that:\n\nAre small\nDo one thing only\nTake as few parameters as possible\n\nInstead of repeating the same calculation in several places:\n\nRPython\n\n\nsales_growth &lt;- (this_year_sales - last_year_sales) / last_year_sales\nprofit_growth &lt;- (this_year_profit - last_year_profit) / last_year_profit\nCapture the logic once:\npercentage_change &lt;- function(new, old) {\n  (new - old) / old\n}\n\nsales_growth &lt;- percentage_change(this_year_sales, last_year_sales)\nprofit_growth &lt;- percentage_change(this_year_profit, last_year_profit)\n\n\nsales_growth = (this_year_sales - last_year_sales) / last_year_sales\nprofit_growth = (this_year_profit - last_year_profit) / last_year_profit\nCapture the logic once:\ndef percentage_change(new, old):\n    return (new - old) / old\n\nsales_growth = percentage_change(this_year_sales, last_year_sales)\nprofit_growth = percentage_change(this_year_profit, last_year_profit)\n\n\n\npercentage_change() has one clear job. It doesn’t know or care whether it’s being used for sales, profit, or anything else. That’s what makes it reusable.\nWhen should you extract a function? Duplication isn’t automatically a problem the first time you see it. A useful rule of thumb is the Rule of Three. Cnce the same logic shows up a third time, that’s a good time to pull the code into a function.\nIf a function feels cluttered, look for low-level detail that could be pulled out into a reusable helper function. For example, input checks could move into a helper function of it’s own.\n\nRPython\n\n\n# Before: validation is mixed in with the calculation\nget_age &lt;- function(age_days, units = \"years\") {\n  if (is.character(age_days)) stop(\"Age must be a number\")\n  if (age_days &lt; 0) stop(\"Negative age\")\n  if (age_days &gt; 150 * 365) stop(\"A bit too old?\")\n  if (units == \"years\") age_days / 365 else age_days\n}\n\n# After: validation is pulled out, and the main function is easier to read\nget_age &lt;- function(age_days, units = \"years\") {\n  check_age(age_days)\n  if (units == \"years\") age_days / 365 else age_days\n}\n\ncheck_age &lt;- function(age_days) {\n  if (is.character(age_days)) stop(\"Age must be a number\")\n  if (age_days &lt; 0) stop(\"Negative age\")\n  if (age_days &gt; 150 * 365) stop(\"A bit too old?\")\n}\n\n\n# Before: validation is mixed in with the calculation\ndef get_age(age_days, units=\"years\"):\n    if isinstance(age_days, str):\n        raise ValueError(\"Age must be a number\")\n    if age_days &lt; 0:\n        raise ValueError(\"Negative age\")\n    if age_days &gt; 150 * 365:\n        raise ValueError(\"A bit too old?\")\n\n    if units == \"years\":\n        return age_days / 365\n    else:\n        return age_days\n\n\n# After: validation is pulled out, and the main function is easier to read\ndef check_age(age_days):\n    if isinstance(age_days, str):\n        raise ValueError(\"Age must be a number\")\n    if age_days &lt; 0:\n        raise ValueError(\"Negative age\")\n    if age_days &gt; 150 * 365:\n        raise ValueError(\"A bit too old?\")\n\n\ndef get_age(age_days, units=\"years\"):\n    check_age(age_days)\n\n    if units == \"years\":\n        return age_days / 365\n    else:\n        return age_days\n\n\n\nWhere practical, aim for pure functions. These are functions that, given the same inputs, always return the same output, with no side effects (no file access, no printing, no depending on or changing anything outside the function). Pure functions are easier to test and reuse.\n\n👩‍💻 Your turn\nLook back at a script you’ve written. Find a chunk of code that appears more than once, even with small variations.\nSketch out how you’d turn it into a function:\n\nWhat would you call it?\nWhat inputs would it need?\nWhat would it return?\n\nBring your example to the session, we’ll use a few of these as discussion points.\n\n\n📖 Resources\n\nFunctions — R for Data Science\nDefining Your Own Python Function by Real Python, section on writing clear, single-purpose functions (Python)"
   },
   {
-    "objectID": "learning_materials/1_reusable/index.html",
-    "href": "learning_materials/1_reusable/index.html",
-    "title": "♻️ Reusable",
-    "section": "",
-    "text": "Writing code that’s easy to understand and reuse, by others and by yourself months later is at the heart of RAP.\nIn this session, you’ll learn to write modular functions, document your functions, and follow consistent style conventions that make your work easy to read."
+    "objectID": "learning_materials/1_reusable/pre-learning.html#documenting",
+    "href": "learning_materials/1_reusable/pre-learning.html#documenting",
+    "title": "Reusable",
+    "section": "3. Document your functions",
+    "text": "3. Document your functions\nA function is easy to reuse when the reader can quickly answer three questions, without reading the implementation:\n\nWhat does it do?\nWhat inputs does it need?\nWhat does it return?\n\n\nRPython\n\n\n#' Calculate percentage change\n#'\n#' @param new Numeric. The new (current) value.\n#' @param old Numeric. The original (baseline) value.\n#'\n#' @return Numeric. The proportional change from `old` to `new`.\n#'\n#' @examples\n#' percentage_change(new = 120, old = 100)\npercentage_change &lt;- function(new, old) {\n  (new - old) / old\n}\n\n\n\n\n\n\nImportant\n\n\n\nThe #' comment block above is the R roxygen2 convention. It only generates a help page (?percentage_change) if your function lives inside an R package. If your script is just stand alone, it won’t do anything automatically. It’s still a good habit to write your function docs in this style even in an ordinary script. It forces you to answer the “what/inputs/returns” questions, and it means your docs are ready to go if that code ever does end up in a package.\n\n\n\n\ndef percentage_change(new, old):\n    \"\"\"Calculate the proportional change between two values.\n\n    Args:\n        new (float): The new (current) value.\n        old (float): The original (baseline) value.\n\n    Returns:\n        float: The proportional change from old to new.\n\n    Example:\n        &gt;&gt;&gt; percentage_change(120, 100)\n        0.2\n    \"\"\"\n    return (new - old) / old\nve this limitation. They work the same way whether your function lives in a one-off script or a full package, and are picked up automatically by help().\n\n\n\n\n👩‍💻 Your turn\nTake the function you sketched out in section 2 and write proper documentation for it. Either a roxygen2-style block in R, or a docstring in Python.\n\n\n📖 Resources\n\nGet started with roxygen2 (R)\nHow to write docstrings in Python (Python)"
   },
   {
-    "objectID": "learning_materials/1_reusable/index.html#overview",
-    "href": "learning_materials/1_reusable/index.html#overview",
-    "title": "♻️ Reusable",
-    "section": "",
-    "text": "Writing code that’s easy to understand and reuse, by others and by yourself months later is at the heart of RAP.\nIn this session, you’ll learn to write modular functions, document your functions, and follow consistent style conventions that make your work easy to read."
+    "objectID": "learning_materials/1_reusable/pre-learning.html#style",
+    "href": "learning_materials/1_reusable/pre-learning.html#style",
+    "title": "Reusable",
+    "section": "4. Consistent style",
+    "text": "4. Consistent style\nA consistent style makes code easier to scan, understand and safely modify. It matters more for reusable code: something meant to be shared or reused needs to be readable by people who didn’t write it. Agree conventions with your team, then let a tool handle the mechanical parts.\n\nRPython\n\n\n# Before\nmy_function=function(x,y){\nx+y\n}\n\n# After: styler::style_file() applied\nmy_function &lt;- function(x, y) {\n  x + y\n}\nstyler reformats code automatically; lintr flags style problems it can’t fix for you.\n\n\n# Before\ndef my_function(x,y):\n    return x+y\n\n# After: black applied\ndef my_function(x, y):\n    return x + y\nblack or ruff format reformat code automatically; ruff also flags issues it can’t fix.\n\n\n\nThe logic hasn’t changed here, just the formatting. But consistent spacing and layout mean anyone on the team can read this function without first adjusting to a one-off style.\n\n👩‍💻 Your turn\nRun an auto-formatter on a script of your own styler::style_file() (R) or black / ruff format (Python). What did it change automatically? Was anything left for you to fix by hand?\n\n\n📖 Resources\n\n{lintr} (R)\nruff (python)\nTidyverse Style Guide, sections on functions and syntax (R)\nPEP 8 Style Guide for Python Code, sections on Naming Conventions and Programming Recommendations (Python)"
   },
   {
-    "objectID": "learning_materials/1_reusable/index.html#learning-objectives",
-    "href": "learning_materials/1_reusable/index.html#learning-objectives",
-    "title": "♻️ Reusable",
-    "section": "🎯 Learning objectives",
-    "text": "🎯 Learning objectives\nBy the end of this session, you should be able to:\n\nRecognise and refactor repeated code into into reusable functions\nChoose appropriate names for functions\nWrite clear function documentation\nFollow a consistent code style and use automated tools to enforce it"
-  },
-  {
-    "objectID": "learning_materials/1_reusable/index.html#before-the-session",
-    "href": "learning_materials/1_reusable/index.html#before-the-session",
-    "title": "♻️ Reusable",
-    "section": "📖 Before the session",
-    "text": "📖 Before the session\nPlease complete the pre-learning materials. These typically take 60 – 90 minutes and are essential for getting the most out of the session."
-  },
-  {
-    "objectID": "learning_materials/1_reusable/index.html#during-the-session",
-    "href": "learning_materials/1_reusable/index.html#during-the-session",
-    "title": "♻️ Reusable",
-    "section": "🖥️ During the session",
-    "text": "🖥️ During the session\nView the slides →"
+    "objectID": "learning_materials/1_reusable/pre-learning.html#before-the-session",
+    "href": "learning_materials/1_reusable/pre-learning.html#before-the-session",
+    "title": "Reusable",
+    "section": "Before the session",
+    "text": "Before the session\nCome prepared to discuss:\n\nThe function you sketched in section 2 — name, inputs, return value\nWhat code have you written that would be useful to reuse?\nWhat makes a function easy for someone else to understand and reuse?\nWhat coding conventions does your team already follow, formally or informally?\nHave you encountered code that was hard to understand or reuse? What made it difficult?"
   },
   {
     "objectID": "learning_materials/5_capstone/index.html",
@@ -474,5 +215,306 @@
     "title": "🏆 Capstone",
     "section": "🖥️ During the session",
     "text": "🖥️ During the session\nWe’ll reflect on and share your projects, give feedback, and discuss next steps. This is as much about learning your own development process as it is about the code itself."
+  },
+  {
+    "objectID": "learning_materials/2_visible/index.html",
+    "href": "learning_materials/2_visible/index.html",
+    "title": "📖 Visible",
+    "section": "",
+    "text": "Once you’re tracking your code with version control, the next step is making it visible and usable to others (and your future self). In this session, you’ll learn how to document your project, license your code, and share it in ways that encourage collaboration and reuse."
+  },
+  {
+    "objectID": "learning_materials/2_visible/index.html#overview",
+    "href": "learning_materials/2_visible/index.html#overview",
+    "title": "📖 Visible",
+    "section": "",
+    "text": "Once you’re tracking your code with version control, the next step is making it visible and usable to others (and your future self). In this session, you’ll learn how to document your project, license your code, and share it in ways that encourage collaboration and reuse."
+  },
+  {
+    "objectID": "learning_materials/2_visible/index.html#learning-objectives",
+    "href": "learning_materials/2_visible/index.html#learning-objectives",
+    "title": "📖 Visible",
+    "section": "🎯 Learning objectives",
+    "text": "🎯 Learning objectives\nBy the end of this session, you should be able to:\n\nWrite a clear, informative README\nChoose an appropriate licence for your code\nCreate vignettes or examples that demonstrate how to use your code\nSet up basic project documentation\nMake your code and analysis discoverable to others"
+  },
+  {
+    "objectID": "learning_materials/2_visible/index.html#before-the-session",
+    "href": "learning_materials/2_visible/index.html#before-the-session",
+    "title": "📖 Visible",
+    "section": "📖 Before the session",
+    "text": "📖 Before the session\nPlease complete the pre-learning materials. These typically take 60 – 90 minutes and are essential for getting the most out of the session."
+  },
+  {
+    "objectID": "learning_materials/2_visible/index.html#during-the-session",
+    "href": "learning_materials/2_visible/index.html#during-the-session",
+    "title": "📖 Visible",
+    "section": "🖥️ During the session",
+    "text": "🖥️ During the session\nView the slides →"
+  },
+  {
+    "objectID": "learning_materials/3_collaborative/pre-learning.html",
+    "href": "learning_materials/3_collaborative/pre-learning.html",
+    "title": "Collaborative",
+    "section": "",
+    "text": "Analytical work never exists in isolation - it is always produced for or with other people. Working on analytical projects collaboratively can sometimes be a messy experience due to differences in file versions between different computers, or losing track of which changes were made by whom. Luckily, there are tools to help manage coding collaboration.\nIn this module, we will use Git and GitHub to practice working asynchronously on a project together.\nUsing Git is complex, and a detailed guide would extend beyond the scope of this course. This module will provide a basic high level overview focusing on the collaborative benefits of Git and GitHub. You can explore more advanced usage in the optional further reading at the bottom of this page.\nWe will cover the following topics:"
+  },
+  {
+    "objectID": "learning_materials/3_collaborative/pre-learning.html#why-use-git-and-github",
+    "href": "learning_materials/3_collaborative/pre-learning.html#why-use-git-and-github",
+    "title": "Collaborative",
+    "section": "Why use Git and GitHub?",
+    "text": "Why use Git and GitHub?\nGit is a way of maintaining version control in your files. GitHub is a commonly used platform that enables you to host Git repositories for free online.\n📺 Watch What is Git and GitHub? (8 minutes) for a quick overview\nBelow are some practical examples of how Git and GitHub can be used to help solve common issues when working collaboratively with others.\n\nTracking how code has changed over time\nSometimes, files change, and people don’t know who made the change or when. Git can help us to solve this problem, because each change is clearly marked with a timestamp and a person responsible. Here’s an example from some code used in a data pipeline.\nIf you scroll down to line 36, you can see that a change was made to this specific line to change one of the treatment specialty codes used for grouping to “502”. If you click on the square to the left of the number 36, you can also see the history of that line - what it looked like before the change was made.\nEach change should be tracked in something called a commit, which is a snapshot of the code at a specific point in time.\n\n\n\nExample of git blame on GitHub\n\n\n\n\nMaintaining a version of truth that remains stable\nMany people working on the same files can sometimes cause conflicts. Git helps us to avoid this by using a system of branches. All Git repositories will have something called a main or master.1 This is usually the primary version of the truth, which ideally should not be changed directly.\nInstead, people working on the code should make a copy of the code in something called a branch. They can then make their changes via commits on their separate branch, without harming the main branch.\n\n\nQuality assurance\nWhen you are happy with the changes on your branch, you can request to incorporate them with the rest of the code in main. This is done via a pull request.\nOne of the benefits of a pull request is that it is a built in quality assurance feature. Team members can review each other’s proposed changes before the changes are incorporated into the primary version of the truth on the main branch."
+  },
+  {
+    "objectID": "learning_materials/3_collaborative/pre-learning.html#managing-work-via-github-issues",
+    "href": "learning_materials/3_collaborative/pre-learning.html#managing-work-via-github-issues",
+    "title": "Collaborative",
+    "section": "Managing work via GitHub issues",
+    "text": "Managing work via GitHub issues\n\nGo to the repository for your group. You will be given collaboration rights to the repository.\n\n\nGroup 1 repository\nGroup 2 repository\nGroup 3 repository\nGroup 4 repository\n\n\nIn your repository, navigate to the Issues tab. You will see a list of different issues that need to be addressed in the repository. Each issue represents a specific task that needs to be completed.\nYou have already been assigned to an issue. You can view issues that you have been assigned to by filtering by Assignees on a repository’s list of issues, or by navigating to GitHub’s assigned issues page. When you’re assigned to an issue, it means that you will work on it. This prevents duplication of effort, and allows workflows and responsibilities to be clear.\nClick on the title of the issue you have been assigned to. The issue should be descriptive, and have details of what it is you need to do. If you do not have enough information to be able to complete the task, you can add comments to the issue to help clarify the ask. You can tag specific individuals with an @ symbol in issue comments, to bring your comment to their attention.\nIf you understand your task, carry on to the next step and start working on your issue. In this example, I will be working on this issue to add a new function."
+  },
+  {
+    "objectID": "learning_materials/3_collaborative/pre-learning.html#making-your-changes-on-a-branch",
+    "href": "learning_materials/3_collaborative/pre-learning.html#making-your-changes-on-a-branch",
+    "title": "Collaborative",
+    "section": "Making your changes on a branch",
+    "text": "Making your changes on a branch\n\nWe need to create a branch to work on, because we don’t want to disrupt the main branch. To do this, click on the branches button just under the repository name, as shown in the screenshot below.\n\n\n\n\nRepository branches button\n\n\n\nClick on the green New branch button on the right hand side. Give your new branch a name. Ideally, start the branch name with the number of the issue to help link your branch to the issue it addresses. Click “Create new branch” when you’re ready.\nSelect your new branch to work on it. You can switch between branches by clicking on the branch icon below the repository name.\n\n\n\n\nSwitching between branches\n\n\n\nNavigate to the file that you need to change. Click on the pencil icon at the top of the file to start editing it. Make your changes to the file.\n\n\n\n\nEditing files\n\n\n\nWhen you’re happy with your changes, click on the big green Commit changes… button on the top right. A box will pop up asking you to add a commit message and extended description. Good commit messages are succinct but descriptive - something vague like “changes made” will not be helpful when you’re reviewing it later! Click on commit changes when you’re done.\n\n\n\n\nCommitting changes"
+  },
+  {
+    "objectID": "learning_materials/3_collaborative/pre-learning.html#sharing-your-changes-with-colleagues-pull-request",
+    "href": "learning_materials/3_collaborative/pre-learning.html#sharing-your-changes-with-colleagues-pull-request",
+    "title": "Collaborative",
+    "section": "Sharing your changes with colleagues (pull request)",
+    "text": "Sharing your changes with colleagues (pull request)\nYour changes are ready to be merged with the main branch! You will now make your first pull request. Sometimes, pull requests are abbreviated to PR.\n\nClick on the Pull requests tab at the top of the repository.\nClick on the green New pull request button on the top right.\nIf not already selected, ensure that the main branch is on the left and the branch you were working on is on the right.\n\n\n\n\nCompare branches\n\n\n\nClick the green Create pull request button on the right.\nIf not automatically filled for you, provide a useful title and description for your pull request. You can also link to the issue that you were tackling in your issue in the description - use a # followed by the issue number to link them together.\n\n\n\n\nLinking issues to pull requests\n\n\n\nOn the right hand side of the page, there is an option to select Reviewers. Click on reviewers, search for yiwen-h from the list, and select the username.\nClick on Create pull request. Your reviewer will be notified and should review your request within 3 working days.\n\nWhen your pull request has been created, click on Files changed to see exactly what changes have been made."
+  },
+  {
+    "objectID": "learning_materials/3_collaborative/pre-learning.html#merging-your-changes-once-approved",
+    "href": "learning_materials/3_collaborative/pre-learning.html#merging-your-changes-once-approved",
+    "title": "Collaborative",
+    "section": "Merging your changes once approved",
+    "text": "Merging your changes once approved\nSometimes, there can be an extended conversation around pull requests. This is part of the quality assurance process. Reviewers can make suggestions to change the code, and provide comments. Jack Kennedy, a data scientist at the UKHSA, has written an excellent guide to conducting code review.\nYour pull request can either be approved, or changes can be requested. If changes are requested, you’ll need to make the necessary changes and then re-request another review.\nIf your changes are approved, you can click on the big green Merge pull request button at the bottom of the screen. This will incorporate your changes into main."
+  },
+  {
+    "objectID": "learning_materials/3_collaborative/pre-learning.html#before-the-session",
+    "href": "learning_materials/3_collaborative/pre-learning.html#before-the-session",
+    "title": "Collaborative",
+    "section": "Before the session",
+    "text": "Before the session\nCome prepared to discuss:\n\nWhat was your experience like working with Git on GitHub?\nWhat benefits can you see from using Git and GitHub?\nHow can you incorporate these tools into your existing workflows?"
+  },
+  {
+    "objectID": "learning_materials/3_collaborative/pre-learning.html#further-reading-optional",
+    "href": "learning_materials/3_collaborative/pre-learning.html#further-reading-optional",
+    "title": "Collaborative",
+    "section": "Further reading (optional)",
+    "text": "Further reading (optional)\n\nMore practice\nThere are some unassigned issues in your group repository. If you feel confident and want to practice more with Git and GitHub, feel free to assign yourself to these issues and work on them.\n\n\nWorking on your own machine\nWe have been working on the GitHub web interface. However, this only offers limited functionality and to really integrate Git into your everyday workflow, ideally you need to set it up on your local machine.\nSet up authentication between your computer and GitHub. Choose either SSH or HTTPS - you do not need both.\n\n\nPractice using the git command line interface (CLI)\nTODO: add demo sandbox from https://ryjohnson09.github.io/quarto-git-sandbox/"
+  },
+  {
+    "objectID": "learning_materials/3_collaborative/pre-learning.html#footnotes",
+    "href": "learning_materials/3_collaborative/pre-learning.html#footnotes",
+    "title": "Collaborative",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nhttps://www.theserverside.com/feature/Why-GitHub-renamed-its-master-branch-to-main↩︎"
+  },
+  {
+    "objectID": "learning_materials/index.html",
+    "href": "learning_materials/index.html",
+    "title": "Learning materials",
+    "section": "",
+    "text": "Welcome to the learning materials for the RAP Accelerator. Each session has pre-learning (required self-study before the session) and slides (used during the 1-hour session). You’ll apply what you learn to your own project in the capstone.\n\n\n\nSession\nFocus\nObjectives\nPre-learning\nSlides\n\n\n\n\n♻️ Reusable\nWrite modular, well-documented code that’s easy for you and others to understand and reuse\nObjectives\nPre-learning\nSlides\n\n\n📖 Visible\nMake your projects easy to find and use with clear READMEs, licences, and documentation\nObjectives\nPre-learning\nSlides\n\n\n👥 Collaborative\nWork effectively with others using Git, code review, and good communication habits\nObjectives\nPre-learning\nSlides\n\n\n🛡️ Reliable\nBuild trust in your code through testing, automation, and reproducible environments\nObjectives\nPre-learning\nSlides\n\n\n🏆 Capstone\nPut it all into practice on a real project with feedback and support\nObjectives\n-\n-"
+  },
+  {
+    "objectID": "learning_materials/3_collaborative/index.html",
+    "href": "learning_materials/3_collaborative/index.html",
+    "title": "👥 Collaborative",
+    "section": "",
+    "text": "In this session, you’ll learn the fundamentals of version control with Git and GitHub — the tools that let teams collaborate safely on code, track changes, and avoid losing work to a corrupted file or accidental overwrite.\nYou’ll also explore peer review and pair programming, and learn how to ask for help effectively when you get stuck."
+  },
+  {
+    "objectID": "learning_materials/3_collaborative/index.html#overview",
+    "href": "learning_materials/3_collaborative/index.html#overview",
+    "title": "👥 Collaborative",
+    "section": "",
+    "text": "In this session, you’ll learn the fundamentals of version control with Git and GitHub — the tools that let teams collaborate safely on code, track changes, and avoid losing work to a corrupted file or accidental overwrite.\nYou’ll also explore peer review and pair programming, and learn how to ask for help effectively when you get stuck."
+  },
+  {
+    "objectID": "learning_materials/3_collaborative/index.html#learning-objectives",
+    "href": "learning_materials/3_collaborative/index.html#learning-objectives",
+    "title": "👥 Collaborative",
+    "section": "🎯 Learning objectives",
+    "text": "🎯 Learning objectives\nBy the end of this session, you should be able to:\n\nCreate and manage a repository on GitHub\nCommit changes with clear, informative messages\nPush and pull code from a remote repository\nConduct a peer review and give constructive feedback"
+  },
+  {
+    "objectID": "learning_materials/3_collaborative/index.html#before-the-session",
+    "href": "learning_materials/3_collaborative/index.html#before-the-session",
+    "title": "👥 Collaborative",
+    "section": "📖 Before the session",
+    "text": "📖 Before the session\nPlease complete the pre-learning materials. These typically take 60 – 90 minutes and are essential for getting the most out of the session."
+  },
+  {
+    "objectID": "learning_materials/3_collaborative/index.html#during-the-session",
+    "href": "learning_materials/3_collaborative/index.html#during-the-session",
+    "title": "👥 Collaborative",
+    "section": "🖥️ During the session",
+    "text": "🖥️ During the session\nView the slides →"
+  },
+  {
+    "objectID": "learning_materials/2_visible/pre-learning.html",
+    "href": "learning_materials/2_visible/pre-learning.html",
+    "title": "Visible",
+    "section": "",
+    "text": "Think about these before the session\n\nHave you read a README or other documentation that was particularly helpful (or unhelpful)? What made the difference?\nWhy might a licence matter for analytical code?"
+  },
+  {
+    "objectID": "learning_materials/2_visible/pre-learning.html#questions-to-answer",
+    "href": "learning_materials/2_visible/pre-learning.html#questions-to-answer",
+    "title": "Visible",
+    "section": "",
+    "text": "Think about these before the session\n\nHave you read a README or other documentation that was particularly helpful (or unhelpful)? What made the difference?\nWhy might a licence matter for analytical code?"
+  },
+  {
+    "objectID": "learning_materials/2_visible/pre-learning.html#learning-materials",
+    "href": "learning_materials/2_visible/pre-learning.html#learning-materials",
+    "title": "Visible",
+    "section": "Learning materials",
+    "text": "Learning materials\n\nDocumentation\nHaving awesome code isn’t enough on its own. We need to make it easy for others to find, understand, and use - documentation is one of the ways that we can achieve this. For Reproducible Analytical Pipelines, there are several types of documentation, each with their own role to play.\nIn the previous session, we looked at how to document individual functions, so that users are clear on what each function does. However, function documentation on its own might not be enough for users, because it does not provide an overview of the package or pipeline as a whole. Providing further context and instructions is key to making your code more accessible. Additionally, although you might understand your code today, it might not make sense 12 months later! Documentation is also a way of making your code understandable for your future self.\nThe simplest and most minimal form of documentation is a README.\n📖 Make a README by Danny Guo (10 minutes).\n✏️ Write a README for some code that you have written, or for some analysis you have completed (15 minutes). Please be prepared to share and discuss this in the face-to-face session.\nOnce a README is in place, you may also want to provide more detailed documentation for your code. This is because the README is intended to provide a quick overview, which might not be sufficient on its own. Below are some options for creating more detailed documentation.\n\n\nR users\n📖 R Vignettes by Software Carpentry.\nRead the article and explore the vignette for one R package of your choice. How does it aid your understanding of the code? What does the vignette provide that the README on its own does not? (30 minutes)\n\n\nPython users\n📖 RAP Cookiecutter documentation by NHS England.\nRead the documentation site and compare it with the repository README. What are the differences between the two types of documentation? (30 minutes)\n\n\nLicences\nThere are many different licences out there. What are our options, if we are to make our code open source? Watch the video below for an overview.\n📺 Open source licence types by Pro Tech Show (12 minutes).\nWhat licences are recommended for analytical code by the UK Government Service Manual? What category does this fall under, according to the classifications provided in the video above?\n📖 Government Digital Service: Making source code open and reusable (10 minutes)\n\n\nNext steps\nIf you wish to extend your learning beyond the scope of this course, try some of the resources below.\n\n📺 Writing effective documentation by Beth Aitman (10 minutes)\nUse {pkgdown} to turn your R vignettes into a documentation site\nUse mkdocs to build a basic Python documentation site."
+  },
+  {
+    "objectID": "learning_materials/5_capstone/example.html",
+    "href": "learning_materials/5_capstone/example.html",
+    "title": "📝 Capstone example",
+    "section": "",
+    "text": "If you aren’t able to use data that is local to you for any reason (such as privacy, or complexity) you could carry out a capstone project using open data. An example is given following."
+  },
+  {
+    "objectID": "learning_materials/5_capstone/example.html#overview",
+    "href": "learning_materials/5_capstone/example.html#overview",
+    "title": "📝 Capstone example",
+    "section": "",
+    "text": "If you aren’t able to use data that is local to you for any reason (such as privacy, or complexity) you could carry out a capstone project using open data. An example is given following."
+  },
+  {
+    "objectID": "learning_materials/5_capstone/example.html#task",
+    "href": "learning_materials/5_capstone/example.html#task",
+    "title": "📝 Capstone example",
+    "section": "💼 Task",
+    "text": "💼 Task\nNHS England publishes data about access to mental health crisis care through the 111 service. The data includes information about the number of calls and the number answered within 60 seconds, as well as trust and ICB names. This data could be used to report on the proportion of calls answered within 60 seconds over time.\nYou might have the task of reporting on and benchmarking performance on the proportion of calls answered within 60 seconds across a region or regions."
+  },
+  {
+    "objectID": "learning_materials/5_capstone/example.html#approaches",
+    "href": "learning_materials/5_capstone/example.html#approaches",
+    "title": "📝 Capstone example",
+    "section": "📖 Approaches",
+    "text": "📖 Approaches\nTo approach this task you could create a Quarto document which is parameterised so that it can be made to focus on specific regions or specific periods of time. Analyses might include tracking performance over time, perhaps with a Statistical Process Control chart. There are various methods of drawing such charts including NHSR plot the dots.\nYou may also consider bringing in other information from datasets about deprivation, health spending, or other factors that might relate to access to mental health crisis services."
+  },
+  {
+    "objectID": "learning_materials/1_reusable/index.html",
+    "href": "learning_materials/1_reusable/index.html",
+    "title": "♻️ Reusable",
+    "section": "",
+    "text": "Writing code that’s easy to understand and reuse, by others and by yourself months later is at the heart of RAP.\nIn this session, you’ll learn to write modular functions, document your functions, and follow consistent style conventions that make your work easy to read."
+  },
+  {
+    "objectID": "learning_materials/1_reusable/index.html#overview",
+    "href": "learning_materials/1_reusable/index.html#overview",
+    "title": "♻️ Reusable",
+    "section": "",
+    "text": "Writing code that’s easy to understand and reuse, by others and by yourself months later is at the heart of RAP.\nIn this session, you’ll learn to write modular functions, document your functions, and follow consistent style conventions that make your work easy to read."
+  },
+  {
+    "objectID": "learning_materials/1_reusable/index.html#learning-objectives",
+    "href": "learning_materials/1_reusable/index.html#learning-objectives",
+    "title": "♻️ Reusable",
+    "section": "🎯 Learning objectives",
+    "text": "🎯 Learning objectives\nBy the end of this session, you should be able to:\n\nRecognise and refactor repeated code into into reusable functions\nChoose appropriate names for functions\nWrite clear function documentation\nFollow a consistent code style and use automated tools to enforce it"
+  },
+  {
+    "objectID": "learning_materials/1_reusable/index.html#before-the-session",
+    "href": "learning_materials/1_reusable/index.html#before-the-session",
+    "title": "♻️ Reusable",
+    "section": "📖 Before the session",
+    "text": "📖 Before the session\nPlease complete the pre-learning materials. These typically take 60 – 90 minutes and are essential for getting the most out of the session."
+  },
+  {
+    "objectID": "learning_materials/1_reusable/index.html#during-the-session",
+    "href": "learning_materials/1_reusable/index.html#during-the-session",
+    "title": "♻️ Reusable",
+    "section": "🖥️ During the session",
+    "text": "🖥️ During the session\nView the slides →"
+  },
+  {
+    "objectID": "learning_materials/4_reliable/pre-learning.html",
+    "href": "learning_materials/4_reliable/pre-learning.html",
+    "title": "Reliable",
+    "section": "",
+    "text": "Think about these before the session\n\nHave you ever had code work on your machine but fail when someone else runs it? What went wrong?\nWhat are you most afraid will break in your code?\nHow would you know if your analysis is correct?"
+  },
+  {
+    "objectID": "learning_materials/4_reliable/pre-learning.html#questions-to-answer",
+    "href": "learning_materials/4_reliable/pre-learning.html#questions-to-answer",
+    "title": "Reliable",
+    "section": "",
+    "text": "Think about these before the session\n\nHave you ever had code work on your machine but fail when someone else runs it? What went wrong?\nWhat are you most afraid will break in your code?\nHow would you know if your analysis is correct?"
+  },
+  {
+    "objectID": "learning_materials/4_reliable/pre-learning.html#learning-materials",
+    "href": "learning_materials/4_reliable/pre-learning.html#learning-materials",
+    "title": "Reliable",
+    "section": "Learning materials",
+    "text": "Learning materials"
+  },
+  {
+    "objectID": "practical_information/set-up.html",
+    "href": "practical_information/set-up.html",
+    "title": "Getting set up",
+    "section": "",
+    "text": "Before the first session, install:\nYou’ll also need to create a GitHub account before session 3."
+  },
+  {
+    "objectID": "practical_information/set-up.html#packages",
+    "href": "practical_information/set-up.html#packages",
+    "title": "Getting set up",
+    "section": "📦 Packages",
+    "text": "📦 Packages\nIdeally, you should have sufficient admin rights on your machine to install the packages that you need as and when you require them. To start off with, here are some packages that we recommend for R and Python:\n\nRecommended Python packages\n\nuv for package management\npandas for data wrangling\nruff for formatting and linting\n\n\n\nRecommended R packages\n\n{tidyverse} collection of R packages"
+  },
+  {
+    "objectID": "practical_information/set-up.html#cloud-environment",
+    "href": "practical_information/set-up.html#cloud-environment",
+    "title": "Getting set up",
+    "section": "☁️ Cloud environment",
+    "text": "☁️ Cloud environment\nIf you have issues using R or Python on your work computer, we have set up GitHub Codespace templates as a backup. GitHub codespace is a free online environment where you can run code without installing anything. However, there are some limitations.\n\nLimited to 60 free hours per month\nTakes time to load\nLimited for later work on your own project\nCloud based - you cannot upload sensitive data\n\nYou’ll get much more from this programme if you’re able to work on your own machine."
+  },
+  {
+    "objectID": "practical_information/schedule.html",
+    "href": "practical_information/schedule.html",
+    "title": "Schedule",
+    "section": "",
+    "text": "The programme runs over ten weeks. Each module is offered at four different sessions. You’ll be assigned one of the listed sessions for each module. All four sessions cover identical content.\n\n\n\nModule\nTutor\nSession 1\nSession 2\nSession 3\nSession 4\n\n\n\n\n♻️ Reusable\nRhian\nWed 14 Oct, 2:00pm\nThu 15 Oct, 2:00pm\nWed 21 Oct, 10:00am\nThu 22 Oct, 10:00am\n\n\n📖 Visible\nYiWen\nWed 28 Oct, 2:00pm\nThu 29 Oct, 2:00pm\nWed 4 Nov, 10:00am\nThu 5 Nov, 10:00am\n\n\n👥 Collaborative\nYiWen\nWed 11 Nov, 2:00pm\nThu 12 Nov, 2:00pm\nWed 18 Nov, 10:00am\nThu 19 Nov, 10:00am\n\n\n🛡️ Reliable\nRhian\nWed 25 Nov, 2:00pm\nThu 26 Nov, 2:00pm\nWed 2 Dec, 10:00am\nThu 3 Dec, 10:00am\n\n\n🏆 Capstone\nRhian & YiWen\nWed 9 Dec, 2:00pm\nThu 10 Dec, 2:00pm\nWed 16 Dec, 10:00am\nThu 17 Dec, 10:00am"
+  },
+  {
+    "objectID": "about/about.html",
+    "href": "about/about.html",
+    "title": "About the programme",
+    "section": "",
+    "text": "RAP (Reproducible Analytical Pipelines) are a set of tools, principles, and techniques that enable analysts to create analytical processes that are automated, transparent, quality assured and reusable. This has the potential to increase efficiency and quality of analytical work across the healthcare system.\nThe Goldacre review recommended RAP as the minimum standard for academic and NHS data analysis."
+  },
+  {
+    "objectID": "about/about.html#what-is-rap",
+    "href": "about/about.html#what-is-rap",
+    "title": "About the programme",
+    "section": "",
+    "text": "RAP (Reproducible Analytical Pipelines) are a set of tools, principles, and techniques that enable analysts to create analytical processes that are automated, transparent, quality assured and reusable. This has the potential to increase efficiency and quality of analytical work across the healthcare system.\nThe Goldacre review recommended RAP as the minimum standard for academic and NHS data analysis."
+  },
+  {
+    "objectID": "about/about.html#what-is-the-rap-accelerator",
+    "href": "about/about.html#what-is-the-rap-accelerator",
+    "title": "About the programme",
+    "section": "🚀 What is the RAP Accelerator?",
+    "text": "🚀 What is the RAP Accelerator?\nA programme for ICB analysts starting their RAP journey, building the foundational skills to apply these approaches in practice. Some coding experience is expected (see prerequisites), along with enthusiasm to learn.\nIt runs as a flipped classroom. You’ll work through learning material at your own pace before each session, then use session time with tutors for discussion, problem-solving, and going deeper."
+  },
+  {
+    "objectID": "about/about.html#course-outline",
+    "href": "about/about.html#course-outline",
+    "title": "About the programme",
+    "section": "📖 Course outline",
+    "text": "📖 Course outline\n\n\n\nTheme\nTopics\n\n\n\n\n\n♻️ Reusable\nWrite modular, well-documented code that’s easy for you and others to understand and reuse\n\n\n\n📖 Visible\nMake your projects easy to find and use with clear READMEs, licences, and documentation\n\n\n\n👥 Collaborative\nWork effectively with others using Git, code review, and good communication habits\n\n\n\n🛡️ Reliable\nBuild trust in your code through testing, automation, and reproducible environments\n\n\n\n🏆 Capstone\nPut it all into practice on a real project with feedback and support\n\n\n\n\nEach session includes:\n\n60-90 mins of self-directed pre-work (reading, small exercises)\n60 mins contact session with the tutors\n\nWe’ll also have an online community for attendees to ask questions to tutors or chat with peers running throughout the ten weeks.\nWe won’t cover:\n\nBasic R or Python programming (We expect you to already know a little programming)\nPlotting and visualisation\nModelling and machine learning\nUsing LLMs\nBuilding interactive web apps"
   }
 ]

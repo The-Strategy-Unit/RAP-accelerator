@@ -48,9 +48,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-21b08c19baec34a3e9161bf281570af6.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-c25201241fa143bb27157ff3b7009344.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-21b08c19baec34a3e9161bf281570af6.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-25eac23d88b76baa0801982e114d5f98.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-3ff187706f6136ec7951dc214fdb61f5.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-25eac23d88b76baa0801982e114d5f98.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -199,8 +199,23 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#questions-to-answer" id="toc-questions-to-answer" class="nav-link active" data-scroll-target="#questions-to-answer">Questions to answer</a></li>
-  <li><a href="#learning-materials" id="toc-learning-materials" class="nav-link" data-scroll-target="#learning-materials">Learning materials</a></li>
+  <li><a href="#why-use-git-and-github" id="toc-why-use-git-and-github" class="nav-link active" data-scroll-target="#why-use-git-and-github">Why use Git and GitHub?</a>
+  <ul class="collapse">
+  <li><a href="#tracking-how-code-has-changed-over-time" id="toc-tracking-how-code-has-changed-over-time" class="nav-link" data-scroll-target="#tracking-how-code-has-changed-over-time">Tracking how code has changed over time</a></li>
+  <li><a href="#maintaining-a-version-of-truth-that-remains-stable" id="toc-maintaining-a-version-of-truth-that-remains-stable" class="nav-link" data-scroll-target="#maintaining-a-version-of-truth-that-remains-stable">Maintaining a version of truth that remains stable</a></li>
+  <li><a href="#quality-assurance" id="toc-quality-assurance" class="nav-link" data-scroll-target="#quality-assurance">Quality assurance</a></li>
+  </ul></li>
+  <li><a href="#managing-work-via-github-issues" id="toc-managing-work-via-github-issues" class="nav-link" data-scroll-target="#managing-work-via-github-issues">Managing work via GitHub issues</a></li>
+  <li><a href="#making-your-changes-on-a-branch" id="toc-making-your-changes-on-a-branch" class="nav-link" data-scroll-target="#making-your-changes-on-a-branch">Making your changes on a branch</a></li>
+  <li><a href="#sharing-your-changes-with-colleagues-pull-request" id="toc-sharing-your-changes-with-colleagues-pull-request" class="nav-link" data-scroll-target="#sharing-your-changes-with-colleagues-pull-request">Sharing your changes with colleagues (pull request)</a></li>
+  <li><a href="#merging-your-changes-once-approved" id="toc-merging-your-changes-once-approved" class="nav-link" data-scroll-target="#merging-your-changes-once-approved">Merging your changes once approved</a></li>
+  <li><a href="#before-the-session" id="toc-before-the-session" class="nav-link" data-scroll-target="#before-the-session">Before the session</a></li>
+  <li><a href="#further-reading-optional" id="toc-further-reading-optional" class="nav-link" data-scroll-target="#further-reading-optional">Further reading (optional)</a>
+  <ul class="collapse">
+  <li><a href="#more-practice" id="toc-more-practice" class="nav-link" data-scroll-target="#more-practice">More practice</a></li>
+  <li><a href="#working-on-your-own-machine" id="toc-working-on-your-own-machine" class="nav-link" data-scroll-target="#working-on-your-own-machine">Working on your own machine</a></li>
+  <li><a href="#practice-using-the-git-command-line-interface-cli" id="toc-practice-using-the-git-command-line-interface-cli" class="nav-link" data-scroll-target="#practice-using-the-git-command-line-interface-cli">Practice using the git command line interface (CLI)</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -227,22 +242,174 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="questions-to-answer" class="level2">
-<h2 class="anchored" data-anchor-id="questions-to-answer">Questions to answer</h2>
-<p>Think about these before the session</p>
+<p>Analytical work never exists in isolation - it is always produced for or with other people. Working on analytical projects collaboratively can sometimes be a messy experience due to differences in file versions between different computers, or losing track of which changes were made by whom. Luckily, there are tools to help manage coding collaboration.</p>
+<p>In this module, we will use Git and GitHub to practice working asynchronously on a project together.</p>
+<p>Using Git is complex, and a detailed guide would extend beyond the scope of this course. This module will provide a basic high level overview focusing on the collaborative benefits of Git and GitHub. You can explore more advanced usage in the optional further reading at the bottom of this page.</p>
+<p>We will cover the following topics:</p>
 <ul>
-<li>What problems have you faced when working on code with others (or on multiple machines)?</li>
-<li>Have you used version control before? What was your experience?</li>
+<li>Why use Git and GitHub?</li>
+<li>Managing work via GitHub issues</li>
+<li>Making your changes on a branch</li>
+<li>Sharing your changes with colleagues (pull request)</li>
+<li>Merging your changes once approved</li>
+</ul>
+<section id="why-use-git-and-github" class="level2">
+<h2 class="anchored" data-anchor-id="why-use-git-and-github">Why use Git and GitHub?</h2>
+<p>Git is a way of maintaining version control in your files. GitHub is a commonly used platform that enables you to host Git repositories for free online.</p>
+<p>📺 Watch <a href="https://www.youtube.com/watch?v=QzvA7r-WndM">What is Git and GitHub?</a> (8 minutes) for a quick overview</p>
+<p>Below are some practical examples of how Git and GitHub can be used to help solve common issues when working collaboratively with others.</p>
+<section id="tracking-how-code-has-changed-over-time" class="level3">
+<h3 class="anchored" data-anchor-id="tracking-how-code-has-changed-over-time">Tracking how code has changed over time</h3>
+<p>Sometimes, files change, and people don’t know who made the change or when. Git can help us to solve this problem, because each change is clearly marked with a timestamp and a person responsible. Here’s an example from <a href="https://github.com/The-Strategy-Unit/nhp_data/blame/main/src/nhp/data/raw_data/helpers.py">some code used in a data pipeline</a>.</p>
+<p>If you scroll down to line 36, you can see that a change was made to this specific line to change one of the treatment specialty codes used for grouping to “502”. If you click on the square to the left of the number 36, you can also see the history of that line - what it looked like before the change was made.</p>
+<p>Each change should be tracked in something called a <strong>commit</strong>, which is a snapshot of the code at a specific point in time.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="git-blame.png" class="img-fluid figure-img" alt="Screenshot showing git blame on a specific line on GitHub"></p>
+<figcaption>Example of git blame on GitHub</figcaption>
+</figure>
+</div>
+</section>
+<section id="maintaining-a-version-of-truth-that-remains-stable" class="level3">
+<h3 class="anchored" data-anchor-id="maintaining-a-version-of-truth-that-remains-stable">Maintaining a version of truth that remains stable</h3>
+<p>Many people working on the same files can sometimes cause conflicts. Git helps us to avoid this by using a system of branches. All Git repositories will have something called a <code>main</code> or <code>master</code>.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> This is usually the primary version of the truth, which ideally should not be changed directly.</p>
+<p>Instead, people working on the code should make a copy of the code in something called a <strong>branch</strong>. They can then make their changes via commits on their separate branch, without harming the main branch.</p>
+</section>
+<section id="quality-assurance" class="level3">
+<h3 class="anchored" data-anchor-id="quality-assurance">Quality assurance</h3>
+<p>When you are happy with the changes on your branch, you can request to incorporate them with the rest of the code in <code>main</code>. This is done via a <strong>pull request</strong>.</p>
+<p>One of the benefits of a pull request is that it is a built in quality assurance feature. Team members can review each other’s proposed changes before the changes are incorporated into the primary version of the truth on the <code>main</code> branch.</p>
+</section>
+</section>
+<section id="managing-work-via-github-issues" class="level2">
+<h2 class="anchored" data-anchor-id="managing-work-via-github-issues">Managing work via GitHub issues</h2>
+<ol type="1">
+<li>Go to the repository for your group. You will be given collaboration rights to the repository.</li>
+</ol>
+<ul>
+<li><a href="https://github.com/yiwen-h/collaboration-group1">Group 1 repository</a></li>
+<li><a href="https://github.com/yiwen-h/collaboration-group2">Group 2 repository</a></li>
+<li><a href="https://github.com/yiwen-h/collaboration-group3">Group 3 repository</a></li>
+<li><a href="https://github.com/yiwen-h/collaboration-group4">Group 4 repository</a></li>
+</ul>
+<ol start="2" type="1">
+<li><p>In your repository, navigate to the Issues tab. You will see a list of different issues that need to be addressed in the repository. Each issue represents a specific task that needs to be completed.</p>
+<p>You have already been assigned to an issue. You can view issues that you have been assigned to by filtering by Assignees on a repository’s list of issues, or by navigating to GitHub’s <a href="https://github.com/issues/assigned">assigned issues page</a>. When you’re assigned to an issue, it means that you will work on it. This prevents duplication of effort, and allows workflows and responsibilities to be clear.</p></li>
+<li><p>Click on the title of the issue you have been assigned to. The issue should be descriptive, and have details of what it is you need to do. If you do not have enough information to be able to complete the task, you can add comments to the issue to help clarify the ask. You can tag specific individuals with an @ symbol in issue comments, to bring your comment to their attention.</p>
+<p>If you understand your task, carry on to the next step and start working on your issue. In this example, I will be working on <a href="https://github.com/yiwen-h/collaboration-group1/issues/2">this issue to add a new function</a>.</p></li>
+</ol>
+</section>
+<section id="making-your-changes-on-a-branch" class="level2">
+<h2 class="anchored" data-anchor-id="making-your-changes-on-a-branch">Making your changes on a branch</h2>
+<ol type="1">
+<li>We need to create a branch to work on, because we don’t want to disrupt the <code>main</code> branch. To do this, click on the <code>branches</code> button just under the repository name, as shown in the screenshot below.</li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="branches.png" class="img-fluid figure-img"></p>
+<figcaption>Repository branches button</figcaption>
+</figure>
+</div>
+<ol start="2" type="1">
+<li><p>Click on the green <code>New branch</code> button on the right hand side. Give your new branch a name. Ideally, start the branch name with the number of the issue to help link your branch to the issue it addresses. Click “Create new branch” when you’re ready.</p></li>
+<li><p>Select your new branch to work on it. You can switch between branches by clicking on the branch icon below the repository name.</p></li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="switch-branch.png" class="img-fluid figure-img"></p>
+<figcaption>Switching between branches</figcaption>
+</figure>
+</div>
+<ol start="4" type="1">
+<li>Navigate to the file that you need to change. Click on the pencil icon at the top of the file to start editing it. Make your changes to the file.</li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="edit-file.png" class="img-fluid figure-img"></p>
+<figcaption>Editing files</figcaption>
+</figure>
+</div>
+<ol start="5" type="1">
+<li>When you’re happy with your changes, click on the big green Commit changes… button on the top right. A box will pop up asking you to add a commit message and extended description. Good commit messages are succinct but descriptive - something vague like “changes made” will not be helpful when you’re reviewing it later! Click on commit changes when you’re done.</li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="commit.png" class="img-fluid figure-img"></p>
+<figcaption>Committing changes</figcaption>
+</figure>
+</div>
+</section>
+<section id="sharing-your-changes-with-colleagues-pull-request" class="level2">
+<h2 class="anchored" data-anchor-id="sharing-your-changes-with-colleagues-pull-request">Sharing your changes with colleagues (pull request)</h2>
+<p>Your changes are ready to be merged with the <code>main</code> branch! You will now make your first <strong>pull request</strong>. Sometimes, pull requests are abbreviated to PR.</p>
+<ol type="1">
+<li><p>Click on the Pull requests tab at the top of the repository.</p></li>
+<li><p>Click on the green <code>New pull request</code> button on the top right.</p></li>
+<li><p>If not already selected, ensure that the <code>main</code> branch is on the left and the branch you were working on is on the right.</p></li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="compare-branch.png" class="img-fluid figure-img"></p>
+<figcaption>Compare branches</figcaption>
+</figure>
+</div>
+<ol start="4" type="1">
+<li><p>Click the green <code>Create pull request</code> button on the right.</p></li>
+<li><p>If not automatically filled for you, provide a useful title and description for your pull request. You can also link to the issue that you were tackling in your issue in the description - use a # followed by the issue number to link them together.</p></li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="link-issue.png" class="img-fluid figure-img"></p>
+<figcaption>Linking issues to pull requests</figcaption>
+</figure>
+</div>
+<ol start="6" type="1">
+<li><p>On the right hand side of the page, there is an option to select Reviewers. Click on reviewers, search for yiwen-h from the list, and select the username.</p></li>
+<li><p>Click on Create pull request. Your reviewer will be notified and should review your request within 3 working days.</p></li>
+</ol>
+<p>When your pull request has been created, click on Files changed to see exactly what changes have been made.</p>
+</section>
+<section id="merging-your-changes-once-approved" class="level2">
+<h2 class="anchored" data-anchor-id="merging-your-changes-once-approved">Merging your changes once approved</h2>
+<p>Sometimes, there can be an extended conversation around pull requests. This is part of the quality assurance process. Reviewers can make suggestions to change the code, and provide comments. Jack Kennedy, a data scientist at the UKHSA, has written an excellent <a href="https://jcken95.github.io/projects/code_review.html">guide to conducting code review</a>.</p>
+<p>Your pull request can either be approved, or changes can be requested. If changes are requested, you’ll need to make the necessary changes and then re-request another review.</p>
+<p>If your changes are approved, you can click on the big green <code>Merge pull request</code> button at the bottom of the screen. This will incorporate your changes into <code>main</code>.</p>
+</section>
+<section id="before-the-session" class="level2">
+<h2 class="anchored" data-anchor-id="before-the-session">Before the session</h2>
+<p>Come prepared to discuss:</p>
+<ul>
+<li>What was your experience like working with Git on GitHub?</li>
+<li>What benefits can you see from using Git and GitHub?</li>
+<li>How can you incorporate these tools into your existing workflows?</li>
 </ul>
 </section>
-<section id="learning-materials" class="level2">
-<h2 class="anchored" data-anchor-id="learning-materials">Learning materials</h2>
-<p>🚧 TO FOLLOW - WORK IN PROGRESS 🚧</p>
+<section id="further-reading-optional" class="level2">
+<h2 class="anchored" data-anchor-id="further-reading-optional">Further reading (optional)</h2>
+<section id="more-practice" class="level3">
+<h3 class="anchored" data-anchor-id="more-practice">More practice</h3>
+<p>There are some unassigned issues in your group repository. If you feel confident and want to practice more with Git and GitHub, feel free to assign yourself to these issues and work on them.</p>
+</section>
+<section id="working-on-your-own-machine" class="level3">
+<h3 class="anchored" data-anchor-id="working-on-your-own-machine">Working on your own machine</h3>
+<p>We have been working on the GitHub web interface. However, this only offers limited functionality and to really integrate Git into your everyday workflow, ideally you need to set it up on your local machine.</p>
+<p><a href="https://se-education.org/guides/tutorials/githubAuthentication.html#setting-up-github-authentication">Set up authentication between your computer and GitHub</a>. Choose <strong><strong>either</strong></strong> SSH or HTTPS - you do not need both.</p>
+</section>
+<section id="practice-using-the-git-command-line-interface-cli" class="level3">
+<h3 class="anchored" data-anchor-id="practice-using-the-git-command-line-interface-cli">Practice using the git command line interface (CLI)</h3>
+<p>TODO: add demo sandbox from https://ryjohnson09.github.io/quarto-git-sandbox/</p>
 
 
 </section>
+</section>
 
-</main> <!-- /main -->
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>https://www.theserverside.com/feature/Why-GitHub-renamed-its-master-branch-to-main<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
