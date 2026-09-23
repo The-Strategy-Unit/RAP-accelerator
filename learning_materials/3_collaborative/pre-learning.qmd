@@ -183,16 +183,18 @@ prompt: "~/demo-project $"
 intro: |
   Run the suggested commands below to perform specific tasks.
   Type {y}help{/} to see what the sandbox supports.
-hints: [git status, git checkout -b docs, 'echo "A new line." >> README.md', git diff, git add ., 'git commit -m "Extend the README"'], 'git push'
+hints: [git status, git checkout -b docs, 'echo "A new line." >> README.md', git diff, git add ., 'git commit -m "Extend the README"', 'git push -u origin docs']
 done-note: You have created a new branch called `docs` and made changes to the README on your branch. Your changes are pushed to GitHub so colleagues can see them. The next step would be to do a Pull Request on GitHub.
 seed: |
   git init
+  git remote add origin https://github.com/example/analysis
   echo "# Demo project" > README.md
   git add .
   git commit -m "Add the README"
   echo "library(tidyverse)" > analysis.R
   git add .
   git commit -m "Start the analysis"
+  git push -u origin main
 tasks:
   - text: Ask where things stand with `git status`
     when: ran /^\s*git\s+status/
@@ -205,5 +207,5 @@ tasks:
   - text: Commit it and watch the history graph grow
     when: commits >= 3
   - text: Push your changes to GitHub
-    when: pushed
+    when: ran "git push -u origin docs"
 ```
