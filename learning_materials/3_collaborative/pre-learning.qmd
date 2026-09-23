@@ -169,7 +169,7 @@ However, this only offers limited functionality and to really integrate Git into
 
 [Set up authentication between your computer and GitHub](https://se-education.org/guides/tutorials/githubAuthentication.html#setting-up-github-authentication). Choose __**either**__ SSH or HTTPS - you do not need both.
 
-### Practice using the git command line interface (CLI)
+### Practice using the Git command line interface (CLI)
 
 Below is a sandbox to practice using git in the browser.
 It is not a real git repository and no data is saved.
@@ -178,7 +178,7 @@ The exercise simulates how you would use the command line interface (CLI) in you
 
 ```git-sandbox
 id: git-practice
-title: Basic intro to the git CLI
+title: Basic intro to the Git CLI
 prompt: "~/demo-project $"
 intro: |
   Run the suggested commands below to perform specific tasks.
@@ -209,3 +209,9 @@ tasks:
   - text: Push your changes to GitHub
     when: ran "git push -u origin docs"
 ```
+
+### Further adventures with Git
+
+- [Using Git and GitHub](https://the-strategy-unit.github.io/data_science/style/git_and_github.html)
+- [How to Use Git and GitHub](https://www.freecodecamp.org/news/guide-to-git-github-for-beginners-and-experienced-devs/)
+- [Version control with Git](https://swcarpentry.github.io/git-novice/)
