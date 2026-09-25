@@ -48,9 +48,10 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-21b08c19baec34a3e9161bf281570af6.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-c25201241fa143bb27157ff3b7009344.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-21b08c19baec34a3e9161bf281570af6.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-25eac23d88b76baa0801982e114d5f98.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-3ff187706f6136ec7951dc214fdb61f5.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-25eac23d88b76baa0801982e114d5f98.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/quarto-contrib/git-sandbox-1.0.0/git-sandbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -213,8 +214,10 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#further-reading-optional" id="toc-further-reading-optional" class="nav-link" data-scroll-target="#further-reading-optional">Further reading (optional)</a>
   <ul class="collapse">
   <li><a href="#more-practice" id="toc-more-practice" class="nav-link" data-scroll-target="#more-practice">More practice</a></li>
+  <li><a href="#guide-to-writing-good-commits" id="toc-guide-to-writing-good-commits" class="nav-link" data-scroll-target="#guide-to-writing-good-commits">Guide to writing good commits</a></li>
   <li><a href="#working-on-your-own-machine" id="toc-working-on-your-own-machine" class="nav-link" data-scroll-target="#working-on-your-own-machine">Working on your own machine</a></li>
-  <li><a href="#practice-using-the-git-command-line-interface-cli" id="toc-practice-using-the-git-command-line-interface-cli" class="nav-link" data-scroll-target="#practice-using-the-git-command-line-interface-cli">Practice using the git command line interface (CLI)</a></li>
+  <li><a href="#practice-using-the-git-command-line-interface-cli" id="toc-practice-using-the-git-command-line-interface-cli" class="nav-link" data-scroll-target="#practice-using-the-git-command-line-interface-cli">Practice using the Git command line interface (CLI)</a></li>
+  <li><a href="#further-adventures-with-git" id="toc-further-adventures-with-git" class="nav-link" data-scroll-target="#further-adventures-with-git">Further adventures with Git</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -390,14 +393,30 @@ ul.task-list li input[type="checkbox"] {
 <h3 class="anchored" data-anchor-id="more-practice">More practice</h3>
 <p>There are some unassigned issues in your group repository. If you feel confident and want to practice more with Git and GitHub, feel free to assign yourself to these issues and work on them.</p>
 </section>
+<section id="guide-to-writing-good-commits" class="level3">
+<h3 class="anchored" data-anchor-id="guide-to-writing-good-commits">Guide to writing good commits</h3>
+<p>📖 <a href="https://github.com/joelparkerhenderson/git-commit-message/#git-commit-message">Git commit message</a> by Joel Parker Henderson</p>
+</section>
 <section id="working-on-your-own-machine" class="level3">
 <h3 class="anchored" data-anchor-id="working-on-your-own-machine">Working on your own machine</h3>
 <p>We have been working on the GitHub web interface. However, this only offers limited functionality and to really integrate Git into your everyday workflow, ideally you need to set it up on your local machine.</p>
 <p><a href="https://se-education.org/guides/tutorials/githubAuthentication.html#setting-up-github-authentication">Set up authentication between your computer and GitHub</a>. Choose <strong><strong>either</strong></strong> SSH or HTTPS - you do not need both.</p>
 </section>
 <section id="practice-using-the-git-command-line-interface-cli" class="level3">
-<h3 class="anchored" data-anchor-id="practice-using-the-git-command-line-interface-cli">Practice using the git command line interface (CLI)</h3>
-<p>TODO: add demo sandbox from https://ryjohnson09.github.io/quarto-git-sandbox/</p>
+<h3 class="anchored" data-anchor-id="practice-using-the-git-command-line-interface-cli">Practice using the Git command line interface (CLI)</h3>
+<p>Below is a sandbox to practice using git. It is not a real git repository and no data is saved. The exercise simulates how you would use the command line interface (CLI) in your computer terminal to enact some of the actions covered in this module, which we carried out on the GitHub web interface.</p>
+<p>Don’t worry if you don’t understand everything here. Using the CLI is more advanced, and you can use version control with Git very effectively without this. However, as you get more familiar with Git, this would be a useful next step due to the more advanced capabilities available.</p>
+<p>To deepen your understanding of the commands provided below, try this <a href="https://www.gitquest.app/en/git-glossary/">glossary of each <code>git</code> command</a> and this <a href="https://www.geeksforgeeks.org/linux-unix/echo-command-in-linux-with-examples/">explanation of the <code>echo</code> command</a>.</p>
+<div class="git-sandbox" id="git-practice"><div class="gs-loading">Loading the Git sandbox…</div></div>
+<script>(window.__gsPending=window.__gsPending||[]).push(["#git-practice",{"doneNote":"You have created a new branch called <code>docs</code> and made changes\nto the README on your branch. Your changes are pushed to GitHub so\ncolleagues can see them. The next step would be to do a Pull Request on\nGitHub.","hints":["git status","git checkout -b docs","echo \"A new line.\" >> README.md","git diff","git add .","git commit -m \"Extend the README\"","git push -u origin docs"],"intro":["Run the suggested commands below to perform specific tasks.","Type {y}help{/} to see what the sandbox supports."],"prompt":"~/demo-project $","seed":"git init\ngit remote add origin https://github.com/example/analysis\necho \"# Demo project\" > README.md\ngit add .\ngit commit -m \"Add the README\"\necho \"library(tidyverse)\" > analysis.R\ngit add .\ngit commit -m \"Start the analysis\"\ngit push -u origin main\n","tasks":[{"text":"Ask where things stand with <code>git status</code>","when":"ran /^\\s*git\\s+status/"},{"text":"Create a new branch called <code>docs</code>","when":"branch docs"},{"text":"Change a file and find it in the Changes panel","when":"not clean"},{"text":"Add the file to your commit","when":"staged"},{"text":"Commit it and watch the history graph grow","when":"commits >= 3"},{"text":"Push your changes to GitHub","when":"ran \"git push -u origin docs\""}],"title":"Basic intro to the Git CLI"}]);</script>
+</section>
+<section id="further-adventures-with-git" class="level3">
+<h3 class="anchored" data-anchor-id="further-adventures-with-git">Further adventures with Git</h3>
+<ul>
+<li><a href="https://the-strategy-unit.github.io/data_science/style/git_and_github.html">Using Git and GitHub</a></li>
+<li><a href="https://www.freecodecamp.org/news/guide-to-git-github-for-beginners-and-experienced-devs/">How to Use Git and GitHub</a></li>
+<li><a href="https://swcarpentry.github.io/git-novice/">Version control with Git</a></li>
+</ul>
 
 
 </section>
@@ -815,4 +834,7 @@ ul.task-list li input[type="checkbox"] {
 
 
 
+<script src="../../site_libs/quarto-contrib/git-sandbox-1.0.0/isomorphic-git.bundle.js"></script>
+<script src="../../site_libs/quarto-contrib/git-sandbox-1.0.0/git-sandbox.js"></script>
+<script src="../../site_libs/quarto-contrib/git-sandbox-1.0.0/git-sandbox-boot.js"></script>
 </body></html>
