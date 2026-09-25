@@ -171,9 +171,15 @@ However, this only offers limited functionality and to really integrate Git into
 
 ### Practice using the Git command line interface (CLI)
 
-Below is a sandbox to practice using git in the browser.
+Below is a sandbox to practice using git.
 It is not a real git repository and no data is saved.
 The exercise simulates how you would use the command line interface (CLI) in your computer terminal to enact some of the actions covered in this module, which we carried out on the GitHub web interface.
+
+Don't worry if you don't understand everything here.
+Using the CLI is more advanced, and you can use version control with Git very effectively without this.
+However, as you get more familiar with Git, this would be a useful next step due to the more advanced capabilities available.
+
+To deepen your understanding of the commands provided below, try this [glossary of each `git` command](https://www.gitquest.app/en/git-glossary/) and this [explanation of the `echo` command](https://www.geeksforgeeks.org/linux-unix/echo-command-in-linux-with-examples/).
 
 
 ```git-sandbox
