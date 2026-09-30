@@ -83,6 +83,6 @@ Come prepared to discuss:
 If you wish to extend your learning beyond the scope of this course, try some of the resources below.
 
 - 📺 [Writing effective documentation](https://www.youtube.com/watch?v=R6zeikbTgVc) by Beth Aitman (10 minutes)
-- ✏️ R: [Use {pkgdown}](https://rguides.dev/tutorials/r-package-development/pkgdown-sites/) to turn your R vignettes into a documentation site
+- ✏️ R: [Use {pkgdown}](https://pkgdown.r-lib.org/articles/pkgdown.html) to turn your R vignettes into a documentation site
 - ✏️ Python: [Use mkdocs](https://www.mkdocs.org/getting-started/) to build a basic Python documentation site.
 - 📖 Have a look at [ATLAS](https://atlas.hsma.co.uk/), a directory of open-source tools, packages, and projects for analytics and decision science in healthcare. Consider submitting your work to it.
