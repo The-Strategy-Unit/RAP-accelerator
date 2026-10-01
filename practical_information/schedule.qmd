@@ -5,9 +5,9 @@ format:
     toc: false
 ---
 
-The programme runs over ten weeks. Each module is offered at four different sessions. You'll be assigned one of the listed sessions for each module. All four sessions cover identical content.
+The programme runs over ten weeks. Each module is repeated four times to ensure small class sizes. You'll be assigned to one of the groups in advance. 
 
-| Module | Tutor | Session 1 | Session 2 | Session 3 | Session 4 |
+| Module | Tutor | Group 1 | Group 2 | Group 3 | Group 4 |
 |---|---|---|---|---|---|
 | ♻️ [Reusable](../learning_materials/1_reusable/index.qmd) | Rhian | Wed 14 Oct, 2:00pm | Thu 15 Oct, 2:00pm | Wed 21 Oct, 10:00am | Thu 22 Oct, 10:00am |
 | 📖 [Visible](../learning_materials/2_visible/index.qmd) | YiWen | Wed 28 Oct, 2:00pm | Thu 29 Oct, 2:00pm | Wed 4 Nov, 10:00am | Thu 5 Nov, 10:00am |
