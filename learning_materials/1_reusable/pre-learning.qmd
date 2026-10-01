@@ -16,14 +16,16 @@ This section covers four things that helps make great functions:
 4. Consistent style
 
 ::: {.callout-note}
-Read through the sections below and try out the _👩‍💻 Your turn_ sections. We'll use your answers to these sections them as discussion points in the contact session.
+Read through the sections below and try out the _👩‍💻 Your turn_ sections.
+Share your answers in the shared learning document for your group.
+We'll use your comments as discussion points in the contact session.
 :::
 
 ---
 
 ## 1. Meaningful names {#naming}
 
-A good name tells the reader what something represents or does, without them having to read the code in detail. Choosing a good name can be surpringly tricky! When choosing a function name, try to describe what the function does really specifically. 
+A good name tells the reader what something represents or does, without them having to read the code in detail. Choosing a good name can be surpringly tricky! When choosing a function name, try to describe what the function does specifically. 
 
 - Describe the purpose. Say what the thing does, specifically
 - Write for humans - readable, searchable names. e.g `start_date` is much more understandable (and searchable) than `d`
@@ -52,8 +54,7 @@ Look at a script you've written recently. Find one variable or function name tha
 
 ### 📖 Resources
 
-- [Meaningful function names](https://youtu.be/Pkd3ud8b9_4?si=gbr-cudEZMUmWGWP&t=28)
-- [How long should a function name be?](https://www.youtube.com/watch?v=yLtZopHDwLU)
+- [Why Naming is #1 Skill for Writing Clean Code](https://dev.to/wasp/why-naming-is-1-skill-for-writing-clean-code-4a5p)
 
 ---
 
@@ -104,7 +105,7 @@ profit_growth = percentage_change(this_year_profit, last_year_profit)
 
 `percentage_change()` has one clear job. It doesn't know or care whether it's being used for sales, profit, or anything else. That's what makes it reusable.
 
-When should you extract a function? Duplication isn't automatically a problem the first time you see it. A useful rule of thumb is the [Rule of Three](https://en.wikipedia.org/wiki/Rule_of_three_(computer_programming)). Cnce the same logic shows up a third time, that's a good time to pull the code into a function.
+When should you extract a function? Duplication isn't automatically a problem the first time you see it. A useful rule of thumb is the [Rule of Three](https://en.wikipedia.org/wiki/Rule_of_three_(computer_programming)). Once the same logic shows up a third time, that's a good time to pull the code into a function.
 
 If a function feels cluttered, look for low-level detail that could be pulled out into a reusable helper function. For example, input checks could move into a helper function of it's own.
 
@@ -181,6 +182,7 @@ Sketch out how you'd turn it into a function:
 - What would you call it?
 - What inputs would it need?
 - What would it return?
+- Is it a pure function?
 
 Bring your example to the session, we'll use a few of these as discussion points.
 
@@ -238,11 +240,12 @@ def percentage_change(new, old):
     """
     return (new - old) / old
 ```
-ve this limitation. They work the same way whether your function lives in a one-off script or a full package, and are picked up automatically by `help()`.
+
+Docstrings work the same way in one-off scripts and full packages, and are picked up automatically by `help()`.
 :::
 
 ### 👩‍💻 Your turn
-Take the function you sketched out in [section 2](#one-thing) and write proper documentation for it. Either a roxygen2-style block in R, or a docstring in Python.
+Take the function you sketched out in [section 2](#one-thing) and write documentation for it. Either a roxygen2-style block in R, or a docstring in Python.
 
 ### 📖 Resources
 -  [Get started with roxygen2](https://roxygen2.r-lib.org/articles/roxygen2.html) (R)
@@ -252,7 +255,7 @@ Take the function you sketched out in [section 2](#one-thing) and write proper d
 
 ## 4. Consistent style {#style}
 
-A consistent style makes code easier to scan, understand and safely modify. It matters more for reusable code: something meant to be shared or reused needs to be readable by people who didn't write it. Agree conventions with your team, then let a tool handle the mechanical parts. 
+A consistent style makes code easier to scan, understand and modify. It matters more for reusable code: something meant to be shared or reused needs to be readable by people who didn't write it. Agree conventions with your team, then let a tool handle the mechanical parts. 
 
 ::: {.panel-tabset}
 ### R
@@ -267,7 +270,7 @@ my_function <- function(x, y) {
   x + y
 }
 ```
-`styler` reformats code automatically; `lintr` flags style problems it can't fix for you.
+{styler} reformats code automatically; {lintr} flags style problems it can't fix for you.
 
 ### Python
 ```python
@@ -285,7 +288,14 @@ def my_function(x, y):
 The logic hasn't changed here, just the formatting. But consistent spacing and layout mean anyone on the team can read this function without first adjusting to a one-off style.
 
 ### 👩‍💻 Your turn
-Run an auto-formatter on a script of your own `styler::style_file()` (R) or `black` / `ruff format` (Python). What did it change automatically? Was anything left for you to fix by hand?
+Run an auto-formatter on a script of your own `styler::style_file()` (R) or `black` / `ruff format` (Python). What did it change automatically? Was anything left for you to fix by hand? 
+
+What coding conventions does your team already follow, formally or informally? How do you 
+
+::: {.callout-tip}
+You don't have to run a formatter manually every time. Editors such as VS Code can format your code automatically when you save. For Python, the [Ruff VS Code extension](https://github.com/astral-sh/ruff-vscode#configuring-vs-code) can be configured to format on save. For R, [Air](https://posit-dev.github.io/air/) is a fast R formatter with VS Code and Positron support, and can also format your code on save.
+:::
+
 
 ### 📖 Resources
 
@@ -300,8 +310,7 @@ Run an auto-formatter on a script of your own `styler::style_file()` (R) or `bla
 
 Come prepared to discuss:
 
-- The function you sketched in [section 2](#one-thing) — name, inputs, return value
 - What code have you written that would be useful to reuse?
-- What makes a function easy for someone else to understand and reuse?
+- Share a function you have designed and documented (name, inputs, return value)
 - What coding conventions does your team already follow, formally or informally?
 - Have you encountered code that was hard to understand or reuse? What made it difficult?
