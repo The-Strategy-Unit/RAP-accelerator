@@ -22,8 +22,4 @@ By the end of this session, you should be able to:
 
 ## 📖 Before the session
 
-Please complete the [pre-learning materials](pre-learning.qmd). These typically take 60 – 90 minutes and are essential for getting the most out of the session.
-
-## 🖥️ During the session
-
-[View the slides →](slides.qmd)
+Please complete the [pre-learning materials](pre-learning.qmd). These typically take 60 – 90 minutes and are essential for getting the most out of the session. Share your answers, examples and any questions in the shared learning document for your group. 
