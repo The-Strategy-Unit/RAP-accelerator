@@ -296,13 +296,13 @@ Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Read through the sections below and try out the <em>👩‍💻 Your turn</em> sections. We’ll use your answers to these sections them as discussion points in the contact session.</p>
+<p>Read through the sections below and try out the <em>👩‍💻 Your turn</em> sections. Share your answers in the shared learning document for your group. We’ll use your comments as discussion points in the contact session.</p>
 </div>
 </div>
 <hr>
 <section id="naming" class="level2">
 <h2 class="anchored" data-anchor-id="naming">1. Meaningful names</h2>
-<p>A good name tells the reader what something represents or does, without them having to read the code in detail. Choosing a good name can be surpringly tricky! When choosing a function name, try to describe what the function does really specifically.</p>
+<p>A good name tells the reader what something represents or does, without them having to read the code in detail. Choosing a good name can be surpringly tricky! When choosing a function name, try to describe what the function does specifically.</p>
 <ul>
 <li>Describe the purpose. Say what the thing does, specifically</li>
 <li>Write for humans - readable, searchable names. e.g <code>start_date</code> is much more understandable (and searchable) than <code>d</code></li>
@@ -333,8 +333,7 @@ Tip
 <section id="resources" class="level3">
 <h3 class="anchored" data-anchor-id="resources">📖 Resources</h3>
 <ul>
-<li><a href="https://youtu.be/Pkd3ud8b9_4?si=gbr-cudEZMUmWGWP&amp;t=28">Meaningful function names</a></li>
-<li><a href="https://www.youtube.com/watch?v=yLtZopHDwLU">How long should a function name be?</a></li>
+<li><a href="https://dev.to/wasp/why-naming-is-1-skill-for-writing-clean-code-4a5p">Why Naming is #1 Skill for Writing Clean Code</a></li>
 </ul>
 <hr>
 </section>
@@ -375,7 +374,7 @@ Tip
 </div>
 </div>
 <p><code>percentage_change()</code> has one clear job. It doesn’t know or care whether it’s being used for sales, profit, or anything else. That’s what makes it reusable.</p>
-<p>When should you extract a function? Duplication isn’t automatically a problem the first time you see it. A useful rule of thumb is the <a href="https://en.wikipedia.org/wiki/Rule_of_three_(computer_programming)">Rule of Three</a>. Cnce the same logic shows up a third time, that’s a good time to pull the code into a function.</p>
+<p>When should you extract a function? Duplication isn’t automatically a problem the first time you see it. A useful rule of thumb is the <a href="https://en.wikipedia.org/wiki/Rule_of_three_(computer_programming)">Rule of Three</a>. Once the same logic shows up a third time, that’s a good time to pull the code into a function.</p>
 <p>If a function feels cluttered, look for low-level detail that could be pulled out into a reusable helper function. For example, input checks could move into a helper function of it’s own.</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true" href="">R</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false" href="">Python</a></li></ul>
@@ -446,6 +445,7 @@ Tip
 <li>What would you call it?</li>
 <li>What inputs would it need?</li>
 <li>What would it return?</li>
+<li>Is it a pure function?</li>
 </ul>
 <p>Bring your example to the session, we’ll use a few of these as discussion points.</p>
 </section>
@@ -512,13 +512,13 @@ Important
 <span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a><span class="co">        0.2</span></span>
 <span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
 <span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> (new <span class="op">-</span> old) <span class="op">/</span> old</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>ve this limitation. They work the same way whether your function lives in a one-off script or a full package, and are picked up automatically by <code>help()</code>.</p>
+<p>Docstrings work the same way in one-off scripts and full packages, and are picked up automatically by <code>help()</code>.</p>
 </div>
 </div>
 </div>
 <section id="your-turn-2" class="level3">
 <h3 class="anchored" data-anchor-id="your-turn-2">👩‍💻 Your turn</h3>
-<p>Take the function you sketched out in <a href="#one-thing">section 2</a> and write proper documentation for it. Either a roxygen2-style block in R, or a docstring in Python.</p>
+<p>Take the function you sketched out in <a href="#one-thing">section 2</a> and write documentation for it. Either a roxygen2-style block in R, or a docstring in Python.</p>
 </section>
 <section id="resources-2" class="level3">
 <h3 class="anchored" data-anchor-id="resources-2">📖 Resources</h3>
@@ -531,7 +531,7 @@ Important
 </section>
 <section id="style" class="level2">
 <h2 class="anchored" data-anchor-id="style">4. Consistent style</h2>
-<p>A consistent style makes code easier to scan, understand and safely modify. It matters more for reusable code: something meant to be shared or reused needs to be readable by people who didn’t write it. Agree conventions with your team, then let a tool handle the mechanical parts.</p>
+<p>A consistent style makes code easier to scan, understand and modify. It matters more for reusable code: something meant to be shared or reused needs to be readable by people who didn’t write it. Agree conventions with your team, then let a tool handle the mechanical parts.</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-4-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-1" role="tab" aria-controls="tabset-4-1" aria-selected="true" href="">R</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-2" role="tab" aria-controls="tabset-4-2" aria-selected="false" href="">Python</a></li></ul>
 <div class="tab-content">
@@ -545,7 +545,7 @@ Important
 <span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>my_function <span class="ot">&lt;-</span> <span class="cf">function</span>(x, y) {</span>
 <span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>  x <span class="sc">+</span> y</span>
 <span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p><code>styler</code> reformats code automatically; <code>lintr</code> flags style problems it can’t fix for you.</p>
+<p>{styler} reformats code automatically; {lintr} flags style problems it can’t fix for you.</p>
 </div>
 <div id="tabset-4-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-4-2-tab">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Before</span></span>
@@ -563,6 +563,20 @@ Important
 <section id="your-turn-3" class="level3">
 <h3 class="anchored" data-anchor-id="your-turn-3">👩‍💻 Your turn</h3>
 <p>Run an auto-formatter on a script of your own <code>styler::style_file()</code> (R) or <code>black</code> / <code>ruff format</code> (Python). What did it change automatically? Was anything left for you to fix by hand?</p>
+<p>What coding conventions does your team already follow, formally or informally? How do you</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>You don’t have to run a formatter manually every time. Editors such as VS Code can format your code automatically when you save. For Python, the <a href="https://github.com/astral-sh/ruff-vscode#configuring-vs-code">Ruff VS Code extension</a> can be configured to format on save. For R, <a href="https://posit-dev.github.io/air/">Air</a> is a fast R formatter with VS Code and Positron support, and can also format your code on save.</p>
+</div>
+</div>
 </section>
 <section id="resources-3" class="level3">
 <h3 class="anchored" data-anchor-id="resources-3">📖 Resources</h3>
@@ -579,9 +593,8 @@ Important
 <h2 class="anchored" data-anchor-id="before-the-session">Before the session</h2>
 <p>Come prepared to discuss:</p>
 <ul>
-<li>The function you sketched in <a href="#one-thing">section 2</a> — name, inputs, return value</li>
 <li>What code have you written that would be useful to reuse?</li>
-<li>What makes a function easy for someone else to understand and reuse?</li>
+<li>Share a function you have designed and documented (name, inputs, return value)</li>
 <li>What coding conventions does your team already follow, formally or informally?</li>
 <li>Have you encountered code that was hard to understand or reuse? What made it difficult?</li>
 </ul>
