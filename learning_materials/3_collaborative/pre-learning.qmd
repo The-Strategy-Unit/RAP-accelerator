@@ -26,6 +26,17 @@ We will cover the following topics:
 - Sharing your changes with colleagues (pull request)
 - Merging your changes once approved
 
+::: {.callout-note}
+Read through the sections below and try out the _👩‍💻 Your turn_ sections.
+Share your answers in the shared learning document for your group.
+We'll use your comments as discussion points in the contact session.
+
+- [Group 1](https://nhs-my.sharepoint.com/:w:/r/personal/rhian_davies25_nhs_net/Documents/SCIC%20RAP%20Accelerator/RAP%20Accelerator%20Group%201.docx?d=w5a54954b949d458d80fa7eeb11875f98&csf=1&web=1&e=FZvj3e)
+- [Group 2](https://nhs-my.sharepoint.com/:w:/r/personal/rhian_davies25_nhs_net/Documents/SCIC%20RAP%20Accelerator/RAP%20Accelerator%20Group%202.docx?d=w5dd12e7ea9d8485994e722491950da36&csf=1&web=1&e=IUOVmP)
+- [Group 3](https://nhs-my.sharepoint.com/:w:/r/personal/rhian_davies25_nhs_net/Documents/SCIC%20RAP%20Accelerator/RAP%20Accelerator%20Group%203.docx?d=w85db45aa7bc340c08c23087965059fa0&csf=1&web=1&e=FOXxEP)
+- [Group 4](https://nhs-my.sharepoint.com/:w:/r/personal/rhian_davies25_nhs_net/Documents/SCIC%20RAP%20Accelerator/RAP%20Accelerator%20Group%204.docx?d=waef817406959496e821355fed6bd485b&csf=1&web=1&e=1uRrVI)
+:::
+
 ## Why use Git and GitHub?
 
 Git is a way of maintaining version control in your files.
