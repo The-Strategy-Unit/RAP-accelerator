@@ -29,7 +29,13 @@ To start off with, here are some packages that we recommend for R and Python:
 
 ### Recommended R packages
 
-- [{tidyverse}](https://tidyverse.org/) collection of R packages
+- [{tidyverse}](https://tidyverse.org/) collection of common R packages for data manipulation
+- [{styler}](https://styler.r-lib.org/) for code styling
+- [{lintr}](https://lintr.r-lib.org/) for code linting
+- [{roxygen2}](https://roxygen2.r-lib.org/) for documenting functions in packages
+- [{testthat}](https://testthat.r-lib.org/) for writing tests
+- [{usethis}](https://usethis.r-lib.org/) helps with common tasks
+- [{renv}](https://rstudio.github.io/renv/) for environment management
 
 ## ☁️ Cloud environment
 
