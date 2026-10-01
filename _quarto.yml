@@ -39,15 +39,6 @@ website:
         - icon: github
           href: https://github.com/The-Strategy-Unit/RAP-accelerator
 
-
-      
-  announcement:
-    icon: exclamation-triangle-fill
-    dismissable: true
-    content: "Site in progress"
-    type: secondary
-    position: below-navbar
-
 format:
   html:
     theme: brand
