@@ -144,7 +144,7 @@ Your changes are ready to be merged with the `main` branch! You will now make yo
 
 7. Click on Create pull request. Your reviewer will be notified and should review your request within 3 working days.
 
-When your pull request has been created, click on Files changed to see exactly what changes have been made.
+When your pull request has been created, click on Files changed to see exactly what changes have been made. Try it with this [example of a pull request and its review](https://github.com/yiwen-h/collaboration-group1/pull/3).
 
 ## Merging your changes once approved
 
