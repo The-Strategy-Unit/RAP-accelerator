@@ -445,7 +445,7 @@
     "href": "practical_information/set-up.html#packages",
     "title": "Getting set up",
     "section": "📦 Packages",
-    "text": "📦 Packages\nIdeally, you should have sufficient admin rights on your machine to install the packages that you need as and when you require them. To start off with, here are some packages that we recommend for R and Python:\n\nRecommended Python packages\n\nuv for package management\npandas for data wrangling\nruff for formatting and linting\n\n\n\nRecommended R packages\n\n{tidyverse} collection of R packages"
+    "text": "📦 Packages\nIdeally, you should have sufficient admin rights on your machine to install the packages that you need as and when you require them. To start off with, here are some packages that we recommend for R and Python:\n\nRecommended Python packages\n\nuv for package management\npandas for data wrangling\nruff for formatting and linting\n\n\n\nRecommended R packages\n\n{tidyverse} collection of common R packages for data manipulation\n{styler} for code styling\n{lintr} for code linting\n{roxygen2} for documenting functions in packages\n{testthat} for writing tests\n{usethis} helps with common tasks\n{renv} for environment management"
   },
   {
     "objectID": "practical_information/set-up.html#cloud-environment",
