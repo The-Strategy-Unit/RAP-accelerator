@@ -49,6 +49,13 @@
     "text": "🧑‍🏫 Need a quick refresher?\nIf you want to take part in the RAP accelerator but don’t yet meet the prerequisites, there is a chance for you to upskill before October.\nThe NHS Open Analytics community is running an Introduction to R and RStudio course in September. Attending this will ensure you meet the prerequisites. You can sign up online. On the sign-up form, please write that you heard about the workshop through SCIC."
   },
   {
+    "objectID": "about/prerequisites.html#additional-r-and-python-learning-resources",
+    "href": "about/prerequisites.html#additional-r-and-python-learning-resources",
+    "title": "Prerequisites & expectations",
+    "section": "Additional R and Python learning resources",
+    "text": "Additional R and Python learning resources\nIf you wish to upskill with R and Python outside of this course, here are some suggested learning resources.\n\nRPython\n\n\n\nBig Book of R\nR for Data Science\nSoftware Carpentry: Programming with R\nIntro2R\nteachR\nGeeks for Geeks R Tutorial\n\n\n\n\nCoding for Economists\nSoftware Carpentry: Programming with Python\nKaggle Python\nW3 Schools Python Tutorial\nNHSPycom Coding Club"
+  },
+  {
     "objectID": "practical_information/tutors.html",
     "href": "practical_information/tutors.html",
     "title": "Tutors",
