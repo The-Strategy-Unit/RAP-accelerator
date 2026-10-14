@@ -28,3 +28,26 @@ If you want to take part in the RAP accelerator but don't yet meet the prerequis
 
 The NHS Open Analytics community is running an Introduction to R and RStudio course in September. Attending this will ensure you meet the prerequisites. You can [sign up online](https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=slTDN7CF9UeyIge0jXdO49xonCqYusFJh3y-kXmKM_1UM0pRTVZLVVJDSzVVWjFXRTI1VTFXVFVVSS4u). On the sign-up form, please write that you heard about the workshop through SCIC. 
 
+## Additional R and Python learning resources
+
+If you wish to upskill with R and Python outside of this course, here are some suggested learning resources.
+
+::: {.panel-tabset}
+### R
+
+- [Big Book of R](https://www.bigbookofr.com/010-start_here)
+- [R for Data Science](https://r4ds.hadley.nz/)
+- [Software Carpentry: Programming with R](https://swcarpentry.github.io/r-novice-inflammation/)
+- [Intro2R](https://alexd106.github.io/intro2R/index.html)
+- [teachR](https://teachingr.com/)
+- [Geeks for Geeks R Tutorial](https://www.geeksforgeeks.org/r-language/r-tutorial/)
+
+### Python
+
+- [Coding for Economists](https://aeturrell.github.io/coding-for-economists/code-basics.html)
+- [Software Carpentry: Programming with Python](https://swcarpentry.github.io/python-novice-inflammation/)
+- [Kaggle Python](https://www.kaggle.com/learn/python)
+- [W3 Schools Python Tutorial](https://www.w3schools.com/python/)
+- [NHSPycom Coding Club](https://github.com/nhs-pycom/coding-club)
+
+:::
