@@ -36,6 +36,7 @@ If you wish to upskill with R and Python outside of this course, here are some s
 ### R
 
 - [Big Book of R](https://www.bigbookofr.com/010-start_here)
+- [R for Data Science](https://r4ds.hadley.nz/)
 - [Software Carpentry: Programming with R](https://swcarpentry.github.io/r-novice-inflammation/)
 - [Intro2R](https://alexd106.github.io/intro2R/index.html)
 - [teachR](https://teachingr.com/)
