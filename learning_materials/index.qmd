@@ -5,7 +5,7 @@ format:
     toc: false
 ---
 
-Welcome to the learning materials for the RAP Accelerator. Each session has pre-learning (required self-study before the session). You'll share your answers in the shared learning document for your group. You'll apply what you learn to your own project in the [capstone](5_capstone/index.qmd).
+Welcome to the learning materials for the RAP Accelerator. Each session has pre-learning (required self-study before the session). You'll share your answers in the shared learning document for your group. You'll apply what you learn to your own project in the [small wins](5_small_wins/index.qmd).
 
 
 | Session | Focus | Objectives | Pre-learning | 
@@ -14,4 +14,4 @@ Welcome to the learning materials for the RAP Accelerator. Each session has pre-
 | 📖 Visible | Make your projects easy to find and use with clear READMEs, licences, and documentation | [Objectives](2_visible/index.qmd) | [Pre-learning](2_visible/pre-learning.qmd) | 
 | 👥 Collaborative | Work effectively with others using Git, code review, and good communication habits | [Objectives](3_collaborative/index.qmd) | [Pre-learning](3_collaborative/pre-learning.qmd) | 
 | 🛡️ Reliable | Build trust in your code through testing, automation, and reproducible environments | [Objectives](4_reliable/index.qmd) | [Pre-learning](4_reliable/pre-learning.qmd) |
-| 🏆 Capstone | Put it all into practice on a real project with feedback and support | [Objectives](5_capstone/index.qmd) | - | 
+| 🌱 Small wins | Applying your learning to your work | [Objectives](5_small_wins/index.qmd) | [Pre-learning](5_small_wins/pre-learning.qmd) | 

@@ -25,7 +25,7 @@ It runs as a _flipped classroom_. You'll work through learning material at your 
 | 📖 [Visible](../learning_materials/2_visible/index.qmd) | Make your projects easy to find and use with clear READMEs, licences, and documentation |
 | 👥 [Collaborative](../learning_materials/3_collaborative/index.qmd) | Work effectively with others using Git, code review, and good communication habits |
 | 🛡️ [Reliable](../learning_materials/4_reliable/index.qmd) | Build trust in your code through testing, automation, and reproducible environments|
-| 🏆 [Capstone](../learning_materials/5_capstone/index.qmd) | Put it all into practice on a real project with feedback and support |
+| 🌱 [Small wins](../learning_materials/5_small_wins/index.qmd) | Applying your learning to your work |
 
 Each session includes:
 

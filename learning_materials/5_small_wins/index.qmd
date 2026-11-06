@@ -1,0 +1,38 @@
+---
+title: "🌱 Small wins"
+subtitle: "Applying your learning to your work"
+format:
+  html:
+    toc: true
+---
+
+## Overview
+
+We want to make sure you have time to apply at least one thing you've learned to your current work. We know you're all busy analysts with lots of time pressure, so this last section is about _small wins_, not a big project.
+
+## 🎯 Learning objectives
+
+By the end of this session, you should be able to:
+
+- Apply at least one RAP technique to a piece of your day-to-day work
+- Describe what changed, and what difference it made
+- Share ideas and get feedback from your peers
+- Choose which RAP techniques you want to practise or learn more about next.
+
+## 📖 Before the session
+
+Pick one or two small wins from [pre-learning materials](pre-learning.qmd) and apply it to a real piece of your work.
+
+Tell us:
+
+   - What small win did you do?
+   - How did it go, and has it changed how you work (even a little)?
+   - What RAP technique are you interested in learning more about in future?
+
+Don't worry if it didn't go perfectly, or if you only managed something very small. Hearing what got in the way is just as useful as hearing what worked.
+
+## 🖥️ During the session
+
+We'll share what you've each tried, talk through what worked and what was tricky, and swap ideas. We'll also spend time thinking about next steps: what you'd like to practise or learn more about when you next have the time.
+
+This session is as much about reflecting on how you work and how you'd like to develop as it is about the code itself.
