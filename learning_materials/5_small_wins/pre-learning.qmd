@@ -1,0 +1,60 @@
+---
+title: "🌱 Small wins"
+subtitle: "Applying your learning to your work"
+format:
+  html:
+    toc: true
+---
+
+Congratulations on working through the first four sections with us. We hope you've learned something new.
+
+We want to make sure you have time to apply at least one thing you've learned to your current work. We know you're all busy analysts with lots of time pressure, so this last section is about _small wins_, not a big project.
+
+We've introduced a lot of concepts, so for the pre-learning we've put together a list of small wins you could try. Choose _at least one_, apply it to a piece of your real work, and come ready to discuss it in the session. You don't need to do them all. One or two quick wins is a big success when you're busy and learning new things!
+
+::: {.callout-note}
+Share your answers in the shared learning document for your group.
+We'll use your comments as discussion points in the contact session.
+
+- [Group 1](https://nhs-my.sharepoint.com/:w:/r/personal/rhian_davies25_nhs_net/Documents/SCIC%20RAP%20Accelerator/RAP%20Accelerator%20Group%201.docx?d=w5a54954b949d458d80fa7eeb11875f98&csf=1&web=1&e=FZvj3e)
+- [Group 2](https://nhs-my.sharepoint.com/:w:/r/personal/rhian_davies25_nhs_net/Documents/SCIC%20RAP%20Accelerator/RAP%20Accelerator%20Group%202.docx?d=w5dd12e7ea9d8485994e722491950da36&csf=1&web=1&e=IUOVmP)
+- [Group 3](https://nhs-my.sharepoint.com/:w:/r/personal/rhian_davies25_nhs_net/Documents/SCIC%20RAP%20Accelerator/RAP%20Accelerator%20Group%203.docx?d=w85db45aa7bc340c08c23087965059fa0&csf=1&web=1&e=FOXxEP)
+- [Group 4](https://nhs-my.sharepoint.com/:w:/r/personal/rhian_davies25_nhs_net/Documents/SCIC%20RAP%20Accelerator/RAP%20Accelerator%20Group%204.docx?d=waef817406959496e821355fed6bd485b&csf=1&web=1&e=1uRrVI)
+:::
+
+
+Choose just one or two small wins (in total) from the list below. Pick whichever will be most useful to you. You can choose from any section, mix and match, or pick a couple from the same section. 
+
+Give it a go on a real piece of your work. Don't worry if it doesn't go perfectly, or if you only manage something small. We'd love to hear what worked, what you learned, or what got in the way. Every small win counts! 
+
+### ♻️ Reusable
+
+- [ ] Draft a style guide for yourself or your team
+- [ ] Review an existing script and refactor it to choose better variable & function names
+- [ ] Run a styler on an existing script and see how much changes
+- [ ] Document a function
+
+### 📖 Visible
+
+- [ ] Add a licence to some existing code
+- [ ] Write a README for an existing analytical project or data pipeline
+- [ ] Draft a "ways of working" document for your organisation to record minimum documentation requirements for new or ongoing projects
+- [ ] Write a vignette for some existing R code
+
+### 👥 Collaborative
+
+- [ ] Do some optional further reading from the [collaborative pre-learning](https://the-strategy-unit.github.io/RAP-accelerator/learning_materials/3_collaborative/pre-learning.html#further-reading-optional)
+- [ ] Create a GitHub repo and add some code or documentation
+- [ ] Open an issue or two in your new repo
+- [ ] Review a pull request for someone else
+ 
+### 🛡️ Reliable
+
+- [ ] Write a test for a function you've written
+- [ ] Move a secret out of a script and into an environment file
+- [ ] Try an environment manager on a project, then share it with a colleague and see if they can load it
+- [ ] Find an existing GitHub action and try it out on your project
+
+::: {.callout-tip}
+Not sure where to start? Pick the one that would have saved you the most time or worry in the last month.
+:::

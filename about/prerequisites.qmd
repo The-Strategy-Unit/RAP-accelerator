@@ -20,7 +20,7 @@ As the RAP Accelerator is run in a _flipped classroom_ style, the sessions are h
 - **Complete the pre-work**: 60–90 minutes before each session. Essential, not optional.
 - **Camera on**: we'll work in small groups, and we learn best when we can see each other.
 - **Engage actively**: ask questions, work through examples, share what you're learning.
-- **Bring a real project**: the [capstone project](../learning_materials/5_capstone/index.qmd) applies what you've learnt to something that matters to you.
+- **Try things out**: the [small wins](../learning_materials/5_small_wins/index.qmd) applies what you've learnt to something that matters to you.
 
 ## 🧑‍🏫 Need a quick refresher?
 
