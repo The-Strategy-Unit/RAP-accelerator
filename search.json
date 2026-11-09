@@ -91,48 +91,6 @@
     "text": "Footnotes\n\n\nhttps://www.theserverside.com/feature/Why-GitHub-renamed-its-master-branch-to-main↩︎"
   },
   {
-    "objectID": "learning_materials/5_capstone/index.html",
-    "href": "learning_materials/5_capstone/index.html",
-    "title": "🏆 Capstone",
-    "section": "",
-    "text": "In the capstone project, you’ll bring together everything you’ve learned and apply it to a real analytical project. You can use your own project or an example we provide."
-  },
-  {
-    "objectID": "learning_materials/5_capstone/index.html#overview",
-    "href": "learning_materials/5_capstone/index.html#overview",
-    "title": "🏆 Capstone",
-    "section": "",
-    "text": "In the capstone project, you’ll bring together everything you’ve learned and apply it to a real analytical project. You can use your own project or an example we provide."
-  },
-  {
-    "objectID": "learning_materials/5_capstone/index.html#learning-objectives",
-    "href": "learning_materials/5_capstone/index.html#learning-objectives",
-    "title": "🏆 Capstone",
-    "section": "🎯 Learning objectives",
-    "text": "🎯 Learning objectives\nBy the end of this session, you should be able to:\n\nApply RAP principles to an existing or new project\nConduct and receive peer feedback on your code\nPlan and prioritise improvements to your analytical pipeline\nDiscuss trade-offs and make decisions about what to refactor and when"
-  },
-  {
-    "objectID": "learning_materials/5_capstone/index.html#your-project",
-    "href": "learning_materials/5_capstone/index.html#your-project",
-    "title": "🏆 Capstone",
-    "section": "💼 Your project",
-    "text": "💼 Your project\n\nBring your own\nYou’re welcome to bring an existing analytical project — anything from a one-off analysis to an ongoing pipeline. We’ll help you apply RAP principles incrementally.\nWhat makes a good capstone project:\n\nYou care about it (it’s real work, or similar to real work you do)\nIt’s something you’ll actually use and maintain after the course\nIt’s complex enough to benefit from RAP (not a one-liner, but doesn’t need to be huge)\n\n\n\nUse our example\nIf you don’t have a suitable project, we have provided an example analytical project that you can work through. You’ll learn the same principles but on our project instead of yours."
-  },
-  {
-    "objectID": "learning_materials/5_capstone/index.html#before-the-session",
-    "href": "learning_materials/5_capstone/index.html#before-the-session",
-    "title": "🏆 Capstone",
-    "section": "📖 Before the session",
-    "text": "📖 Before the session\nFor the capstone, there are no formal pre-learning materials. We’ll ask you to complete a short form, reflecting on your capstone project. We’ll ask you about:\n\nWhat was the problem?\nWhat RAP techniques did you apply?\nHow has that impacted your work?\nWhat are you going to do next?\n\nYou can also use time before the session to work on your project. Remember you can always ask for help in the channel."
-  },
-  {
-    "objectID": "learning_materials/5_capstone/index.html#during-the-session",
-    "href": "learning_materials/5_capstone/index.html#during-the-session",
-    "title": "🏆 Capstone",
-    "section": "🖥️ During the session",
-    "text": "🖥️ During the session\nWe’ll reflect on and share your projects, give feedback, and discuss next steps. This is as much about learning your own development process as it is about the code itself."
-  },
-  {
     "objectID": "learning_materials/1_reusable/pre-learning.html",
     "href": "learning_materials/1_reusable/pre-learning.html",
     "title": "Reusable",
@@ -173,6 +131,41 @@
     "title": "Reusable",
     "section": "Before the session",
     "text": "Before the session\nCome prepared to discuss:\n\nWhat code have you written that would be useful to reuse?\nShare a function you have designed and documented (name, inputs, return value)\nWhat coding conventions does your team already follow, formally or informally?\nHave you encountered code that was hard to understand or reuse? What made it difficult?"
+  },
+  {
+    "objectID": "learning_materials/5_small_wins/index.html",
+    "href": "learning_materials/5_small_wins/index.html",
+    "title": "🌱 Small wins",
+    "section": "",
+    "text": "We want to make sure you have time to apply at least one thing you’ve learned to your current work. We know you’re all busy analysts with lots of time pressure, so this last section is about small wins, not a big project."
+  },
+  {
+    "objectID": "learning_materials/5_small_wins/index.html#overview",
+    "href": "learning_materials/5_small_wins/index.html#overview",
+    "title": "🌱 Small wins",
+    "section": "",
+    "text": "We want to make sure you have time to apply at least one thing you’ve learned to your current work. We know you’re all busy analysts with lots of time pressure, so this last section is about small wins, not a big project."
+  },
+  {
+    "objectID": "learning_materials/5_small_wins/index.html#learning-objectives",
+    "href": "learning_materials/5_small_wins/index.html#learning-objectives",
+    "title": "🌱 Small wins",
+    "section": "🎯 Learning objectives",
+    "text": "🎯 Learning objectives\nBy the end of this session, you should be able to:\n\nApply at least one RAP technique to a piece of your day-to-day work\nDescribe what changed, and what difference it made\nShare ideas and get feedback from your peers\nChoose which RAP techniques you want to practise or learn more about next."
+  },
+  {
+    "objectID": "learning_materials/5_small_wins/index.html#before-the-session",
+    "href": "learning_materials/5_small_wins/index.html#before-the-session",
+    "title": "🌱 Small wins",
+    "section": "📖 Before the session",
+    "text": "📖 Before the session\nPick one or two small wins from pre-learning materials and apply it to a real piece of your work.\nTell us:\n\nWhat small win did you do?\nHow did it go, and has it changed how you work (even a little)?\nWhat RAP technique are you interested in learning more about in future?\n\nDon’t worry if it didn’t go perfectly, or if you only managed something very small. Hearing what got in the way is just as useful as hearing what worked."
+  },
+  {
+    "objectID": "learning_materials/5_small_wins/index.html#during-the-session",
+    "href": "learning_materials/5_small_wins/index.html#during-the-session",
+    "title": "🌱 Small wins",
+    "section": "🖥️ During the session",
+    "text": "🖥️ During the session\nWe’ll share what you’ve each tried, talk through what worked and what was tricky, and swap ideas. We’ll also spend time thinking about next steps: what you’d like to practise or learn more about when you next have the time.\nThis session is as much about reflecting on how you work and how you’d like to develop as it is about the code itself."
   },
   {
     "objectID": "learning_materials/4_reliable/index.html",
@@ -235,7 +228,7 @@
     "href": "practical_information/schedule.html",
     "title": "Schedule",
     "section": "",
-    "text": "The programme runs over ten weeks. Each module is repeated four times to ensure small class sizes. You’ll be assigned to one of the groups in advance.\n\n\n\nModule\nTutor\nGroup 1\nGroup 2\nGroup 3\nGroup 4\n\n\n\n\n♻️ Reusable\nRhian\nWed 14 Oct, 2:00pm\nThu 15 Oct, 2:00pm\nWed 21 Oct, 10:00am\nThu 22 Oct, 10:00am\n\n\n📖 Visible\nYiWen\nWed 28 Oct, 2:00pm\nThu 29 Oct, 2:00pm\nWed 4 Nov, 10:00am\nThu 5 Nov, 10:00am\n\n\n👥 Collaborative\nYiWen\nWed 11 Nov, 2:00pm\nThu 12 Nov, 2:00pm\nWed 18 Nov, 10:00am\nThu 19 Nov, 10:00am\n\n\n🛡️ Reliable\nRhian\nWed 25 Nov, 2:00pm\nThu 26 Nov, 2:00pm\nWed 2 Dec, 10:00am\nThu 3 Dec, 10:00am\n\n\n🏆 Capstone\nRhian & YiWen\nWed 9 Dec, 2:00pm\nThu 10 Dec, 2:00pm\nWed 16 Dec, 10:00am\nThu 17 Dec, 10:00am"
+    "text": "The programme runs over ten weeks. Each module is repeated four times to ensure small class sizes. You’ll be assigned to one of the groups in advance.\n\n\n\nModule\nTutor\nGroup 1\nGroup 2\nGroup 3\nGroup 4\n\n\n\n\n♻️ Reusable\nRhian\nWed 14 Oct, 2:00pm\nThu 15 Oct, 2:00pm\nWed 21 Oct, 10:00am\nThu 22 Oct, 10:00am\n\n\n📖 Visible\nYiWen\nWed 28 Oct, 2:00pm\nThu 29 Oct, 2:00pm\nWed 4 Nov, 10:00am\nThu 5 Nov, 10:00am\n\n\n👥 Collaborative\nYiWen\nWed 11 Nov, 2:00pm\nThu 12 Nov, 2:00pm\nWed 18 Nov, 10:00am\nThu 19 Nov, 10:00am\n\n\n🛡️ Reliable\nRhian\nThu 26 Nov, 2:00pm\nFri 27 Nov, 2:00pm\nWed 2 Dec, 10:00am\nThu 3 Dec, 10:00am\n\n\n🌱 Small wins\nRhian & YiWen\nWed 9 Dec, 2:00pm\nThu 10 Dec, 2:00pm\nWed 16 Dec, 10:00am\nThu 17 Dec, 10:00am"
   },
   {
     "objectID": "practical_information/tutors.html",
@@ -277,7 +270,7 @@
     "href": "about/prerequisites.html#during-the-sessions",
     "title": "Prerequisites & expectations",
     "section": "💬 During the sessions",
-    "text": "💬 During the sessions\nAs the RAP Accelerator is run in a flipped classroom style, the sessions are highly engaging — don’t expect to just sit back and watch! To get the most out of the programme, here’s what we ask of you:\n\nComplete the pre-work: 60–90 minutes before each session. Essential, not optional.\nCamera on: we’ll work in small groups, and we learn best when we can see each other.\nEngage actively: ask questions, work through examples, share what you’re learning.\nBring a real project: the capstone project applies what you’ve learnt to something that matters to you."
+    "text": "💬 During the sessions\nAs the RAP Accelerator is run in a flipped classroom style, the sessions are highly engaging — don’t expect to just sit back and watch! To get the most out of the programme, here’s what we ask of you:\n\nComplete the pre-work: 60–90 minutes before each session. Essential, not optional.\nCamera on: we’ll work in small groups, and we learn best when we can see each other.\nEngage actively: ask questions, work through examples, share what you’re learning.\nTry things out: the small wins applies what you’ve learnt to something that matters to you."
   },
   {
     "objectID": "about/prerequisites.html#need-a-quick-refresher",
@@ -340,7 +333,7 @@
     "href": "about/about.html#course-outline",
     "title": "About the programme",
     "section": "📖 Course outline",
-    "text": "📖 Course outline\n\n\n\nTheme\nTopics\n\n\n\n\n\n♻️ Reusable\nWrite modular, well-documented code that’s easy for you and others to understand and reuse\n\n\n\n📖 Visible\nMake your projects easy to find and use with clear READMEs, licences, and documentation\n\n\n\n👥 Collaborative\nWork effectively with others using Git, code review, and good communication habits\n\n\n\n🛡️ Reliable\nBuild trust in your code through testing, automation, and reproducible environments\n\n\n\n🏆 Capstone\nPut it all into practice on a real project with feedback and support\n\n\n\n\nEach session includes:\n\n60-90 mins of self-directed pre-work (reading, small exercises)\n60 mins contact session with the tutors\n\nWe’ll also have an online community for attendees to ask questions to tutors or chat with peers running throughout the ten weeks.\nWe won’t cover:\n\nBasic R or Python programming (We expect you to already know a little programming)\nPlotting and visualisation\nModelling and machine learning\nUsing LLMs\nBuilding interactive web apps"
+    "text": "📖 Course outline\n\n\n\nTheme\nTopics\n\n\n\n\n\n♻️ Reusable\nWrite modular, well-documented code that’s easy for you and others to understand and reuse\n\n\n\n📖 Visible\nMake your projects easy to find and use with clear READMEs, licences, and documentation\n\n\n\n👥 Collaborative\nWork effectively with others using Git, code review, and good communication habits\n\n\n\n🛡️ Reliable\nBuild trust in your code through testing, automation, and reproducible environments\n\n\n\n🌱 Small wins\nApplying your learning to your work\n\n\n\n\nEach session includes:\n\n60-90 mins of self-directed pre-work (reading, small exercises)\n60 mins contact session with the tutors\n\nWe’ll also have an online community for attendees to ask questions to tutors or chat with peers running throughout the ten weeks.\nWe won’t cover:\n\nBasic R or Python programming (We expect you to already know a little programming)\nPlotting and visualisation\nModelling and machine learning\nUsing LLMs\nBuilding interactive web apps"
   },
   {
     "objectID": "practical_information/set-up.html",
@@ -441,11 +434,18 @@
     "text": "Before the session\nCome prepared to discuss:\n\nWhich function in your project you’d most want to test, and what test you might write\nWhat in your project shouldn’t be shared on GitHub, and what you might store as an environment variable\nWhat environment management your team uses, and which projects need a strict environment\nWhich jobs you do by hand that you’d like automated"
   },
   {
+    "objectID": "learning_materials/5_small_wins/pre-learning.html",
+    "href": "learning_materials/5_small_wins/pre-learning.html",
+    "title": "🌱 Small wins",
+    "section": "",
+    "text": "Congratulations on working through the first four sections with us. We hope you’ve learned something new.\nWe want to make sure you have time to apply at least one thing you’ve learned to your current work. We know you’re all busy analysts with lots of time pressure, so this last section is about small wins, not a big project.\nWe’ve introduced a lot of concepts, so for the pre-learning we’ve put together a list of small wins you could try. Choose at least one, apply it to a piece of your real work, and come ready to discuss it in the session. You don’t need to do them all. One or two quick wins is a big success when you’re busy and learning new things!\n\n\n\n\n\n\nNote\n\n\n\nShare your answers in the shared learning document for your group. We’ll use your comments as discussion points in the contact session.\n\nGroup 1\nGroup 2\nGroup 3\nGroup 4\n\n\n\nChoose just one or two small wins (in total) from the list below. Pick whichever will be most useful to you. You can choose from any section, mix and match, or pick a couple from the same section.\nGive it a go on a real piece of your work. Don’t worry if it doesn’t go perfectly, or if you only manage something small. We’d love to hear what worked, what you learned, or what got in the way. Every small win counts!\n\n♻️ Reusable\n\nDraft a style guide for yourself or your team\nReview an existing script and refactor it to choose better variable & function names\nRun a styler on an existing script and see how much changes\nDocument a function\n\n\n\n📖 Visible\n\nAdd a licence to some existing code\nWrite a README for an existing analytical project or data pipeline\nDraft a “ways of working” document for your organisation to record minimum documentation requirements for new or ongoing projects\nWrite a vignette for some existing R code\n\n\n\n👥 Collaborative\n\nDo some optional further reading from the collaborative pre-learning\nCreate a GitHub repo and add some code or documentation\nOpen an issue or two in your new repo\nReview a pull request for someone else\n\n\n\n🛡️ Reliable\n\nWrite a test for a function you’ve written\nMove a secret out of a script and into an environment file\nTry an environment manager on a project, then share it with a colleague and see if they can load it\nFind an existing GitHub action and try it out on your project\n\n\n\n\n\n\n\nTip\n\n\n\nNot sure where to start? Pick the one that would have saved you the most time or worry in the last month."
+  },
+  {
     "objectID": "learning_materials/index.html",
     "href": "learning_materials/index.html",
     "title": "Learning materials",
     "section": "",
-    "text": "Welcome to the learning materials for the RAP Accelerator. Each session has pre-learning (required self-study before the session). You’ll share your answers in the shared learning document for your group. You’ll apply what you learn to your own project in the capstone.\n\n\n\nSession\nFocus\nObjectives\nPre-learning\n\n\n\n\n\n♻️ Reusable\nWrite modular, well-documented code that’s easy for you and others to understand and reuse\nObjectives\nPre-learning\n\n\n\n📖 Visible\nMake your projects easy to find and use with clear READMEs, licences, and documentation\nObjectives\nPre-learning\n\n\n\n👥 Collaborative\nWork effectively with others using Git, code review, and good communication habits\nObjectives\nPre-learning\n\n\n\n🛡️ Reliable\nBuild trust in your code through testing, automation, and reproducible environments\nObjectives\nPre-learning\n\n\n\n🏆 Capstone\nPut it all into practice on a real project with feedback and support\nObjectives\n-"
+    "text": "Welcome to the learning materials for the RAP Accelerator. Each session has pre-learning (required self-study before the session). You’ll share your answers in the shared learning document for your group. You’ll apply what you learn to your own project in the small wins.\n\n\n\nSession\nFocus\nObjectives\nPre-learning\n\n\n\n\n\n♻️ Reusable\nWrite modular, well-documented code that’s easy for you and others to understand and reuse\nObjectives\nPre-learning\n\n\n\n📖 Visible\nMake your projects easy to find and use with clear READMEs, licences, and documentation\nObjectives\nPre-learning\n\n\n\n👥 Collaborative\nWork effectively with others using Git, code review, and good communication habits\nObjectives\nPre-learning\n\n\n\n🛡️ Reliable\nBuild trust in your code through testing, automation, and reproducible environments\nObjectives\nPre-learning\n\n\n\n🌱 Small wins\nApplying your learning to your work\nObjectives\nPre-learning"
   },
   {
     "objectID": "learning_materials/1_reusable/index.html",
@@ -474,34 +474,6 @@
     "title": "♻️ Reusable",
     "section": "📖 Before the session",
     "text": "📖 Before the session\nPlease complete the pre-learning materials. These typically take 60 – 90 minutes and are essential for getting the most out of the session. Share your answers, examples and any questions in the shared learning document for your group.\n\nGroup 1\nGroup 2\nGroup 3\nGroup 4"
-  },
-  {
-    "objectID": "learning_materials/5_capstone/example.html",
-    "href": "learning_materials/5_capstone/example.html",
-    "title": "📝 Capstone example",
-    "section": "",
-    "text": "If you aren’t able to use data that is local to you for any reason (such as privacy, or complexity) you could carry out a capstone project using open data. An example is given following."
-  },
-  {
-    "objectID": "learning_materials/5_capstone/example.html#overview",
-    "href": "learning_materials/5_capstone/example.html#overview",
-    "title": "📝 Capstone example",
-    "section": "",
-    "text": "If you aren’t able to use data that is local to you for any reason (such as privacy, or complexity) you could carry out a capstone project using open data. An example is given following."
-  },
-  {
-    "objectID": "learning_materials/5_capstone/example.html#task",
-    "href": "learning_materials/5_capstone/example.html#task",
-    "title": "📝 Capstone example",
-    "section": "💼 Task",
-    "text": "💼 Task\nNHS England publishes data about access to mental health crisis care through the 111 service. The data includes information about the number of calls and the number answered within 60 seconds, as well as trust and ICB names. This data could be used to report on the proportion of calls answered within 60 seconds over time.\nYou might have the task of reporting on and benchmarking performance on the proportion of calls answered within 60 seconds across a region or regions."
-  },
-  {
-    "objectID": "learning_materials/5_capstone/example.html#approaches",
-    "href": "learning_materials/5_capstone/example.html#approaches",
-    "title": "📝 Capstone example",
-    "section": "📖 Approaches",
-    "text": "📖 Approaches\nTo approach this task you could create a Quarto document which is parameterised so that it can be made to focus on specific regions or specific periods of time. Analyses might include tracking performance over time, perhaps with a Statistical Process Control chart. There are various methods of drawing such charts including NHSR plot the dots.\nYou may also consider bringing in other information from datasets about deprivation, health spending, or other factors that might relate to access to mental health crisis services."
   },
   {
     "objectID": "learning_materials/3_collaborative/index.html",
