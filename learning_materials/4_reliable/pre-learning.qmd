@@ -6,6 +6,14 @@ format:
     toc: true
 ---
 
+Making code _reliable_ means ensuring it does what you think it does, and that it keeps doing so even as your data or dependencies change. In this session, you'll learn about how you can
+
+1. Write tests
+1. Use enviroment variables & secrets
+1. Manage your environment
+1. Automate your checks
+
+
 ::: {.callout-note}
 Read through the sections below and try out the _👩‍💻 Your turn_ sections.
 Share your answers in the shared learning document for your group.
@@ -17,4 +25,231 @@ We'll use your comments as discussion points in the contact session.
 - [Group 4](https://nhs-my.sharepoint.com/:w:/r/personal/rhian_davies25_nhs_net/Documents/SCIC%20RAP%20Accelerator/RAP%20Accelerator%20Group%204.docx?d=waef817406959496e821355fed6bd485b&csf=1&web=1&e=1uRrVI)
 :::
 
-- Content coming soon
+
+## Write tests {#testing}
+
+A test is a small piece of code that checks your function does what you expect. Tests give you confidence that your code works and catch mistakes when you change it later.
+
+A simple test has three parts:
+
+- Call your function with a known input
+- State the output you expect
+- Check the two match
+
+::: {.panel-tabset}
+
+### R
+
+The [{testthat}](https://testthat.r-lib.org/) package is the standard tool for testing in R. If your code is in a package, `usethis::use_test("percentage_change")` creates `tests/testthat/test-percentage_change.R` with some boilerplate to get you started.
+
+```r
+# tests/testthat/test-percentage_change.R
+library(testthat)
+
+percentage_change <- function(new, old) {
+  (new - old) / old
+}
+
+test_that("percentage_change calculates an increase", {
+  expect_equal(percentage_change(new = 120, old = 100), 0.2)
+})
+
+test_that("percentage_change calculates a decrease", {
+  expect_equal(percentage_change(new = 80, old = 100), -0.2)
+})
+```
+
+Run all your tests with `devtools::test()`, or a single file with `testthat::test_file("tests/testthat/test-percentage_change.R")`.
+
+::: {.callout-note}
+You don't need a full R package to use {testthat}. Keep your functions in one script, your tests in another, and `source()` the functions at the top of the test file.
+:::
+
+### Python
+
+[pytest](https://docs.pytest.org/en/stable/) is the most widely used testing package in Python. Tests are plain functions whose names start with `test_`, and you use `assert` to check the result. 
+
+
+```python
+# test_percentage_change.py
+import pytest
+
+def percentage_change(new, old):
+    return (new - old) / old
+
+def test_percentage_change_increase():
+    assert percentage_change(new=120, old=100) == pytest.approx(0.2)
+
+def test_percentage_change_decrease():
+    assert percentage_change(new=80, old=100) == pytest.approx(-0.2)
+```
+
+Run all your tests by typing `pytest` in the terminal from your project folder.
+
+::: {.callout-tip}
+Use `pytest.approx()` when comparing decimals, as floating point arithmetic can give tiny rounding differences. {testthat}'s `expect_equal()` already allows for this.
+:::
+
+:::
+
+
+### 👩‍💻 Your turn
+
+- Think of a function in your work would you want to be sure is correct. What test could you write for it? What input would you give, and what output do you already know it should produce?
+- What edge cases might break it? Think about zeros, missing values or an empty file.
+
+### 📖 Resources
+- [Testing basics, R Packages (2nd edition)](https://r-pkgs.org/testing-basics.html) (R)
+- [Get started with {testthat}](https://testthat.r-lib.org/articles/index.html) (R)
+- [First Steps in Python Testing](https://www.jumpingrivers.com/blog/intro-to-pytest/) (Python)
+- [Effective Python testing with pytest](https://realpython.com/pytest-python-testing/) (Python)
+
+## Use environment variables and secrets {#secrets}
+
+Ideally, we want to share and commit our code as much as possible. But some things should never end up in a repository:
+
+- Data, especially personal or sensitive data
+- Credentials, such as passwords and API keys
+
+Instead of writing these into your script, store them in an _environment variable_: a named value that lives outside your code and is read in when the code runs. Your code can then be shared freely, and each user supplies their own values.
+
+Environment variables aren't only for secrets. They're also useful for anything that differs between users or machines, such as the path to a shared folder.
+
+Environment variables are usually stored in a special file (`.Renviron` or `.env`) as `NAME="value"` pairs.
+
+```
+API_KEY="ndfu9034890msd"
+```
+
+::: {.panel-tabset}
+### R
+
+In R, environment variables are stored in a file called `.Renviron`. R reads this file when it starts, and you access the values with `Sys.getenv()`:
+
+```r
+api_key <- Sys.getenv("API_KEY")
+```
+
+`usethis::edit_r_environ()` opens your user-level `.Renviron`. You can also have one at the project level. If you do, add it to your `.gitignore`. The differences between levels are explained in [Efficient R programming](https://csgillespie.github.io/efficientR/set-up.html#:~:text=2.4.2%20An%20overview%20of%20R%E2%80%99s%20startup%20files).
+
+### Python
+
+In Python, a common approach is a `.env` file in your project, read with the [python-dotenv](https://github.com/theskumar/python-dotenv) package. 
+
+
+```python
+import os
+from dotenv import load_dotenv
+
+load_dotenv()  # reads the .env file
+
+api_key = os.getenv("API_KEY")
+```
+:::
+
+::: {.callout-tip}
+To prevent a file being committed to a repo, list it in a `.gitignore` file. GitHub has standard templates for [R](https://github.com/github/gitignore/blob/main/R.gitignore) and [Python](https://github.com/github/gitignore/blob/main/Python.gitignore) projects. If you commit a secret by accident, deleting it later isn't enough, because it stays in the Git history. Treat it as compromised: change or revoke it straight away.
+:::
+
+### 👩‍💻 Your turn
+
+- What is in your project that shouldn't be shared on GitHub? Think about data, credentials and anything personal.
+- What might you store as an environment variable? For example, the path to a SharePoint or network folder, which will be different for each person.
+
+### 📖 Resources
+- [gitignore templates](https://github.com/github/gitignore) (R and Python)
+- [.Renviron files: What They Forgot to Teach You About R](https://rstats.wtf/r-startup.html) (R)
+- [python-dotenv](https://github.com/theskumar/python-dotenv) (Python)
+- [Removing sensitive data from a repository](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/removing-sensitive-data-from-a-repository) (GitHub docs)
+
+
+## Manage your environment {#environments}
+The code you write depends on more than the code itself: the version of R or Python, and the packages installed on your laptop. If you share your code with a colleague, will it run on their computer? What if a package updates and changes a key function? Will your code still run in two years?
+
+A _virtual environment_ solves this. It gives each project its own set of packages, and records the exact versions you used in a _lockfile_, so anyone can recreate the same setup.
+
+
+::: {.callout-note}
+You may have heard of [Docker](https://www.docker.com/), which also manages environments but for the entire system, not just your R or Python packages. We won’t cover it here, since a virtual environment is all most projects need.
+:::
+
+
+::: {.panel-tabset}
+### R
+
+[{renv}](https://rstudio.github.io/renv/) is a dependency manager for R packages. The general workflow is:
+
+1. `renv::init()` sets up a new project-local environment
+2. Work as normal, installing and removing packages as you need them
+3. `renv::snapshot()` saves the package versions to the lockfile (`renv.lock`)
+4. `renv::restore()` recreates the setup recorded in the lockfile, e.g. when a colleague opens your project
+
+Commit `renv.lock` to Git so others can restore your environment.
+
+::: {.callout-note}
+{renv} records package versions and the version of R used, but it doesn't install R for you. If you need to switch between R versions, take a look at [rig](https://github.com/r-lib/rig). 
+:::
+
+### Python
+
+[uv](https://docs.astral.sh/uv/) manages Python versions, virtual environments and packages in one place. The general workflow is:
+
+1. `uv init` creates a new project
+2. `uv add <package>` installs a package and records it
+3. `uv run <command>` runs your code in the project's environment
+4. `uv sync` recreates the environment from the lockfile (`uv.lock`), e.g. when a colleague opens your project
+
+Commit `pyproject.toml` and `uv.lock` to Git, but not the `.venv` folder.
+:::
+
+::: {.callout-tip}
+{renv} and uv are just two options. Others include [rig](https://github.com/r-lib/rig) and [packrat](https://rstudio.github.io/packrat/) in R, and [venv](https://docs.python.org/3/tutorial/venv.html), [conda](https://docs.conda.io/) and [poetry](https://python-poetry.org/) in Python. They all follow the same idea, so use whichever your team has agreed on.
+:::
+
+### 👩‍💻 Your turn
+
+- What environment management does your team use, if any?
+- Which of your projects need a strictly controlled environment (for example, published statistics, or anything that has to be reproduced exactly)? Which don't (for example, quick one-off exploration)?
+- If a colleague picked up your project in six months, what would they need to know to get your code running?
+
+### 📖 Resources
+- [Practical {renv}](https://www.youtube.com/watch?v=l01u7Ue9pIQ) (R)
+- [An explosion of R package and environment managers](https://rworks.dev/posts/r-managers/) (R)
+- [Getting started with uv](https://docs.astral.sh/uv/getting-started/) (Python)
+
+## Automate your checks {#automation}
+
+So far, you've thought about tests, secrets and environments. Running checks by hand every time you change your code is easy to forget. _Continuous integration (CI)_ means those checks run automatically whenever your code changes. _Continuous delivery (CD)_ means your outputs, such as a report or documentation, are also published automatically.
+
+[GitHub Actions](https://docs.github.com/en/actions) is GitHub's built-in tool for this. You describe what should happen in a small text file (a _workflow_) saved in your repository. For example: "every time someone pushes a change, set up the environment from the lockfile and run all the tests". GitHub then does it on its own machine and shows you a green tick or a red cross.
+
+Automation also runs your code on a clean machine. If your tests pass on your laptop but fail there, you've probably relied on something that only exists on your computer, such as an unrecorded package or a local file path.
+
+Common things people automate include:
+
+- Running tests
+- Checking code style
+- Rendering a report or document
+- Publishing documentation or a website
+
+
+### 👩‍💻 Your turn
+
+- What jobs do you do by hand that you'd like to be automated? Which checks do you sometimes forget?
+- Would the tests you thought about be able to run on a clean machine, or do they rely on files or settings only you have?
+- Who would you ask to find out whether GitHub Actions is available in your organisation?
+
+### 📖 Resources
+- [Understanding GitHub Actions](https://docs.github.com/en/actions/about-github-actions/understanding-github-actions) (GitHub docs)
+- [r-lib/actions](https://github.com/r-lib/actions): ready-made workflows for R
+- [Using uv in GitHub Actions](https://docs.astral.sh/uv/guides/integration/github/) (Python)
+
+
+## Before the session
+
+Come prepared to discuss:
+
+- Which function in your project you’d most want to test, and what test you might write
+- What in your project shouldn’t be shared on GitHub, and what you might store as an environment variable 
+- What environment management your team uses, and which projects need a strict environment
+- Which jobs you do by hand that you’d like automated
