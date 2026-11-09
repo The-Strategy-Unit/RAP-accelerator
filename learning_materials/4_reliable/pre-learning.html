@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.10.19">
+<meta name="generator" content="quarto-1.11.9">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -26,6 +26,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -39,18 +74,19 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../images/logo_black_medium.png" rel="icon" type="image/png">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/scrollable-regions/scrollable-regions.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-b626d73c4c936ccc3cb08be7d45d1df6.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-63b5708e65d6cd79cd7618c58d0c21e7.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-447e42e69aaa9833c0ba1b986f430b20.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-63b5708e65d6cd79cd7618c58d0c21e7.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-25eac23d88b76baa0801982e114d5f98.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-3ff187706f6136ec7951dc214fdb61f5.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-25eac23d88b76baa0801982e114d5f98.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-ba0178c4ab7f3c3b7573070825d2c6bc.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-8ef9abaea3a0511697332ea642653913.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-ba0178c4ab7f3c3b7573070825d2c6bc.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -83,11 +119,11 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" href="../../_SUBrand.StyleSheet.css">
 </head>
 
-<body class="nav-fixed quarto-light">
+<body class="nav-fixed quarto-light"><a id="quarto-skip-link" class="visually-hidden-focusable" href="#quarto-document-content">Skip to main content</a>
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark" aria-label="Site">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a href="../../index.html" class="navbar-brand navbar-brand-logo">
@@ -98,8 +134,7 @@ ul.task-list li input[type="checkbox"] {
     <span class="navbar-title">RAP Accelerator 🚀</span>
     </a>
   </div>
-            <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -184,6 +219,7 @@ ul.task-list li input[type="checkbox"] {
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
 </div>
+            <div id="quarto-search" class="" title="Search"></div>
       </div> <!-- /container-fluid -->
     </nav>
 </header>
@@ -191,11 +227,37 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" aria-labelledby="toc-title" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#testing" id="toc-testing" class="nav-link active" data-scroll-target="#testing">Write tests</a>
+  <ul class="collapse">
+  <li><a href="#your-turn" id="toc-your-turn" class="nav-link" data-scroll-target="#your-turn">👩‍💻 Your turn</a></li>
+  <li><a href="#resources" id="toc-resources" class="nav-link" data-scroll-target="#resources">📖 Resources</a></li>
+  </ul></li>
+  <li><a href="#secrets" id="toc-secrets" class="nav-link" data-scroll-target="#secrets">Use environment variables and secrets</a>
+  <ul class="collapse">
+  <li><a href="#your-turn-1" id="toc-your-turn-1" class="nav-link" data-scroll-target="#your-turn-1">👩‍💻 Your turn</a></li>
+  <li><a href="#resources-1" id="toc-resources-1" class="nav-link" data-scroll-target="#resources-1">📖 Resources</a></li>
+  </ul></li>
+  <li><a href="#environments" id="toc-environments" class="nav-link" data-scroll-target="#environments">Manage your environment</a>
+  <ul class="collapse">
+  <li><a href="#your-turn-2" id="toc-your-turn-2" class="nav-link" data-scroll-target="#your-turn-2">👩‍💻 Your turn</a></li>
+  <li><a href="#resources-2" id="toc-resources-2" class="nav-link" data-scroll-target="#resources-2">📖 Resources</a></li>
+  </ul></li>
+  <li><a href="#automation" id="toc-automation" class="nav-link" data-scroll-target="#automation">Automate your checks</a>
+  <ul class="collapse">
+  <li><a href="#your-turn-3" id="toc-your-turn-3" class="nav-link" data-scroll-target="#your-turn-3">👩‍💻 Your turn</a></li>
+  <li><a href="#resources-3" id="toc-resources-3" class="nav-link" data-scroll-target="#resources-3">📖 Resources</a></li>
+  </ul></li>
+  <li><a href="#before-the-session" id="toc-before-the-session" class="nav-link" data-scroll-target="#before-the-session">Before the session</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content" id="quarto-document-content" tabindex="-1">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -217,6 +279,13 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<p>Making code <em>reliable</em> means ensuring it does what you think it does, and that it keeps doing so even as your data or dependencies change. In this session, you’ll learn about how you can</p>
+<ol type="1">
+<li>Write tests</li>
+<li>Use enviroment variables &amp; secrets</li>
+<li>Manage your environment</li>
+<li>Automate your checks</li>
+</ol>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -236,11 +305,282 @@ Note
 </ul>
 </div>
 </div>
+<section id="testing" class="level2">
+<h2 class="anchored" data-anchor-id="testing">Write tests</h2>
+<p>A test is a small piece of code that checks your function does what you expect. Tests give you confidence that your code works and catch mistakes when you change it later.</p>
+<p>A simple test has three parts:</p>
 <ul>
-<li>Content coming soon</li>
+<li>Call your function with a known input</li>
+<li>State the output you expect</li>
+<li>Check the two match</li>
+</ul>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">R</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">Python</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<p>The <a href="https://testthat.r-lib.org/">{testthat}</a> package is the standard tool for testing in R. If your code is in a package, <code>usethis::use_test("percentage_change")</code> creates <code>tests/testthat/test-percentage_change.R</code> with some boilerplate to get you started.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># tests/testthat/test-percentage_change.R</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(testthat)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>percentage_change <span class="ot">&lt;-</span> <span class="cf">function</span>(new, old) {</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  (new <span class="sc">-</span> old) <span class="sc">/</span> old</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="fu">test_that</span>(<span class="st">"percentage_change calculates an increase"</span>, {</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">expect_equal</span>(<span class="fu">percentage_change</span>(<span class="at">new =</span> <span class="dv">120</span>, <span class="at">old =</span> <span class="dv">100</span>), <span class="fl">0.2</span>)</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>})</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="fu">test_that</span>(<span class="st">"percentage_change calculates a decrease"</span>, {</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">expect_equal</span>(<span class="fu">percentage_change</span>(<span class="at">new =</span> <span class="dv">80</span>, <span class="at">old =</span> <span class="dv">100</span>), <span class="sc">-</span><span class="fl">0.2</span>)</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>})</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Run all your tests with <code>devtools::test()</code>, or a single file with <code>testthat::test_file("tests/testthat/test-percentage_change.R")</code>.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>You don’t need a full R package to use {testthat}. Keep your functions in one script, your tests in another, and <code>source()</code> the functions at the top of the test file.</p>
+</div>
+</div>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<p><a href="https://docs.pytest.org/en/stable/">pytest</a> is the most widely used testing package in Python. Tests are plain functions whose names start with <code>test_</code>, and you use <code>assert</code> to check the result.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># test_percentage_change.py</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pytest</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> percentage_change(new, old):</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> (new <span class="op">-</span> old) <span class="op">/</span> old</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> test_percentage_change_increase():</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">assert</span> percentage_change(new<span class="op">=</span><span class="dv">120</span>, old<span class="op">=</span><span class="dv">100</span>) <span class="op">==</span> pytest.approx(<span class="fl">0.2</span>)</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> test_percentage_change_decrease():</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">assert</span> percentage_change(new<span class="op">=</span><span class="dv">80</span>, old<span class="op">=</span><span class="dv">100</span>) <span class="op">==</span> pytest.approx(<span class="op">-</span><span class="fl">0.2</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Run all your tests by typing <code>pytest</code> in the terminal from your project folder.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Use <code>pytest.approx()</code> when comparing decimals, as floating point arithmetic can give tiny rounding differences. {testthat}’s <code>expect_equal()</code> already allows for this.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<section id="your-turn" class="level3">
+<h3 class="anchored" data-anchor-id="your-turn">👩‍💻 Your turn</h3>
+<ul>
+<li>Think of a function in your work would you want to be sure is correct. What test could you write for it? What input would you give, and what output do you already know it should produce?</li>
+<li>What edge cases might break it? Think about zeros, missing values or an empty file.</li>
+</ul>
+</section>
+<section id="resources" class="level3">
+<h3 class="anchored" data-anchor-id="resources">📖 Resources</h3>
+<ul>
+<li><a href="https://r-pkgs.org/testing-basics.html">Testing basics, R Packages (2nd edition)</a> (R)</li>
+<li><a href="https://testthat.r-lib.org/articles/index.html">Get started with {testthat}</a> (R)</li>
+<li><a href="https://www.jumpingrivers.com/blog/intro-to-pytest/">First Steps in Python Testing</a> (Python)</li>
+<li><a href="https://realpython.com/pytest-python-testing/">Effective Python testing with pytest</a> (Python)</li>
+</ul>
+</section>
+</section>
+<section id="secrets" class="level2">
+<h2 class="anchored" data-anchor-id="secrets">Use environment variables and secrets</h2>
+<p>Ideally, we want to share and commit our code as much as possible. But some things should never end up in a repository:</p>
+<ul>
+<li>Data, especially personal or sensitive data</li>
+<li>Credentials, such as passwords and API keys</li>
+</ul>
+<p>Instead of writing these into your script, store them in an <em>environment variable</em>: a named value that lives outside your code and is read in when the code runs. Your code can then be shared freely, and each user supplies their own values.</p>
+<p>Environment variables aren’t only for secrets. They’re also useful for anything that differs between users or machines, such as the path to a shared folder.</p>
+<p>Environment variables are usually stored in a special file (<code>.Renviron</code> or <code>.env</code>) as <code>NAME="value"</code> pairs.</p>
+<pre><code>API_KEY="ndfu9034890msd"</code></pre>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true" href="">R</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false" href="">Python</a></li></ul>
+<div class="tab-content">
+<div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
+<p>In R, environment variables are stored in a file called <code>.Renviron</code>. R reads this file when it starts, and you access the values with <code>Sys.getenv()</code>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>api_key <span class="ot">&lt;-</span> <span class="fu">Sys.getenv</span>(<span class="st">"API_KEY"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><code>usethis::edit_r_environ()</code> opens your user-level <code>.Renviron</code>. You can also have one at the project level. If you do, add it to your <code>.gitignore</code>. The differences between levels are explained in <a href="https://csgillespie.github.io/efficientR/set-up.html#:~:text=2.4.2%20An%20overview%20of%20R%E2%80%99s%20startup%20files">Efficient R programming</a>.</p>
+</div>
+<div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
+<p>In Python, a common approach is a <code>.env</code> file in your project, read with the <a href="https://github.com/theskumar/python-dotenv">python-dotenv</a> package.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> dotenv <span class="im">import</span> load_dotenv</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>load_dotenv()  <span class="co"># reads the .env file</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>api_key <span class="op">=</span> os.getenv(<span class="st">"API_KEY"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>To prevent a file being committed to a repo, list it in a <code>.gitignore</code> file. GitHub has standard templates for <a href="https://github.com/github/gitignore/blob/main/R.gitignore">R</a> and <a href="https://github.com/github/gitignore/blob/main/Python.gitignore">Python</a> projects. If you commit a secret by accident, deleting it later isn’t enough, because it stays in the Git history. Treat it as compromised: change or revoke it straight away.</p>
+</div>
+</div>
+<section id="your-turn-1" class="level3">
+<h3 class="anchored" data-anchor-id="your-turn-1">👩‍💻 Your turn</h3>
+<ul>
+<li>What is in your project that shouldn’t be shared on GitHub? Think about data, credentials and anything personal.</li>
+<li>What might you store as an environment variable? For example, the path to a SharePoint or network folder, which will be different for each person.</li>
+</ul>
+</section>
+<section id="resources-1" class="level3">
+<h3 class="anchored" data-anchor-id="resources-1">📖 Resources</h3>
+<ul>
+<li><a href="https://github.com/github/gitignore">gitignore templates</a> (R and Python)</li>
+<li><a href="https://rstats.wtf/r-startup.html">.Renviron files: What They Forgot to Teach You About R</a> (R)</li>
+<li><a href="https://github.com/theskumar/python-dotenv">python-dotenv</a> (Python)</li>
+<li><a href="https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/removing-sensitive-data-from-a-repository">Removing sensitive data from a repository</a> (GitHub docs)</li>
+</ul>
+</section>
+</section>
+<section id="environments" class="level2">
+<h2 class="anchored" data-anchor-id="environments">Manage your environment</h2>
+<p>The code you write depends on more than the code itself: the version of R or Python, and the packages installed on your laptop. If you share your code with a colleague, will it run on their computer? What if a package updates and changes a key function? Will your code still run in two years?</p>
+<p>A <em>virtual environment</em> solves this. It gives each project its own set of packages, and records the exact versions you used in a <em>lockfile</em>, so anyone can recreate the same setup.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>You may have heard of <a href="https://www.docker.com/">Docker</a>, which also manages environments but for the entire system, not just your R or Python packages. We won’t cover it here, since a virtual environment is all most projects need.</p>
+</div>
+</div>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-3-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-1" role="tab" aria-controls="tabset-3-1" aria-selected="true" href="">R</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-2" role="tab" aria-controls="tabset-3-2" aria-selected="false" href="">Python</a></li></ul>
+<div class="tab-content">
+<div id="tabset-3-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-3-1-tab">
+<p><a href="https://rstudio.github.io/renv/">{renv}</a> is a dependency manager for R packages. The general workflow is:</p>
+<ol type="1">
+<li><code>renv::init()</code> sets up a new project-local environment</li>
+<li>Work as normal, installing and removing packages as you need them</li>
+<li><code>renv::snapshot()</code> saves the package versions to the lockfile (<code>renv.lock</code>)</li>
+<li><code>renv::restore()</code> recreates the setup recorded in the lockfile, e.g.&nbsp;when a colleague opens your project</li>
+</ol>
+<p>Commit <code>renv.lock</code> to Git so others can restore your environment.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>{renv} records package versions and the version of R used, but it doesn’t install R for you. If you need to switch between R versions, take a look at <a href="https://github.com/r-lib/rig">rig</a>.</p>
+</div>
+</div>
+</div>
+<div id="tabset-3-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-2-tab">
+<p><a href="https://docs.astral.sh/uv/">uv</a> manages Python versions, virtual environments and packages in one place. The general workflow is:</p>
+<ol type="1">
+<li><code>uv init</code> creates a new project</li>
+<li><code>uv add &lt;package&gt;</code> installs a package and records it</li>
+<li><code>uv run &lt;command&gt;</code> runs your code in the project’s environment</li>
+<li><code>uv sync</code> recreates the environment from the lockfile (<code>uv.lock</code>), e.g.&nbsp;when a colleague opens your project</li>
+</ol>
+<p>Commit <code>pyproject.toml</code> and <code>uv.lock</code> to Git, but not the <code>.venv</code> folder.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>{renv} and uv are just two options. Others include <a href="https://github.com/r-lib/rig">rig</a> and <a href="https://rstudio.github.io/packrat/">packrat</a> in R, and <a href="https://docs.python.org/3/tutorial/venv.html">venv</a>, <a href="https://docs.conda.io/">conda</a> and <a href="https://python-poetry.org/">poetry</a> in Python. They all follow the same idea, so use whichever your team has agreed on.</p>
+</div>
+</div>
+<section id="your-turn-2" class="level3">
+<h3 class="anchored" data-anchor-id="your-turn-2">👩‍💻 Your turn</h3>
+<ul>
+<li>What environment management does your team use, if any?</li>
+<li>Which of your projects need a strictly controlled environment (for example, published statistics, or anything that has to be reproduced exactly)? Which don’t (for example, quick one-off exploration)?</li>
+<li>If a colleague picked up your project in six months, what would they need to know to get your code running?</li>
+</ul>
+</section>
+<section id="resources-2" class="level3">
+<h3 class="anchored" data-anchor-id="resources-2">📖 Resources</h3>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=l01u7Ue9pIQ">Practical {renv}</a> (R)</li>
+<li><a href="https://rworks.dev/posts/r-managers/">An explosion of R package and environment managers</a> (R)</li>
+<li><a href="https://docs.astral.sh/uv/getting-started/">Getting started with uv</a> (Python)</li>
+</ul>
+</section>
+</section>
+<section id="automation" class="level2">
+<h2 class="anchored" data-anchor-id="automation">Automate your checks</h2>
+<p>So far, you’ve thought about tests, secrets and environments. Running checks by hand every time you change your code is easy to forget. <em>Continuous integration (CI)</em> means those checks run automatically whenever your code changes. <em>Continuous delivery (CD)</em> means your outputs, such as a report or documentation, are also published automatically.</p>
+<p><a href="https://docs.github.com/en/actions">GitHub Actions</a> is GitHub’s built-in tool for this. You describe what should happen in a small text file (a <em>workflow</em>) saved in your repository. For example: “every time someone pushes a change, set up the environment from the lockfile and run all the tests”. GitHub then does it on its own machine and shows you a green tick or a red cross.</p>
+<p>Automation also runs your code on a clean machine. If your tests pass on your laptop but fail there, you’ve probably relied on something that only exists on your computer, such as an unrecorded package or a local file path.</p>
+<p>Common things people automate include:</p>
+<ul>
+<li>Running tests</li>
+<li>Checking code style</li>
+<li>Rendering a report or document</li>
+<li>Publishing documentation or a website</li>
+</ul>
+<section id="your-turn-3" class="level3">
+<h3 class="anchored" data-anchor-id="your-turn-3">👩‍💻 Your turn</h3>
+<ul>
+<li>What jobs do you do by hand that you’d like to be automated? Which checks do you sometimes forget?</li>
+<li>Would the tests you thought about be able to run on a clean machine, or do they rely on files or settings only you have?</li>
+<li>Who would you ask to find out whether GitHub Actions is available in your organisation?</li>
+</ul>
+</section>
+<section id="resources-3" class="level3">
+<h3 class="anchored" data-anchor-id="resources-3">📖 Resources</h3>
+<ul>
+<li><a href="https://docs.github.com/en/actions/about-github-actions/understanding-github-actions">Understanding GitHub Actions</a> (GitHub docs)</li>
+<li><a href="https://github.com/r-lib/actions">r-lib/actions</a>: ready-made workflows for R</li>
+<li><a href="https://docs.astral.sh/uv/guides/integration/github/">Using uv in GitHub Actions</a> (Python)</li>
+</ul>
+</section>
+</section>
+<section id="before-the-session" class="level2">
+<h2 class="anchored" data-anchor-id="before-the-session">Before the session</h2>
+<p>Come prepared to discuss:</p>
+<ul>
+<li>Which function in your project you’d most want to test, and what test you might write</li>
+<li>What in your project shouldn’t be shared on GitHub, and what you might store as an environment variable</li>
+<li>What environment management your team uses, and which projects need a strict environment</li>
+<li>Which jobs you do by hand that you’d like automated</li>
 </ul>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -321,7 +661,8 @@ Note
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
       // Inspect non-navigation links and adorn them if external
-     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      window.quartoDecorateExternalLinks = function (root) {
+     var links = (root || window.document).querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
       for (var i=0; i<links.length; i++) {
         const link = links[i];
         if (!isInternal(link.href)) {
@@ -330,8 +671,69 @@ Note
           if (link.dataset.originalHref !== undefined) {
             link.href = link.dataset.originalHref;
           }
+          if (!link.classList.contains('no-external-icon')) {
+          }
         }
       }
+      };
+      window.quartoDecorateExternalLinks(window.document);
+    // Esc closes the popup (WCAG 1.4.13) and focus leaving both trigger and
+    // popup closes it (WCAG 2.4.11); tippy handles neither for interactive popups.
+    const hideOnEscAndFocusOut = {
+      name: 'hideOnEscAndFocusOut',
+      defaultValue: true,
+      fn(instance) {
+        const dismiss = () => {
+          // A show scheduled by the trigger delay would otherwise reopen it
+          instance.clearDelayTimeouts();
+          instance.hide();
+        };
+        const onKeyDown = (event) => {
+          if (event.key !== 'Escape') {
+            return;
+          }
+          // Keep Esc from also reaching page handlers (e.g. reveal.js overview),
+          // except an open reveal.js slide menu, which Esc should close too.
+          // The menu handles keys only when its keyboard option is on.
+          const menuHandlesEsc = window.Reveal?.getPlugin?.('menu')?.isOpen() &&
+            window.Reveal.getConfig().menu?.keyboard !== false;
+          if (!menuHandlesEsc) {
+            event.stopPropagation();
+          }
+          if (instance.popper.contains(window.document.activeElement)) {
+            // Disabled while refocusing so the focus trigger does not reopen it
+            instance.disable();
+            instance.reference.focus();
+            instance.enable();
+          }
+          dismiss();
+        };
+        const onFocusOut = (event) => {
+          const target = event.relatedTarget;
+          if (target && !instance.reference.contains(target) &&
+              !instance.popper.contains(target)) {
+            dismiss();
+          }
+        };
+        // On the trigger too: a click trigger (code-annotations: select) has no
+        // blur handling. Attached for the instance's lifetime so leaving the
+        // trigger also cancels a show still pending on the trigger delay.
+        instance.reference.addEventListener('focusout', onFocusOut);
+        return {
+          onShow() {
+            window.document.addEventListener('keydown', onKeyDown, true);
+            instance.popper.addEventListener('focusout', onFocusOut);
+          },
+          onHide() {
+            window.document.removeEventListener('keydown', onKeyDown, true);
+            instance.popper.removeEventListener('focusout', onFocusOut);
+          },
+          onDestroy() {
+            instance.reference.removeEventListener('focusout', onFocusOut);
+          },
+        };
+      },
+    };
     function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
       const config = {
         allowHTML: true,
@@ -345,6 +747,7 @@ Note
         interactiveBorder: 10,
         theme: 'quarto',
         placement: 'bottom-start',
+        plugins: [hideOnEscAndFocusOut],
       };
       if (contentFn) {
         config.content = contentFn;
@@ -507,44 +910,54 @@ Note
           const lineIds = lines.map((line) => {
             return targetCell + "-" + line;
           })
-          let top = null;
-          let height = null;
-          let parent = null;
+          // Each band is positioned against its own containing block, which is
+          // not the offsetParent of the lines, so place it from client rects.
+          const placeBand = (band, firstEl, lastEl, codeBlock) => {
+            const container = band.offsetParent;
+            if (container === null) {
+              return;
+            }
+            const containerRect = container.getBoundingClientRect();
+            // Reveal.js scales slides with a transform, so convert client
+            // pixels back to the CSS pixels of the container.
+            const scale = containerRect.height / container.offsetHeight || 1;
+            const firstRect = firstEl.getBoundingClientRect();
+            const lastRect = lastEl.getBoundingClientRect();
+            const top = (firstRect.top - containerRect.top) / scale - container.clientTop + container.scrollTop;
+            const height = (lastRect.bottom - firstRect.top) / scale;
+            band.style.top = top - 2 + "px";
+            band.style.height = height + 4 + "px";
+            if (codeBlock) {
+              // Without the copy button wrapper, the containing block is wider
+              // than the code block, so span the code block explicitly.
+              const blockRect = codeBlock.getBoundingClientRect();
+              band.style.left = (blockRect.left - containerRect.left) / scale - container.clientLeft + container.scrollLeft + "px";
+              band.style.width = blockRect.width / scale + "px";
+            }
+          };
           if (lineIds.length > 0) {
-              //compute the position of the single el (top and bottom and make a div)
-              const el = window.document.getElementById(lineIds[0]);
-              top = el.offsetTop;
-              height = el.offsetHeight;
-              parent = el.parentElement.parentElement;
-            if (lineIds.length > 1) {
-              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
-              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
-              height = bottom - top;
+            const el = window.document.getElementById(lineIds[0]);
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const parent = el.parentElement.parentElement;
+            // cook up a div (if necessary) and position it
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
             }
-            if (top !== null && height !== null && parent !== null) {
-              // cook up a div (if necessary) and position it 
-              let div = window.document.getElementById("code-annotation-line-highlight");
-              if (div === null) {
-                div = window.document.createElement("div");
-                div.setAttribute("id", "code-annotation-line-highlight");
-                div.style.position = 'absolute';
-                parent.appendChild(div);
-              }
-              div.style.top = top - 2 + "px";
-              div.style.height = height + 4 + "px";
-              div.style.left = 0;
-              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
-              if (gutterDiv === null) {
-                gutterDiv = window.document.createElement("div");
-                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
-                gutterDiv.style.position = 'absolute';
-                const codeCell = window.document.getElementById(targetCell);
-                const gutter = codeCell.querySelector('.code-annotation-gutter');
-                gutter.appendChild(gutterDiv);
-              }
-              gutterDiv.style.top = top - 2 + "px";
-              gutterDiv.style.height = height + 4 + "px";
+            placeBand(div, el, lastEl, parent.closest("div.sourceCode") || parent);
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
             }
+            placeBand(gutterDiv, el, lastEl);
             selectedAnnoteEl = annoteEl;
           }
         };
@@ -642,6 +1055,9 @@ Note
       }
     }
   });
+  </script>
+  <script type="application/javascript">
+  window.quartoScrollableRegionsLabels = {"code":"Scrollable code","output":"Scrollable output"};
   </script>
 </div> <!-- /content -->
 
