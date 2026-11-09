@@ -53,7 +53,7 @@ Give it a go on a real piece of your work. Don't worry if it doesn't go perfectl
 - [ ] Write a test for a function you've written
 - [ ] Move a secret out of a script and into an environment file
 - [ ] Try an environment manager on a project, then share it with a colleague and see if they can load it
-- [ ] Find an existing GitHub action and try it our on your project
+- [ ] Find an existing GitHub action and try it out on your project
 
 ::: {.callout-tip}
 Not sure where to start? Pick the one that would have saved you the most time or worry in the last month.
