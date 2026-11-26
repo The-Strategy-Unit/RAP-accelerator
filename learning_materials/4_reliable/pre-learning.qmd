@@ -216,6 +216,7 @@ Commit `pyproject.toml` and `uv.lock` to Git, but not the `.venv` folder.
 - [Practical {renv}](https://www.youtube.com/watch?v=l01u7Ue9pIQ) (R)
 - [An explosion of R package and environment managers](https://rworks.dev/posts/r-managers/) (R)
 - [Getting started with uv](https://docs.astral.sh/uv/getting-started/) (Python)
+- [Diffify](https://diffify.com/) to compare changes between versions of R/Python packages
 
 ## Automate your checks {#automation}
 
